@@ -2,64 +2,197 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SEO Audit Report - Cutter's Corner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit Report – Cutter's Corner | Marketing Built by Aleck</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f4f5f7;color:#333}
-@media(max-width:600px){
-  .info-row{flex-direction:column!important;text-align:center}
-  .info-row>div:first-child{min-width:auto!important}
-  .content-wrap{padding:20px 16px!important}
-  .card{padding:20px 18px!important}
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e;background:#f8f9fa;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:20px}
+header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:40px 0;text-align:center}
+header h1{font-size:1.1rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;opacity:.85;margin-bottom:8px}
+header h2{font-size:2rem;font-weight:700;margin-bottom:4px}
+header .date{opacity:.7;font-size:.9rem}
+.score-hero{text-align:center;padding:40px 20px;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin:30px 0}
+.score-circle{width:140px;height:140px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;color:#fff;margin-bottom:12px}
+.score-orange{background:linear-gradient(135deg,#e67e22,#f39c12)}
+.score-yellow{background:linear-gradient(135deg,#f1c40f,#f39c12)}
+.score-green{background:linear-gradient(135deg,#27ae60,#2ecc71)}
+.score-label{font-size:1.1rem;color:#555;margin-bottom:16px}
+.executive-summary{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:30px}
+.executive-summary h3{font-size:1.3rem;margin-bottom:12px;color:#1a1a2e}
+.executive-summary p{color:#444;font-size:1rem}
+.section{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:30px}
+.section h3{font-size:1.3rem;margin-bottom:20px;color:#1a1a2e;border-bottom:2px solid #eee;padding-bottom:10px}
+.cat-bar{margin-bottom:16px}
+.cat-bar .label{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:4px;font-weight:600}
+.cat-bar .track{height:24px;background:#e9ecef;border-radius:12px;overflow:hidden}
+.cat-bar .fill{height:100%;border-radius:12px;display:flex;align-items:center;padding-left:10px;font-size:.8rem;color:#fff;font-weight:600}
+.fill-red{background:linear-gradient(90deg,#c0392b,#e74c3c)}
+.fill-orange{background:linear-gradient(90deg,#e67e22,#f39c12)}
+.fill-yellow{background:linear-gradient(90deg,#f1c40f,#e67e22)}
+.fill-green{background:linear-gradient(90deg,#27ae60,#2ecc71)}
+.finding{padding:16px;border-left:4px solid #e74c3c;background:#fdf2f2;border-radius:0 8px 8px 0;margin-bottom:12px}
+.finding.warn{border-color:#f39c12;background:#fef9e7}
+.finding.good{border-color:#27ae60;background:#eafaf1}
+.finding h4{font-size:1rem;margin-bottom:4px}
+.finding p{font-size:.9rem;color:#555}
+.rec{padding:20px;border:1px solid #e0e0e0;border-radius:10px;margin-bottom:16px}
+.rec h4{font-size:1.05rem;margin-bottom:10px;color:#0f3460}
+.rec .meta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.rec .tag{font-size:.8rem;padding:3px 10px;border-radius:20px;font-weight:600}
+.tag-high{background:#fde8e8;color:#c0392b}
+.tag-med{background:#fef3cd;color:#856404}
+.tag-low{background:#d4edda;color:#155724}
+.rec dl{margin:0}
+.rec dt{font-weight:700;font-size:.9rem;margin-top:8px;color:#333}
+.rec dd{font-size:.9rem;color:#555;margin-left:0}
+footer{text-align:center;padding:40px 20px;color:#777;font-size:.85rem;border-top:2px solid #eee;margin-top:20px}
+footer strong{color:#1a1a2e}
+@media print{body{background:#fff}.container{padding:0}.section,.score-hero,.executive-summary{box-shadow:none;border:1px solid #ddd}}
+@media(max-width:600px){header h2{font-size:1.4rem}.score-circle{width:110px;height:110px;font-size:2.4rem}.rec .meta{flex-direction:column;gap:6px}}
 </style>
 </head>
 <body>
-<header style="background:linear-gradient(135deg,#1a2332 0%,#2c3e50 100%);padding:32px 0;text-align:center">
-<div style="max-width:800px;margin:0 auto;padding:0 24px">
-<div style="font-size:13px;letter-spacing:4px;color:#c9a84c;text-transform:uppercase;margin-bottom:6px;font-weight:600">&#9670; Marketing Built by Aleck &#9670;</div>
-<h1 style="color:#fff;font-size:28px;margin:0;font-weight:300;letter-spacing:1px">SEO Audit Report</h1>
-<div style="width:60px;height:2px;background:#c9a84c;margin:12px auto 0"></div>
+<header>
+<div class="container">
+<h1>Marketing Built by Aleck</h1>
+<h2>SEO Audit Report: Cutter's Corner</h2>
+<p class="date">April 4, 2026 &bull; Foley, AL</p>
 </div>
 </header>
-<div class="content-wrap" style="max-width:800px;margin:0 auto;padding:32px 24px">
-<div class="card info-row" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;flex-wrap:wrap;align-items:center;gap:24px">
-<div style="flex:1;min-width:240px">
-<h2 style="color:#1a2332;font-size:24px;margin:0 0 14px">Cutter's Corner</h2>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Address:</span> 7857 Highway 59, Foley, AL</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Phone:</span> (251) 987-0999</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Website:</span> Generic Thryv/LiRP template</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Report Date:</span> April 4, 2026</p>
+<div class="container">
+
+<div class="score-hero">
+<div class="score-circle score-orange">30</div>
+<div class="score-label">Overall SEO Score out of 100</div>
+<p style="color:#e67e22;font-weight:700;font-size:1.1rem">Needs Significant Improvement</p>
 </div>
-<div style="text-align:center">
-<div style="width:130px;height:130px;border-radius:50%;border:7px solid #e67e22;display:flex;align-items:center;justify-content:center;flex-direction:column;margin:0 auto">
-<span style="font-size:44px;font-weight:700;color:#e67e22;line-height:1">62</span>
-<span style="font-size:13px;color:#999;margin-top:2px">out of 100</span>
+
+<div class="executive-summary">
+<h3>Executive Summary</h3>
+<p>Cutter's Corner has a website, but it's a generic Thryv/LiRP template that looks identical to thousands of other small businesses. There's no online booking — the call-to-action just dials the phone. The site uses a Gmail address instead of a professional business email, there's no Instagram presence, and no before/after gallery to showcase work. For a hair salon in a competitive market, the site fails to differentiate or convert visitors into clients.</p>
 </div>
-<div style="margin-top:10px;font-size:12px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:1px">Overall Score</div>
+
+<div class="section">
+<h3>Category Scores</h3>
+<div class="cat-bar"><div class="label"><span>Website Quality</span><span>7 / 25</span></div><div class="track"><div class="fill fill-red" style="width:28%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>SEO Fundamentals</span><span>3 / 20</span></div><div class="track"><div class="fill fill-red" style="width:15%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Google Business Profile</span><span>7 / 20</span></div><div class="track"><div class="fill fill-red" style="width:35%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Social Media</span><span>5 / 15</span></div><div class="track"><div class="fill fill-red" style="width:33%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>User Experience</span><span>4 / 10</span></div><div class="track"><div class="fill fill-orange" style="width:40%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Online Reputation</span><span>4 / 10</span></div><div class="track"><div class="fill fill-orange" style="width:40%"></div></div></div>
+</div>
+
+<div class="section">
+<h3>Detailed Findings</h3>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Website Quality (7/25)</h4>
+<div class="finding warn"><h4>Has a Custom Domain</h4><p>The domain mycutterscorner.com is a solid asset. HTTPS is enabled. However, the Thryv/LiRP template limits customization and looks identical to thousands of other businesses.</p></div>
+<div class="finding"><h4>Generic Template — Zero Differentiation</h4><p>The layout, design, and structure are cookie-cutter. Nothing about the design says "Cutter's Corner." A generic template signals "we didn't invest in our image" to potential clients.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">SEO Fundamentals (3/20)</h4>
+<div class="finding"><h4>Template-Generated SEO Elements</h4><p>Title tags and meta descriptions are likely generic and auto-generated by Thryv. No HairSalon or LocalBusiness schema markup. No geo-targeted content for "Foley AL" searches. Platform restricts page creation.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Google Business Profile (7/20)</h4>
+<div class="finding warn"><h4>Directory Links Exist</h4><p>The site links to Google, Yelp, and Facebook — a positive foundation. NAP: 7857 Highway 59, Foley AL 36535. Business hours listed (Mon-Tue 9-3, Wed-Fri 9-5, Sat 9-2). But the website itself provides no local SEO value.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Social Media (5/15)</h4>
+<div class="finding warn"><h4>Facebook Active, Instagram Missing</h4><p>Facebook page exists and is linked. However, there is no Instagram presence — a critical gap for a hair salon in 2026. Instagram is the #1 platform for showcasing salon work.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">User Experience (4/10)</h4>
+<div class="finding"><h4>No Real Online Booking</h4><p>The booking CTA just triggers a phone call to (251) 987-0999. No actual online scheduling system. After-hours visitors and younger demographics who expect to book online are lost to competitors.</p></div>
+<div class="finding"><h4>Gmail Email — Unprofessional</h4><p>Using <code>gabby.cutterscorner@gmail.com</code> instead of <code>gabby@mycutterscorner.com</code>. A Gmail address looks amateurish and wastes a branding opportunity.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Online Reputation (4/10)</h4>
+<div class="finding"><h4>No Gallery, Testimonials, or Reviews on Site</h4><p>No before/after gallery, no stylist profiles, no client testimonials. A hair salon lives and dies by visual proof of its work — potential clients can't see the quality.</p></div>
+</div>
+
+<div class="section">
+<h3>Prioritized Recommendations</h3>
+
+<div class="rec">
+<h4>1. Create an Instagram Business Profile</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No Instagram presence at all. This is a critical gap for a hair salon.</dd>
+<dt>Why It Matters</dt><dd>Instagram is the #1 platform for showcasing salon work. Before/after photos and transformation reels drive massive engagement and new client bookings.</dd>
+<dt>How to Fix</dt><dd>Create an Instagram business profile and start posting before/after photos immediately. Short transformation reels perform extremely well for salons.</dd>
+<dt>Estimated Impact</dt><dd>New client discovery channel and visual portfolio that builds trust before booking.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>2. Set Up Professional Email &amp; Real Online Booking</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>Using Gmail instead of domain email. Booking CTA just triggers a phone call — no actual online scheduling.</dd>
+<dt>Why It Matters</dt><dd>A Gmail address reduces trust. Phone-only booking loses after-hours visitors and younger demographics who expect to book online.</dd>
+<dt>How to Fix</dt><dd>Set up <code>gabby@mycutterscorner.com</code> via Google Workspace. Implement a booking system (Square Appointments, Vagaro, or Booksy) that allows clients to pick a stylist, service, and time slot online.</dd>
+<dt>Estimated Impact</dt><dd>Professional image and 24/7 booking capability capturing clients competitors miss.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>3. Build a Custom Website</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>The Thryv/LiRP template is generic, provides almost no SEO value, and looks identical to thousands of other businesses.</dd>
+<dt>Why It Matters</dt><dd>Template platforms give the illusion of having a website while providing almost no SEO value. Competitors with custom sites rank higher and convert better.</dd>
+<dt>How to Fix</dt><dd>Build a custom website with unique branding, a before/after gallery, stylist profiles with photos and specialties, and integrated booking.</dd>
+<dt>Estimated Impact</dt><dd>Professional first impression, SEO foundation, and higher visitor-to-client conversion.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>4. Create a Before/After Gallery &amp; Stylist Profiles</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No gallery showcasing work. No stylist profiles. No client testimonials on the site.</dd>
+<dt>Why It Matters</dt><dd>A before/after gallery is the single best conversion tool for a salon. Potential clients need visual proof of quality before they book.</dd>
+<dt>How to Fix</dt><dd>Create a gallery page with transformation photos. Add stylist profiles with photos, specialties, and individual booking links. Pull client testimonials from Google and Yelp reviews.</dd>
+<dt>Estimated Impact</dt><dd>Significantly higher conversion rate from website visitors to booked appointments.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>5. Add HairSalon + LocalBusiness Schema Markup</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No structured data markup on the site.</dd>
+<dt>Why It Matters</dt><dd>Schema markup helps Google display rich results with hours, ratings, and services directly in search results.</dd>
+<dt>How to Fix</dt><dd>Add JSON-LD HairSalon/LocalBusiness schema to the new website with business name, address, phone, hours, and services.</dd>
+<dt>Estimated Impact</dt><dd>Enhanced search appearance and improved click-through rates.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>6. Set Up Google Review Generation</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No system for generating or displaying reviews on the website.</dd>
+<dt>Why It Matters</dt><dd>Google reviews are one of the top local ranking factors and the #1 trust signal for new clients choosing a salon.</dd>
+<dt>How to Fix</dt><dd>Set up post-appointment review follow-ups. Add a reviews widget to the homepage. Use QR codes at the register linking to the Google review page.</dd>
+<dt>Estimated Impact</dt><dd>Improved GBP ranking and stronger social proof driving bookings.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>7. Build Citations &amp; Optimize for Local Keywords</h4>
+<div class="meta"><span class="tag tag-low">Low Impact</span><span class="tag tag-low">Priority: Month 2-3</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No local keyword optimization. Citation consistency needs verification across directories.</dd>
+<dt>Why It Matters</dt><dd>Consistent NAP across all directories strengthens local SEO. Keyword-optimized content ranks for searches clients are actually making.</dd>
+<dt>How to Fix</dt><dd>Build consistent local citations on Yelp, Bing Places, Apple Maps, and salon directories. Optimize for "hair salon Foley AL," "haircut near me," and "women's haircut Foley." Consider extended hours or adjust CTAs to capture after-hours interest via online booking.</dd>
+<dt>Estimated Impact</dt><dd>Broader local visibility and ongoing organic traffic growth.</dd>
+</dl>
+</div>
+
 </div>
 </div>
-<div class="card" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
-<h2 style="color:#1a2332;font-size:20px;margin:0 0 12px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Executive Summary</h2>
-<p style="color:#555;line-height:1.8;margin:0;font-size:15px">Cutter's Corner operates with a generic Thryv/LiRP template website that does almost nothing to differentiate the business. The site uses a Gmail email address, has no online booking, no before/after gallery, and no compelling content. In a competitive barbershop market along Highway 59 in Foley, this generic presence is essentially invisible. The business needs a complete digital overhaul to compete effectively.</p>
-</div>
-<div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Website Performance</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Generic Template Website</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">The Thryv/LiRP template looks identical to hundreds of other businesses. Zero brand identity or professionalism.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Basic Mobile Compatibility</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Renders on mobile but offers a bland, unengaging experience.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Interactive Features</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">No online booking, gallery, or contact forms — essentially a digital business card with less personality.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">SEO Basics</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Template SEO Limitations</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Thryv/LiRP offers minimal SEO customization. Cannot be properly optimized for target keywords.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Keyword Targeting</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Does not target 'barbershop Foley AL,' 'haircut Highway 59,' or related terms.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Schema Markup</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Missing structured data for rich results showing hours, reviews, and services.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Content Quality</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Before/After Gallery</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Visual proof of skill is the #1 conversion driver for barbershops. Zero examples of work shown.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Service Descriptions or Pricing</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Customers cannot see what services are offered or what they cost.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Brand Story</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Nothing explains why a customer should choose Cutter's Corner over competitors.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Local SEO</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Google Business Profile Exists</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">A GBP listing provides basic Google Maps visibility.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Gmail Email Address</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Using Gmail instead of a professional domain email undermines credibility.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Limited Local Citations</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Directory presence is minimal, missing local search authority opportunities.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Online Presence</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Online Booking</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Cannot schedule appointments online — a baseline expectation for modern barbershops.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Visual Portfolio</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">No Instagram, gallery, or visual showcase of work.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Unprofessional Email</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Gmail as business contact signals lack of investment in the brand.</p></div></div></div>
-<div class="card" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
-<h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Prioritized Recommendations</h2>
-<div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">1</div><div><strong style="color:#1a2332">Build a Custom Professional Website</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Replace the template with a branded site featuring identity, services, gallery, and booking.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">2</div><div><strong style="color:#1a2332">Get Professional Domain and Email</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Register a custom domain and set up professional email. This alone dramatically improves credibility.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">3</div><div><strong style="color:#1a2332">Add Online Booking</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Implement appointment scheduling. Table stakes for barbershops in 2026.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">4</div><div><strong style="color:#1a2332">Create Before/After Gallery</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Start photographing work. A visual portfolio is the most powerful conversion tool for barbershops.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">5</div><div><strong style="color:#1a2332">Write Service and Pricing Pages</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Create detailed content for each service with pricing and differentiators.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">6</div><div><strong style="color:#1a2332">Implement Local SEO Strategy</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Optimize for 'barbershop Foley AL' with proper on-page SEO, schema, and citations.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">7</div><div><strong style="color:#1a2332">Launch Social Media</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Start Instagram to showcase daily work and drive traffic to the new website.</p></div></div>
-</div>
-<div style="background:linear-gradient(135deg,#1a2332 0%,#2c3e50 100%);border-radius:10px;padding:40px 32px;margin-bottom:24px;text-align:center">
-<h2 style="color:#c9a84c;font-size:22px;margin:0 0 14px">Ready for the Next Step?</h2>
-<p style="color:#ccc;line-height:1.8;margin:0 0 24px;max-width:560px;display:inline-block;font-size:15px">Schedule a <strong style="color:#fff">free, no-obligation consultation</strong> and we will walk through this report together, answer your questions, and build a clear action plan tailored to your business goals and budget.</p>
-<div><a href="mailto:jeriel.menendez@gmail.com?subject=Free%20Consultation%20-%20Cutter's%20Corner" style="display:inline-block;background:#c9a84c;color:#1a2332;padding:14px 40px;border-radius:6px;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:0.5px">Schedule Free Consultation</a></div>
-<p style="color:#777;font-size:13px;margin:16px 0 0">or email directly: jeriel.menendez@gmail.com</p>
-</div>
-</div>
-<footer style="background:#1a2332;padding:28px;text-align:center">
-<div style="color:#c9a84c;font-size:13px;letter-spacing:3px;margin-bottom:8px;font-weight:600">MARKETING BUILT BY ALECK</div>
-<div style="color:#777;font-size:13px">jeriel.menendez@gmail.com</div>
-<div style="color:#555;font-size:11px;margin-top:8px">This report is confidential and prepared exclusively for Cutter's Corner.</div>
+<footer>
+<p><strong>Marketing Built by Aleck</strong></p>
+<p>jeriel.menendez@gmail.com &bull; Foley, AL 36535</p>
+<p style="margin-top:8px;font-size:.8rem">This report was generated on April 4, 2026. SEO conditions change frequently; a follow-up audit is recommended in 90 days.</p>
 </footer>
 </body>
 </html>

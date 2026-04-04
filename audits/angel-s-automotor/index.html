@@ -2,64 +2,197 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SEO Audit Report - Angel's Automotor LLC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit Report – Angel's Automotor LLC | Marketing Built by Aleck</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f4f5f7;color:#333}
-@media(max-width:600px){
-  .info-row{flex-direction:column!important;text-align:center}
-  .info-row>div:first-child{min-width:auto!important}
-  .content-wrap{padding:20px 16px!important}
-  .card{padding:20px 18px!important}
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e;background:#f8f9fa;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:20px}
+header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:40px 0;text-align:center}
+header h1{font-size:1.1rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;opacity:.85;margin-bottom:8px}
+header h2{font-size:2rem;font-weight:700;margin-bottom:4px}
+header .date{opacity:.7;font-size:.9rem}
+.score-hero{text-align:center;padding:40px 20px;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin:30px 0}
+.score-circle{width:140px;height:140px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;color:#fff;margin-bottom:12px}
+.score-orange{background:linear-gradient(135deg,#e67e22,#f39c12)}
+.score-yellow{background:linear-gradient(135deg,#f1c40f,#f39c12)}
+.score-green{background:linear-gradient(135deg,#27ae60,#2ecc71)}
+.score-label{font-size:1.1rem;color:#555;margin-bottom:16px}
+.executive-summary{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:30px}
+.executive-summary h3{font-size:1.3rem;margin-bottom:12px;color:#1a1a2e}
+.executive-summary p{color:#444;font-size:1rem}
+.section{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:30px}
+.section h3{font-size:1.3rem;margin-bottom:20px;color:#1a1a2e;border-bottom:2px solid #eee;padding-bottom:10px}
+.cat-bar{margin-bottom:16px}
+.cat-bar .label{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:4px;font-weight:600}
+.cat-bar .track{height:24px;background:#e9ecef;border-radius:12px;overflow:hidden}
+.cat-bar .fill{height:100%;border-radius:12px;display:flex;align-items:center;padding-left:10px;font-size:.8rem;color:#fff;font-weight:600}
+.fill-red{background:linear-gradient(90deg,#c0392b,#e74c3c)}
+.fill-orange{background:linear-gradient(90deg,#e67e22,#f39c12)}
+.fill-yellow{background:linear-gradient(90deg,#f1c40f,#e67e22)}
+.fill-green{background:linear-gradient(90deg,#27ae60,#2ecc71)}
+.finding{padding:16px;border-left:4px solid #e74c3c;background:#fdf2f2;border-radius:0 8px 8px 0;margin-bottom:12px}
+.finding.warn{border-color:#f39c12;background:#fef9e7}
+.finding.good{border-color:#27ae60;background:#eafaf1}
+.finding h4{font-size:1rem;margin-bottom:4px}
+.finding p{font-size:.9rem;color:#555}
+.rec{padding:20px;border:1px solid #e0e0e0;border-radius:10px;margin-bottom:16px}
+.rec h4{font-size:1.05rem;margin-bottom:10px;color:#0f3460}
+.rec .meta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.rec .tag{font-size:.8rem;padding:3px 10px;border-radius:20px;font-weight:600}
+.tag-high{background:#fde8e8;color:#c0392b}
+.tag-med{background:#fef3cd;color:#856404}
+.tag-low{background:#d4edda;color:#155724}
+.rec dl{margin:0}
+.rec dt{font-weight:700;font-size:.9rem;margin-top:8px;color:#333}
+.rec dd{font-size:.9rem;color:#555;margin-left:0}
+footer{text-align:center;padding:40px 20px;color:#777;font-size:.85rem;border-top:2px solid #eee;margin-top:20px}
+footer strong{color:#1a1a2e}
+@media print{body{background:#fff}.container{padding:0}.section,.score-hero,.executive-summary{box-shadow:none;border:1px solid #ddd}}
+@media(max-width:600px){header h2{font-size:1.4rem}.score-circle{width:110px;height:110px;font-size:2.4rem}.rec .meta{flex-direction:column;gap:6px}}
 </style>
 </head>
 <body>
-<header style="background:linear-gradient(135deg,#1a2332 0%,#2c3e50 100%);padding:32px 0;text-align:center">
-<div style="max-width:800px;margin:0 auto;padding:0 24px">
-<div style="font-size:13px;letter-spacing:4px;color:#c9a84c;text-transform:uppercase;margin-bottom:6px;font-weight:600">&#9670; Marketing Built by Aleck &#9670;</div>
-<h1 style="color:#fff;font-size:28px;margin:0;font-weight:300;letter-spacing:1px">SEO Audit Report</h1>
-<div style="width:60px;height:2px;background:#c9a84c;margin:12px auto 0"></div>
+<header>
+<div class="container">
+<h1>Marketing Built by Aleck</h1>
+<h2>SEO Audit Report: Angel's Automotor LLC</h2>
+<p class="date">April 4, 2026 &bull; Foley, AL</p>
 </div>
 </header>
-<div class="content-wrap" style="max-width:800px;margin:0 auto;padding:32px 24px">
-<div class="card info-row" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;flex-wrap:wrap;align-items:center;gap:24px">
-<div style="flex:1;min-width:240px">
-<h2 style="color:#1a2332;font-size:24px;margin:0 0 14px">Angel's Automotor LLC</h2>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Address:</span> 18620 County Road 26, Foley, AL</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Phone:</span> (251) 233-8523</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Website:</span> Generic Duda/Thryv template</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Report Date:</span> April 4, 2026</p>
+<div class="container">
+
+<div class="score-hero">
+<div class="score-circle score-orange">29</div>
+<div class="score-label">Overall SEO Score out of 100</div>
+<p style="color:#e67e22;font-weight:700;font-size:1.1rem">Needs Significant Improvement</p>
 </div>
-<div style="text-align:center">
-<div style="width:130px;height:130px;border-radius:50%;border:7px solid #e67e22;display:flex;align-items:center;justify-content:center;flex-direction:column;margin:0 auto">
-<span style="font-size:44px;font-weight:700;color:#e67e22;line-height:1">68</span>
-<span style="font-size:13px;color:#999;margin-top:2px">out of 100</span>
+
+<div class="executive-summary">
+<h3>Executive Summary</h3>
+<p>Angel's Automotor has a website, but it's a generic Duda/Thryv template filled with boilerplate content that doesn't reflect the business's actual 18-year history or bilingual capabilities. The site claims "12 years" of experience despite operating since 2008. There's no online booking, no Google reviews integration, and the thin content fails to communicate why a customer should choose Angel's over competitors. The bilingual (English/Spanish) service is a major competitive advantage that's being completely wasted.</p>
 </div>
-<div style="margin-top:10px;font-size:12px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:1px">Overall Score</div>
+
+<div class="section">
+<h3>Category Scores</h3>
+<div class="cat-bar"><div class="label"><span>Website Quality</span><span>8 / 25</span></div><div class="track"><div class="fill fill-red" style="width:32%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>SEO Fundamentals</span><span>4 / 20</span></div><div class="track"><div class="fill fill-red" style="width:20%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Google Business Profile</span><span>6 / 20</span></div><div class="track"><div class="fill fill-red" style="width:30%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Social Media</span><span>3 / 15</span></div><div class="track"><div class="fill fill-red" style="width:20%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>User Experience</span><span>5 / 10</span></div><div class="track"><div class="fill fill-orange" style="width:50%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Online Reputation</span><span>3 / 10</span></div><div class="track"><div class="fill fill-red" style="width:30%"></div></div></div>
+</div>
+
+<div class="section">
+<h3>Detailed Findings</h3>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Website Quality (8/25)</h4>
+<div class="finding warn"><h4>Has a Custom Domain</h4><p>The domain angelsautomotorllc.com is a solid asset. HTTPS is enabled and a basic contact form exists. However, the platform (Duda/Thryv) limits growth potential.</p></div>
+<div class="finding"><h4>Generic Boilerplate Template Content</h4><p>The site uses a Duda/Thryv template with cookie-cutter content. The text reads like it was auto-generated for any auto repair shop, not specifically written for Angel's Automotor. Google penalizes thin, duplicated content.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">SEO Fundamentals (4/20)</h4>
+<div class="finding"><h4>Template-Generated SEO Elements</h4><p>Title tags and meta descriptions are likely generic and auto-generated by Thryv. No schema markup, no geo-targeted content for "Foley AL" searches, and no bilingual SEO despite offering Spanish-language service.</p></div>
+<div class="finding"><h4>Outdated and Inaccurate Content</h4><p>The website states "12 years" of experience, but the business has been operating since 2008 — that's 18 years. This signals the website hasn't been maintained and erodes customer trust.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Google Business Profile (6/20)</h4>
+<div class="finding warn"><h4>GBP Likely Exists but Underoptimized</h4><p>NAP: 18620 County Road 26, Foley AL 36535. Two phone numbers (Main: 251-233-8523, Tow: 251-233-5934). No Google reviews widget on the website and no local keyword targeting.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Social Media (3/15)</h4>
+<div class="finding"><h4>Minimal or No Social Media Presence</h4><p>Facebook and Instagram presence not confirmed. The bilingual capability and tow service — two major differentiators — aren't being promoted anywhere online.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">User Experience (5/10)</h4>
+<div class="finding warn"><h4>Basic Contact Form Only</h4><p>A basic contact form exists and business hours are listed (Mon-Fri 9-6, closed 1-2pm). However, there's no online appointment scheduling, meaning the lunch closure and limited hours result in missed calls and lost business.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Online Reputation (3/10)</h4>
+<div class="finding"><h4>No Reviews Integration or Generation</h4><p>No Google reviews displayed on the website. No system in place for generating reviews. The tow service phone number is not prominently marketed.</p></div>
+</div>
+
+<div class="section">
+<h3>Prioritized Recommendations</h3>
+
+<div class="rec">
+<h4>1. Fix Inaccurate Content — Update "12 Years" Claim</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>The website states "12 years" of experience, but the business has been operating since 2008 — that's 18 years as of 2026.</dd>
+<dt>Why It Matters</dt><dd>Inaccurate information erodes trust. If a customer notices the math doesn't add up, they question everything else on the site.</dd>
+<dt>How to Fix</dt><dd>Update to "since 2008" (which never goes stale) or the actual number of years. Review all other content for accuracy.</dd>
+<dt>Estimated Impact</dt><dd>Immediate trust improvement for every website visitor.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>2. Add Tow Service Section &amp; Appointment Request Form</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>The tow service (251-233-5934) is not prominently featured. No way to request appointments online — customers must call during limited hours.</dd>
+<dt>Why It Matters</dt><dd>The lunch closure (1-2pm) and limited hours mean missed calls and lost business. The tow service is a major differentiator being underpromoteed.</dd>
+<dt>How to Fix</dt><dd>Add a prominent tow service section with the dedicated tow phone number. Add an appointment request form that captures vehicle info, service needed, and preferred time.</dd>
+<dt>Estimated Impact</dt><dd>24/7 lead capture and increased tow service calls from search visibility.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>3. Verify and Optimize Google Business Profile</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>GBP status is uncertain. If it exists, it likely lacks optimization with correct hours, full service list, and current photos.</dd>
+<dt>Why It Matters</dt><dd>GBP is the most important local SEO asset for an auto repair shop. It drives Google Maps visibility and "near me" searches.</dd>
+<dt>How to Fix</dt><dd>Verify the GBP listing. Add correct hours (including lunch closure), all services, both phone numbers, and real photos of the shop and team.</dd>
+<dt>Estimated Impact</dt><dd>Improved Google Maps visibility and local pack rankings.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>4. Rewrite All Website Content</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>Generic boilerplate content that reads like it was auto-generated for any auto repair shop.</dd>
+<dt>Why It Matters</dt><dd>Google penalizes thin, duplicated content. Competitors with custom content rank higher and convert better.</dd>
+<dt>How to Fix</dt><dd>Rewrite all content from scratch to tell Angel's actual story — the 18-year history, bilingual service, tow service, and specific repairs and specialties.</dd>
+<dt>Estimated Impact</dt><dd>Higher rankings, better conversions, and authentic brand differentiation.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>5. Add Bilingual (Spanish) Content</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>The English/Spanish bilingual service capability is not reflected anywhere on the website.</dd>
+<dt>Why It Matters</dt><dd>A Spanish-language landing page would capture underserved search traffic like "mecanico Foley AL" with virtually no competition.</dd>
+<dt>How to Fix</dt><dd>Add at least one Spanish-language landing page targeting bilingual auto repair searches. Mention "Se habla Espa&ntilde;ol" prominently on the English site.</dd>
+<dt>Estimated Impact</dt><dd>New customer segment with almost zero competition for Spanish-language auto repair searches.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>6. Add AutoRepair + LocalBusiness Schema Markup</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No structured data markup exists on the site.</dd>
+<dt>Why It Matters</dt><dd>Schema markup helps Google display rich results with hours, ratings, services, and contact info directly in search results.</dd>
+<dt>How to Fix</dt><dd>Add JSON-LD AutoRepair/LocalBusiness schema with business name, address, both phone numbers, hours, and service offerings.</dd>
+<dt>Estimated Impact</dt><dd>Enhanced search appearance and improved click-through rates.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>7. Build Citations, Reviews &amp; Real Photos</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-low">Priority: Month 2-3</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No review generation system. Likely stock photos on the site. Weak citations across directories.</dd>
+<dt>Why It Matters</dt><dd>Reviews, real photos, and consistent citations are foundational local ranking factors.</dd>
+<dt>How to Fix</dt><dd>Set up Google review generation with post-service follow-ups. Replace stock photos with real images of the shop, team, and completed work. Build local citations on Yelp, Bing Places, Apple Maps, and auto repair directories. Optimize for "auto repair Foley AL," "tow service Foley," and "mecanico Foley AL."</dd>
+<dt>Estimated Impact</dt><dd>Stronger local presence, improved trust signals, and better rankings across all local search terms.</dd>
+</dl>
+</div>
+
 </div>
 </div>
-<div class="card" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
-<h2 style="color:#1a2332;font-size:20px;margin:0 0 12px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Executive Summary</h2>
-<p style="color:#555;line-height:1.8;margin:0;font-size:15px">Angel's Automotor has been serving Foley since 2008 — 18 years of trusted service. However, the current website is a generic Duda/Thryv template that undermines this credibility. The site claims '12 years of experience' (outdated), uses a cookie-cutter design, and offers no online booking. As a bilingual auto shop, Angel's has a unique competitive advantage in Baldwin County that is completely invisible online. The template is not just failing to help — it is actively misrepresenting the business.</p>
-</div>
-<div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Website Performance</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Generic Template Design</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">The Duda/Thryv template looks identical to thousands of other businesses, communicating a lack of investment.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Adequate Mobile Responsiveness</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Basic mobile compatibility from the template, though not optimized.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Online Booking or Scheduling</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Customers cannot request appointments or quotes online — significant friction for auto service.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">SEO Basics</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Basic SEO Structure</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">The template provides minimal SEO framework, but generic and unoptimized for Angel's services.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Targeted Keyword Strategy</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Does not target valuable keywords like 'bilingual mechanic Foley' or 'auto repair Baldwin County.'</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Limited Schema Markup</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Template may include basic schema but not customized for auto repair specifics.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Content Quality</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Outdated and Inaccurate Content</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Website states '12 years of experience' but the business opened in 2008 — that is 18 years. This error undermines credibility.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Bilingual Advantage Not Showcased</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Serves English and Spanish-speaking customers, but this differentiator is not featured on the website.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Generic Template Content</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Service descriptions appear to be template defaults, not reflecting actual expertise.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Local SEO</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Google Business Profile Active</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">GBP listing is the primary way customers find the business.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Missing Bilingual Local SEO</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">No Spanish-language content or optimization, missing a significant market segment.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Basic Directory Presence</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Appears in some directories but citations may be inconsistent.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Online Presence</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Online Quote or Booking</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Auto service customers expect to request quotes or schedule online. Angel's offers neither.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Limited Social Media</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Minimal social presence, missing opportunities to showcase work.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Customer Testimonials</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">18 years of satisfied customers but zero testimonials displayed on the website.</p></div></div></div>
-<div class="card" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
-<h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Prioritized Recommendations</h2>
-<div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">1</div><div><strong style="color:#1a2332">Replace Template with Custom Website</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Build a professional, bilingual website reflecting 18 years of experience and unique value.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">2</div><div><strong style="color:#1a2332">Fix Outdated Content Immediately</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Update the '12 years' claim to accurately reflect 18 years since 2008. Inaccurate content destroys trust.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">3</div><div><strong style="color:#1a2332">Add Bilingual Content</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Create full Spanish-language content. Target 'mecanico Foley AL' and 'reparacion de autos Baldwin County.'</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">4</div><div><strong style="color:#1a2332">Implement Online Booking/Quoting</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Add scheduling and quote request forms to reduce phone dependency and capture after-hours leads.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">5</div><div><strong style="color:#1a2332">Showcase Customer Testimonials</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Collect and display reviews from 18 years of customers.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">6</div><div><strong style="color:#1a2332">Build Service-Specific Pages</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Create individual pages for each service to rank for specific repair searches.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">7</div><div><strong style="color:#1a2332">Develop Spanish-Language Local SEO</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Optimize GBP and directories targeting the Spanish-speaking community.</p></div></div>
-</div>
-<div style="background:linear-gradient(135deg,#1a2332 0%,#2c3e50 100%);border-radius:10px;padding:40px 32px;margin-bottom:24px;text-align:center">
-<h2 style="color:#c9a84c;font-size:22px;margin:0 0 14px">Ready for the Next Step?</h2>
-<p style="color:#ccc;line-height:1.8;margin:0 0 24px;max-width:560px;display:inline-block;font-size:15px">Schedule a <strong style="color:#fff">free, no-obligation consultation</strong> and we will walk through this report together, answer your questions, and build a clear action plan tailored to your business goals and budget.</p>
-<div><a href="mailto:jeriel.menendez@gmail.com?subject=Free%20Consultation%20-%20Angel's%20Automotor%20LLC" style="display:inline-block;background:#c9a84c;color:#1a2332;padding:14px 40px;border-radius:6px;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:0.5px">Schedule Free Consultation</a></div>
-<p style="color:#777;font-size:13px;margin:16px 0 0">or email directly: jeriel.menendez@gmail.com</p>
-</div>
-</div>
-<footer style="background:#1a2332;padding:28px;text-align:center">
-<div style="color:#c9a84c;font-size:13px;letter-spacing:3px;margin-bottom:8px;font-weight:600">MARKETING BUILT BY ALECK</div>
-<div style="color:#777;font-size:13px">jeriel.menendez@gmail.com</div>
-<div style="color:#555;font-size:11px;margin-top:8px">This report is confidential and prepared exclusively for Angel's Automotor LLC.</div>
+<footer>
+<p><strong>Marketing Built by Aleck</strong></p>
+<p>jeriel.menendez@gmail.com &bull; Foley, AL 36535</p>
+<p style="margin-top:8px;font-size:.8rem">This report was generated on April 4, 2026. SEO conditions change frequently; a follow-up audit is recommended in 90 days.</p>
 </footer>
 </body>
 </html>

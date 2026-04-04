@@ -2,64 +2,198 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SEO Audit Report - Elegance Barbershop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit Report – Elegance Barbershop | Marketing Built by Aleck</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f4f5f7;color:#333}
-@media(max-width:600px){
-  .info-row{flex-direction:column!important;text-align:center}
-  .info-row>div:first-child{min-width:auto!important}
-  .content-wrap{padding:20px 16px!important}
-  .card{padding:20px 18px!important}
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e;background:#f8f9fa;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:20px}
+header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:40px 0;text-align:center}
+header h1{font-size:1.1rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;opacity:.85;margin-bottom:8px}
+header h2{font-size:2rem;font-weight:700;margin-bottom:4px}
+header .date{opacity:.7;font-size:.9rem}
+.score-hero{text-align:center;padding:40px 20px;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin:30px 0}
+.score-circle{width:140px;height:140px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;color:#fff;margin-bottom:12px}
+.score-orange{background:linear-gradient(135deg,#e67e22,#f39c12)}
+.score-yellow{background:linear-gradient(135deg,#f1c40f,#f39c12)}
+.score-green{background:linear-gradient(135deg,#27ae60,#2ecc71)}
+.score-label{font-size:1.1rem;color:#555;margin-bottom:16px}
+.executive-summary{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:30px}
+.executive-summary h3{font-size:1.3rem;margin-bottom:12px;color:#1a1a2e}
+.executive-summary p{color:#444;font-size:1rem}
+.section{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:30px}
+.section h3{font-size:1.3rem;margin-bottom:20px;color:#1a1a2e;border-bottom:2px solid #eee;padding-bottom:10px}
+.cat-bar{margin-bottom:16px}
+.cat-bar .label{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:4px;font-weight:600}
+.cat-bar .track{height:24px;background:#e9ecef;border-radius:12px;overflow:hidden}
+.cat-bar .fill{height:100%;border-radius:12px;display:flex;align-items:center;padding-left:10px;font-size:.8rem;color:#fff;font-weight:600}
+.fill-red{background:linear-gradient(90deg,#c0392b,#e74c3c)}
+.fill-orange{background:linear-gradient(90deg,#e67e22,#f39c12)}
+.fill-yellow{background:linear-gradient(90deg,#f1c40f,#e67e22)}
+.fill-green{background:linear-gradient(90deg,#27ae60,#2ecc71)}
+.finding{padding:16px;border-left:4px solid #e74c3c;background:#fdf2f2;border-radius:0 8px 8px 0;margin-bottom:12px}
+.finding.warn{border-color:#f39c12;background:#fef9e7}
+.finding.good{border-color:#27ae60;background:#eafaf1}
+.finding h4{font-size:1rem;margin-bottom:4px}
+.finding p{font-size:.9rem;color:#555}
+.rec{padding:20px;border:1px solid #e0e0e0;border-radius:10px;margin-bottom:16px}
+.rec h4{font-size:1.05rem;margin-bottom:10px;color:#0f3460}
+.rec .meta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.rec .tag{font-size:.8rem;padding:3px 10px;border-radius:20px;font-weight:600}
+.tag-high{background:#fde8e8;color:#c0392b}
+.tag-med{background:#fef3cd;color:#856404}
+.tag-low{background:#d4edda;color:#155724}
+.rec dl{margin:0}
+.rec dt{font-weight:700;font-size:.9rem;margin-top:8px;color:#333}
+.rec dd{font-size:.9rem;color:#555;margin-left:0}
+footer{text-align:center;padding:40px 20px;color:#777;font-size:.85rem;border-top:2px solid #eee;margin-top:20px}
+footer strong{color:#1a1a2e}
+@media print{body{background:#fff}.container{padding:0}.section,.score-hero,.executive-summary{box-shadow:none;border:1px solid #ddd}}
+@media(max-width:600px){header h2{font-size:1.4rem}.score-circle{width:110px;height:110px;font-size:2.4rem}.rec .meta{flex-direction:column;gap:6px}}
 </style>
 </head>
 <body>
-<header style="background:linear-gradient(135deg,#1a2332 0%,#2c3e50 100%);padding:32px 0;text-align:center">
-<div style="max-width:800px;margin:0 auto;padding:0 24px">
-<div style="font-size:13px;letter-spacing:4px;color:#c9a84c;text-transform:uppercase;margin-bottom:6px;font-weight:600">&#9670; Marketing Built by Aleck &#9670;</div>
-<h1 style="color:#fff;font-size:28px;margin:0;font-weight:300;letter-spacing:1px">SEO Audit Report</h1>
-<div style="width:60px;height:2px;background:#c9a84c;margin:12px auto 0"></div>
+<header>
+<div class="container">
+<h1>Marketing Built by Aleck</h1>
+<h2>SEO Audit Report: Elegance Barbershop</h2>
+<p class="date">April 4, 2026 &bull; Foley, AL</p>
 </div>
 </header>
-<div class="content-wrap" style="max-width:800px;margin:0 auto;padding:32px 24px">
-<div class="card info-row" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06);display:flex;flex-wrap:wrap;align-items:center;gap:24px">
-<div style="flex:1;min-width:240px">
-<h2 style="color:#1a2332;font-size:24px;margin:0 0 14px">Elegance Barbershop</h2>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Address:</span> 209 W 9th Ave, Foley, AL</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Phone:</span> (251) 223-0776</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Website:</span> Hub-24 template + WordPress blog</p>
-<p style="color:#666;margin:5px 0;font-size:14px"><span style="color:#1a2332;font-weight:600">Report Date:</span> April 4, 2026</p>
+<div class="container">
+
+<div class="score-hero">
+<div class="score-circle score-orange">28</div>
+<div class="score-label">Overall SEO Score out of 100</div>
+<p style="color:#e67e22;font-weight:700;font-size:1.1rem">Needs Significant Improvement</p>
 </div>
-<div style="text-align:center">
-<div style="width:130px;height:130px;border-radius:50%;border:7px solid #e67e22;display:flex;align-items:center;justify-content:center;flex-direction:column;margin:0 auto">
-<span style="font-size:44px;font-weight:700;color:#e67e22;line-height:1">72</span>
-<span style="font-size:13px;color:#999;margin-top:2px">out of 100</span>
+
+<div class="executive-summary">
+<h3>Executive Summary</h3>
+<p>Elegance Barbershop is spread across three different platforms — a hub-24 directory page, a separate WordPress blog, and social media — creating serious brand fragmentation. None of these platforms gives the shop a professional, unified online identity. The hub-24 page is a basic directory template with no custom domain, minimal SEO control, and no booking capability. Meanwhile, the Instagram presence shows real engagement and potential that isn't being leveraged through a proper website.</p>
 </div>
-<div style="margin-top:10px;font-size:12px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:1px">Overall Score</div>
+
+<div class="section">
+<h3>Category Scores</h3>
+<div class="cat-bar"><div class="label"><span>Website Quality</span><span>4 / 25</span></div><div class="track"><div class="fill fill-red" style="width:16%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>SEO Fundamentals</span><span>2 / 20</span></div><div class="track"><div class="fill fill-red" style="width:10%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Google Business Profile</span><span>7 / 20</span></div><div class="track"><div class="fill fill-red" style="width:35%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Social Media</span><span>8 / 15</span></div><div class="track"><div class="fill fill-orange" style="width:53%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>User Experience</span><span>3 / 10</span></div><div class="track"><div class="fill fill-red" style="width:30%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Online Reputation</span><span>4 / 10</span></div><div class="track"><div class="fill fill-orange" style="width:40%"></div></div></div>
+</div>
+
+<div class="section">
+<h3>Detailed Findings</h3>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Website Quality (4/25)</h4>
+<div class="finding"><h4>No Real Website — Using hub-24 Directory Page</h4><p>The primary web presence is on a hub-24 subdomain — a basic directory template with limited customization, no custom domain, and minimal control over performance, design, or functionality.</p></div>
+<div class="finding"><h4>Brand Fragmentation Across 3 Platforms</h4><p>The business has a hub-24 directory page, a separate WordPress blog, and social media profiles all operating independently. Google doesn't know which page to rank, and link equity is split instead of building authority on one domain.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">SEO Fundamentals (2/20)</h4>
+<div class="finding"><h4>No Custom Domain</h4><p>Using <code>elegancebarbershopfoley.hub-24.com</code> — a subdomain on someone else's platform. Google treats hub-24.com as the domain, not Elegance Barbershop. The URL is unprofessional and hard to remember.</p></div>
+<div class="finding"><h4>Zero SEO Control</h4><p>Title tags, meta descriptions, and URL structure are all controlled by the hub-24 template. No schema markup, no custom URLs, and the disconnected WordPress blog adds confusion rather than value.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Google Business Profile (7/20)</h4>
+<div class="finding warn"><h4>GBP Exists but Undermined by Fragmentation</h4><p>Google Business Profile is active and visible on Maps, but NAP information (209 W 9th Ave, Foley AL 36535) is spread across three platforms with potentially conflicting data. Multiple URLs create citation confusion.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Social Media (8/15)</h4>
+<div class="finding good"><h4>Strong Instagram Engagement</h4><p>Instagram is the standout asset with good engagement. Facebook page is also active. The social presence proves customers care about this shop — it just needs a proper website to direct that energy to.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">User Experience (3/10)</h4>
+<div class="finding"><h4>No Online Booking</h4><p>There's no way to book appointments online from any of the three platforms. A barbershop without online booking in 2026 is losing walk-up digital traffic to competitors.</p></div>
+<div class="finding"><h4>Thin, Inconsistent Content</h4><p>No shop story, no barber profiles, minimal photos, and no pricing information. The Latin barbershop identity — a real differentiator — is not being showcased.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Online Reputation (4/10)</h4>
+<div class="finding"><h4>No Review Generation System</h4><p>No system in place for driving Google reviews. No reviews integration on any platform despite Instagram proving customer engagement exists.</p></div>
+</div>
+
+<div class="section">
+<h3>Prioritized Recommendations</h3>
+
+<div class="rec">
+<h4>1. Register a Custom Domain</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>The primary web presence is on <code>elegancebarbershopfoley.hub-24.com</code> — a subdomain that builds zero domain authority for the business.</dd>
+<dt>Why It Matters</dt><dd>Google treats hub-24.com as the domain, not Elegance Barbershop. The URL looks unprofessional and is hard to remember or share.</dd>
+<dt>How to Fix</dt><dd>Register <code>elegancebarbershopfoley.com</code> or <code>elegancebarbershop.com</code> and build a proper website on it.</dd>
+<dt>Estimated Impact</dt><dd>Foundation for all future SEO work. Without this, no other optimization matters.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>2. Build a Unified Website</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>The business is fragmented across hub-24, WordPress, and social media with no single authoritative site.</dd>
+<dt>Why It Matters</dt><dd>Google doesn't know which page to rank. Customers get confused. Link equity is split across platforms instead of building authority on one domain.</dd>
+<dt>How to Fix</dt><dd>Consolidate everything into one custom-domain website. Redirect or deprecate the hub-24 page and WordPress blog. Use the website as the central hub linking to social profiles.</dd>
+<dt>Estimated Impact</dt><dd>Unified brand presence, consolidated SEO authority, and a professional first impression.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>3. Set Up Online Booking</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No way to book appointments online from any of the three platforms.</dd>
+<dt>Why It Matters</dt><dd>A barbershop without online booking in 2026 is losing walk-up digital traffic to competitors who make it easy.</dd>
+<dt>How to Fix</dt><dd>Integrate a booking system (Booksy, Square Appointments, or Vagaro) into the new consolidated website.</dd>
+<dt>Estimated Impact</dt><dd>Capture after-hours leads and compete with modern barbershops offering digital convenience.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>4. Update GBP &amp; Eliminate Fragmentation</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-med">Priority: This Week</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>GBP points to the hub-24 subdomain, and NAP data is inconsistent across three platforms.</dd>
+<dt>Why It Matters</dt><dd>Google penalizes NAP inconsistency. Multiple conflicting URLs hurt citation authority.</dd>
+<dt>How to Fix</dt><dd>Update GBP to point to the new custom domain. Redirect or shut down the hub-24 page and WordPress blog.</dd>
+<dt>Estimated Impact</dt><dd>Cleaner local signals and improved Google Maps ranking.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>5. Add LocalBusiness + BarberShop Schema Markup</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No structured data markup exists on any platform.</dd>
+<dt>Why It Matters</dt><dd>Schema markup helps Google display rich results with hours, ratings, and services directly in search results.</dd>
+<dt>How to Fix</dt><dd>Add JSON-LD BarberShop/LocalBusiness schema to the new website with business name, address, phone, hours, and services.</dd>
+<dt>Estimated Impact</dt><dd>Enhanced search appearance and improved click-through rates.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>6. Embed Instagram Feed &amp; Lean Into Latin Identity</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>Instagram engagement is strong but disconnected from any website. The Latin barbershop identity is a differentiator being wasted.</dd>
+<dt>Why It Matters</dt><dd>Leveraging existing social proof on a proper website converts visitors. Bilingual content and cultural branding capture an underserved market.</dd>
+<dt>How to Fix</dt><dd>Embed the Instagram feed on the new site. Write proper service descriptions with photos and pricing. Add bilingual content to showcase the Latin barbershop identity.</dd>
+<dt>Estimated Impact</dt><dd>Better conversion rates and new customer segments from bilingual search traffic.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>7. Build Citations &amp; Google Review System</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-low">Priority: Month 2-3</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No review generation system and weak/conflicting citations across directories.</dd>
+<dt>Why It Matters</dt><dd>Reviews and consistent citations are two of the strongest local ranking factors.</dd>
+<dt>How to Fix</dt><dd>Build consistent local citations across Yelp, Bing Places, Apple Maps — all pointing to one domain. Set up Google review generation with QR codes and follow-ups. Optimize for local keywords like "barbershop Foley AL" and "Latino barber Foley."</dd>
+<dt>Estimated Impact</dt><dd>Improved local pack rankings and stronger social proof driving conversions.</dd>
+</dl>
+</div>
+
 </div>
 </div>
-<div class="card" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
-<h2 style="color:#1a2332;font-size:20px;margin:0 0 12px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Executive Summary</h2>
-<p style="color:#555;line-height:1.8;margin:0;font-size:15px">Elegance Barbershop's online presence is fragmented across three separate platforms: a Hub-24 template site with no custom domain, a separate WordPress blog, and Instagram. This fragmentation dilutes SEO authority, confuses customers, and makes it nearly impossible to rank in Google. Instead of one strong website collecting all search equity, link juice is split three ways — and none of the platforms are optimized. For a Latin barbershop with active social engagement, consolidating into a single professional website would dramatically improve visibility.</p>
-</div>
-<div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Website Performance</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Custom Domain</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">The primary site lives on a Hub-24 subdomain, which cannot rank competitively. Customers cannot easily find or remember the URL.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Three Fragmented Platforms</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Web presence split across Hub-24, WordPress blog, and Instagram — diluting authority and confusing search engines.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Hub-24 Template Limitations</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Limited customization, slow loads, and generic design that does not reflect the Elegance brand.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">SEO Basics</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">Fragmented SEO Authority</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Search equity split across three domains. Google does not know which is the real website, so none rank well.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Custom Domain for SEO</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Without a custom domain, the business cannot build domain authority or rank for local keywords.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Blog Content Not Leveraged</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">WordPress blog content exists but is disconnected from the main site, wasting potential SEO value.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Content Quality</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Content Exists but Scattered</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Between Hub-24 and WordPress, content has been created but is spread where it cannot work together.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#27ae60;font-size:20px;min-width:24px">&#10004;</span><div><strong style="color:#1a2332">Active Instagram Presence</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">The shop maintains Instagram, showing work and engaging community — a strong asset.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Template Lacks Brand Identity</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">The Hub-24 template does not convey the Elegance brand or Latin barbershop culture.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Local SEO</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">Inconsistent Web Presence</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Multiple URLs create NAP inconsistency issues and confuse local search algorithms.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">GBP Needs Optimization</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">The GBP listing likely points to the Hub-24 subdomain, limiting click-through and trust.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#27ae60;font-size:20px;min-width:24px">&#10004;</span><div><strong style="color:#1a2332">Instagram Supports Local Discovery</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Active Instagram with location tags helps with local visibility among younger demographics.</p></div></div></div><div style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)"><h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Online Presence</h2><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#27ae60;font-size:20px;min-width:24px">&#10004;</span><div><strong style="color:#1a2332">Social Media Active</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Instagram shows consistent posting and community engagement.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#e74c3c;font-size:20px;min-width:24px">&#10008;</span><div><strong style="color:#1a2332">No Unified Digital Strategy</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Three disconnected platforms mean triple the maintenance with a fraction of the results.</p></div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><span style="color:#f39c12;font-size:20px;min-width:24px">&#9888;</span><div><strong style="color:#1a2332">No Online Booking</strong><p style="color:#555;margin:6px 0 0;line-height:1.6">Customers must call to book rather than scheduling through a unified website.</p></div></div></div>
-<div class="card" style="background:#fff;border-radius:10px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
-<h2 style="color:#1a2332;font-size:20px;margin:0 0 16px;padding-bottom:12px;border-bottom:2px solid #c9a84c">Prioritized Recommendations</h2>
-<div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">1</div><div><strong style="color:#1a2332">Consolidate to One Professional Website</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Merge Hub-24, WordPress blog, and booking into a single custom-domain website. Most impactful change for SEO.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">2</div><div><strong style="color:#1a2332">Register a Custom Domain</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Secure a branded domain like elegancebarbershopfoley.com and build all presence around it.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">3</div><div><strong style="color:#1a2332">Migrate Blog Content</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Move WordPress blog posts to the new unified site to consolidate SEO authority.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">4</div><div><strong style="color:#1a2332">Implement SEO Foundation</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fde8e8;color:#e74c3c">HIGH PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Add optimized title tags, meta descriptions, schema markup, and sitemap targeting Latin barbershop keywords.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">5</div><div><strong style="color:#1a2332">Integrate Instagram on Website</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Embed the active Instagram feed to showcase work and keep content fresh automatically.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">6</div><div><strong style="color:#1a2332">Add Online Booking</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Integrate appointment scheduling into the unified website.</p></div></div><div style="display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #eee"><div style="background:#c9a84c;color:#fff;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px">7</div><div><strong style="color:#1a2332">Build Citation Consistency</strong><span style="display:inline-block;margin-left:10px;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;background:#fef3cd;color:#856404">MEDIUM PRIORITY</span><p style="color:#555;margin:6px 0 0;line-height:1.6">Update all directories with the single new domain for strong NAP signals.</p></div></div>
-</div>
-<div style="background:linear-gradient(135deg,#1a2332 0%,#2c3e50 100%);border-radius:10px;padding:40px 32px;margin-bottom:24px;text-align:center">
-<h2 style="color:#c9a84c;font-size:22px;margin:0 0 14px">Ready for the Next Step?</h2>
-<p style="color:#ccc;line-height:1.8;margin:0 0 24px;max-width:560px;display:inline-block;font-size:15px">Schedule a <strong style="color:#fff">free, no-obligation consultation</strong> and we will walk through this report together, answer your questions, and build a clear action plan tailored to your business goals and budget.</p>
-<div><a href="mailto:jeriel.menendez@gmail.com?subject=Free%20Consultation%20-%20Elegance%20Barbershop" style="display:inline-block;background:#c9a84c;color:#1a2332;padding:14px 40px;border-radius:6px;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:0.5px">Schedule Free Consultation</a></div>
-<p style="color:#777;font-size:13px;margin:16px 0 0">or email directly: jeriel.menendez@gmail.com</p>
-</div>
-</div>
-<footer style="background:#1a2332;padding:28px;text-align:center">
-<div style="color:#c9a84c;font-size:13px;letter-spacing:3px;margin-bottom:8px;font-weight:600">MARKETING BUILT BY ALECK</div>
-<div style="color:#777;font-size:13px">jeriel.menendez@gmail.com</div>
-<div style="color:#555;font-size:11px;margin-top:8px">This report is confidential and prepared exclusively for Elegance Barbershop.</div>
+<footer>
+<p><strong>Marketing Built by Aleck</strong></p>
+<p>jeriel.menendez@gmail.com &bull; Foley, AL 36535</p>
+<p style="margin-top:8px;font-size:.8rem">This report was generated on April 4, 2026. SEO conditions change frequently; a follow-up audit is recommended in 90 days.</p>
 </footer>
 </body>
 </html>

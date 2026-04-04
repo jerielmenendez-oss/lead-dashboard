@@ -3,172 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEO Audit Report — Wayne's Barber Shop | Marketing Built by Aleck</title>
+<title>SEO Audit Report – Wayne's Barber Shop | Marketing Built by Aleck</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#f4f5f7;color:#2d3748;line-height:1.6}
-.header{background:linear-gradient(135deg,#1a2332 0%,#2a3a52 100%);color:#fff;padding:40px 0;text-align:center}
-.header .brand{font-size:14px;text-transform:uppercase;letter-spacing:4px;color:#c9a84c;margin-bottom:8px}
-.header .brand-name{font-size:28px;font-weight:700;margin-bottom:4px}
-.header .tagline{font-size:13px;color:#8a9bb5;letter-spacing:1px}
-.container{max-width:860px;margin:0 auto;padding:0 20px}
-.report-title{background:#fff;margin:-30px auto 0;border-radius:12px;padding:36px 40px;box-shadow:0 4px 24px rgba(0,0,0,.08);position:relative;z-index:2}
-.report-title h1{font-size:24px;color:#1a2332;margin-bottom:4px}
-.report-title .meta{font-size:14px;color:#718096;margin-bottom:2px}
-.report-title .meta a{color:#c9a84c;text-decoration:none}
-.score-section{display:flex;align-items:center;gap:36px;margin-top:24px;flex-wrap:wrap}
-.score-circle{width:120px;height:120px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff;font-weight:700;flex-shrink:0}
-.score-circle .number{font-size:38px;line-height:1}
-.score-circle .label{font-size:11px;text-transform:uppercase;letter-spacing:1px;opacity:.9}
-.score-red{background:linear-gradient(135deg,#e53e3e,#c53030)}
-.score-orange{background:linear-gradient(135deg,#dd6b20,#c05621)}
-.score-green{background:linear-gradient(135deg,#38a169,#2f855a)}
-.score-desc h3{font-size:16px;color:#1a2332;margin-bottom:6px}
-.score-desc p{font-size:14px;color:#718096}
-.section{background:#fff;border-radius:12px;padding:32px 40px;margin:20px auto;box-shadow:0 2px 12px rgba(0,0,0,.05)}
-.section h2{font-size:20px;color:#1a2332;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #edf2f7}
-.section h2 .accent{color:#c9a84c}
-.finding{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid #f7fafc}
-.finding:last-child{border-bottom:none}
-.indicator{width:14px;height:14px;border-radius:50%;flex-shrink:0;margin-top:4px}
-.ind-red{background:#e53e3e}
-.ind-yellow{background:#ecc94b}
-.ind-green{background:#38a169}
-.finding-content{flex:1}
-.finding-content strong{color:#1a2332;font-size:15px}
-.finding-content p{font-size:13px;color:#718096;margin-top:2px}
-.finding-score{font-size:13px;font-weight:600;color:#1a2332;white-space:nowrap}
-.rec-list{counter-reset:rec}
-.rec-list li{list-style:none;padding:14px 0 14px 48px;border-bottom:1px solid #f7fafc;position:relative;font-size:14px}
-.rec-list li::before{counter-increment:rec;content:counter(rec);position:absolute;left:0;top:12px;width:32px;height:32px;background:#1a2332;color:#c9a84c;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
-.rec-list li strong{color:#1a2332}
-.cta-section{background:linear-gradient(135deg,#1a2332,#2a3a52);color:#fff;border-radius:12px;padding:40px;margin:20px auto;text-align:center}
-.cta-section h2{font-size:22px;margin-bottom:10px;color:#fff}
-.cta-section p{color:#8a9bb5;font-size:15px;margin-bottom:20px}
-.cta-btn{display:inline-block;background:#c9a84c;color:#1a2332;padding:14px 36px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none}
-.footer{text-align:center;padding:32px 20px;font-size:13px;color:#a0aec0}
-.footer a{color:#c9a84c;text-decoration:none}
-.exec-summary{background:#fffbeb;border-left:4px solid #c9a84c;padding:20px 24px;border-radius:0 8px 8px 0;margin-bottom:8px}
-.exec-summary p{font-size:14px;color:#5a4e2f}
-@media(max-width:640px){.header .brand-name{font-size:22px}.report-title{padding:24px 20px}.section{padding:24px 20px}.score-section{flex-direction:column;align-items:flex-start;gap:20px}.score-circle{width:100px;height:100px}.score-circle .number{font-size:30px}.cta-section{padding:28px 20px}}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e;background:#f8f9fa;line-height:1.6}
+.container{max-width:900px;margin:0 auto;padding:20px}
+header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:40px 0;text-align:center}
+header h1{font-size:1.1rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;opacity:.85;margin-bottom:8px}
+header h2{font-size:2rem;font-weight:700;margin-bottom:4px}
+header .date{opacity:.7;font-size:.9rem}
+.score-hero{text-align:center;padding:40px 20px;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin:30px 0}
+.score-circle{width:140px;height:140px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;color:#fff;margin-bottom:12px}
+.score-red{background:linear-gradient(135deg,#e74c3c,#c0392b)}
+.score-orange{background:linear-gradient(135deg,#e67e22,#f39c12)}
+.score-yellow{background:linear-gradient(135deg,#f1c40f,#f39c12)}
+.score-green{background:linear-gradient(135deg,#27ae60,#2ecc71)}
+.score-label{font-size:1.1rem;color:#555;margin-bottom:16px}
+.executive-summary{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:30px}
+.executive-summary h3{font-size:1.3rem;margin-bottom:12px;color:#1a1a2e}
+.executive-summary p{color:#444;font-size:1rem}
+.section{background:#fff;padding:30px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.08);margin-bottom:30px}
+.section h3{font-size:1.3rem;margin-bottom:20px;color:#1a1a2e;border-bottom:2px solid #eee;padding-bottom:10px}
+.cat-bar{margin-bottom:16px}
+.cat-bar .label{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:4px;font-weight:600}
+.cat-bar .track{height:24px;background:#e9ecef;border-radius:12px;overflow:hidden}
+.cat-bar .fill{height:100%;border-radius:12px;display:flex;align-items:center;padding-left:10px;font-size:.8rem;color:#fff;font-weight:600}
+.fill-red{background:linear-gradient(90deg,#c0392b,#e74c3c)}
+.fill-orange{background:linear-gradient(90deg,#e67e22,#f39c12)}
+.fill-yellow{background:linear-gradient(90deg,#f1c40f,#e67e22)}
+.fill-green{background:linear-gradient(90deg,#27ae60,#2ecc71)}
+.finding{padding:16px;border-left:4px solid #e74c3c;background:#fdf2f2;border-radius:0 8px 8px 0;margin-bottom:12px}
+.finding.warn{border-color:#f39c12;background:#fef9e7}
+.finding.good{border-color:#27ae60;background:#eafaf1}
+.finding h4{font-size:1rem;margin-bottom:4px}
+.finding p{font-size:.9rem;color:#555}
+.rec{padding:20px;border:1px solid #e0e0e0;border-radius:10px;margin-bottom:16px}
+.rec h4{font-size:1.05rem;margin-bottom:10px;color:#0f3460}
+.rec .meta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
+.rec .tag{font-size:.8rem;padding:3px 10px;border-radius:20px;font-weight:600}
+.tag-high{background:#fde8e8;color:#c0392b}
+.tag-med{background:#fef3cd;color:#856404}
+.tag-low{background:#d4edda;color:#155724}
+.rec dl{margin:0}
+.rec dt{font-weight:700;font-size:.9rem;margin-top:8px;color:#333}
+.rec dd{font-size:.9rem;color:#555;margin-left:0}
+footer{text-align:center;padding:40px 20px;color:#777;font-size:.85rem;border-top:2px solid #eee;margin-top:20px}
+footer strong{color:#1a1a2e}
+@media print{body{background:#fff}.container{padding:0}.section,.score-hero,.executive-summary{box-shadow:none;border:1px solid #ddd}}
+@media(max-width:600px){header h2{font-size:1.4rem}.score-circle{width:110px;height:110px;font-size:2.4rem}.rec .meta{flex-direction:column;gap:6px}}
 </style>
 </head>
 <body>
-<div class="header">
+<header>
 <div class="container">
-<div class="brand">Professional SEO Audit</div>
-<div class="brand-name">Marketing Built by Aleck</div>
-<div class="tagline">Data-Driven Digital Marketing Solutions</div>
+<h1>Marketing Built by Aleck</h1>
+<h2>SEO Audit Report: Wayne's Barber Shop</h2>
+<p class="date">April 4, 2026 &bull; Gulf Shores, AL</p>
 </div>
-</div>
+</header>
 <div class="container">
-<div class="report-title">
-<div class="meta">Prepared: April 4, 2026</div>
-<h1>Wayne's Barber Shop</h1>
-<div class="meta">Gulf Shores, AL &nbsp;|&nbsp; Phone: (251) 968-7738</div>
-<div class="meta">Website: <strong style="color:#e53e3e;">None — No website detected</strong></div>
-<div class="score-section">
-<div class="score-circle score-red">
-<span class="number">95</span>
-<span class="label">out of 100</span>
+
+<div class="score-hero">
+<div class="score-circle score-red">6</div>
+<div class="score-label">Overall SEO Score out of 100</div>
+<p style="color:#e74c3c;font-weight:700;font-size:1.1rem">Red — Critical</p>
 </div>
-<div class="score-desc">
-<h3>Critical Opportunity Score</h3>
-<p>A score of 95 means this business has massive untapped digital potential. Wayne's Barber Shop is virtually invisible online — no website, no social media — in one of Alabama's top tourist destinations. This represents an enormous opportunity for growth.</p>
-</div>
-</div>
+
+<div class="executive-summary">
+<h3>Executive Summary</h3>
+<p>Wayne's Barber Shop has virtually zero online presence. There is no website, no Facebook page, and no social media of any kind. The only digital footprint is a basic Google Business Profile and a Yellow Pages listing. For a barbershop in a high-traffic tourist destination like Gulf Shores, this level of invisibility means massive lost revenue from visitors who search "barber near me" every single day.</p>
 </div>
 
 <div class="section">
-<h2><span class="accent">01.</span> Executive Summary</h2>
-<div class="exec-summary">
-<p><strong>Wayne's Barber Shop in Gulf Shores has zero online presence.</strong> There is no website, no social media profiles, and only a basic Google Business Profile. In a town that welcomes over 6 million tourists annually, this barbershop is completely invisible to the vast majority of potential customers searching online. Every day without a digital presence is revenue left on the table.</p>
-</div>
-</div>
-
-<div class="section">
-<h2><span class="accent">02.</span> Detailed Findings</h2>
-
-<h3 style="font-size:16px;color:#c9a84c;margin:20px 0 12px;">Website Performance</h3>
-<div class="finding">
-<div class="indicator ind-red"></div>
-<div class="finding-content">
-<strong>No Website Exists</strong>
-<p>Wayne's Barber Shop has no website whatsoever. Potential customers searching "barber shop Gulf Shores" cannot find any owned web property for this business. This is the single largest gap in their digital presence.</p>
-</div>
-<div class="finding-score">35 / 35</div>
-</div>
-<div class="finding">
-<div class="indicator ind-red"></div>
-<div class="finding-content">
-<strong>No Mobile Experience</strong>
-<p>With no website, there is no mobile experience. Over 75% of local searches happen on mobile devices — tourists searching on their phones will never find this business.</p>
-</div>
-<div class="finding-score">15 / 15</div>
-</div>
-
-<h3 style="font-size:16px;color:#c9a84c;margin:20px 0 12px;">Local SEO & Google Business Profile</h3>
-<div class="finding">
-<div class="indicator ind-yellow"></div>
-<div class="finding-content">
-<strong>Basic Google Business Profile</strong>
-<p>A GBP listing exists but lacks optimization — limited photos, incomplete service descriptions, no posts, and no review response strategy. The profile does minimal work to convert searchers into customers.</p>
-</div>
-<div class="finding-score">12 / 15</div>
-</div>
-
-<h3 style="font-size:16px;color:#c9a84c;margin:20px 0 12px;">Online Presence & Social Media</h3>
-<div class="finding">
-<div class="indicator ind-red"></div>
-<div class="finding-content">
-<strong>Zero Social Media Presence</strong>
-<p>No Facebook, Instagram, or any other social media accounts were found. In the barber/salon industry, visual platforms like Instagram are essential for showcasing work and attracting new clients.</p>
-</div>
-<div class="finding-score">13 / 15</div>
-</div>
-
-<h3 style="font-size:16px;color:#c9a84c;margin:20px 0 12px;">Market Opportunity</h3>
-<div class="finding">
-<div class="indicator ind-red"></div>
-<div class="finding-content">
-<strong>Tourist Market Completely Untapped</strong>
-<p>Gulf Shores attracts millions of tourists year-round. Visitors actively search for services like barber shops. Without any online presence, Wayne's relies entirely on drive-by foot traffic and word of mouth, missing the vast tourist market.</p>
-</div>
-<div class="finding-score">7 / 10</div>
-</div>
-<div class="finding">
-<div class="indicator ind-green"></div>
-<div class="finding-content">
-<strong>Proximity Advantage (15mi service area)</strong>
-<p>Located within a strong service radius in Gulf Shores, well-positioned to capture local and tourist demand — if discoverable online.</p>
-</div>
-<div class="finding-score">7 / 10</div>
-</div>
+<h3>Category Scores</h3>
+<div class="cat-bar"><div class="label"><span>Website Quality</span><span>0 / 25</span></div><div class="track"><div class="fill fill-red" style="width:2%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>SEO Fundamentals</span><span>0 / 20</span></div><div class="track"><div class="fill fill-red" style="width:2%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Google Business Profile</span><span>4 / 20</span></div><div class="track"><div class="fill fill-red" style="width:20%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Social Media</span><span>0 / 15</span></div><div class="track"><div class="fill fill-red" style="width:2%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>User Experience</span><span>0 / 10</span></div><div class="track"><div class="fill fill-red" style="width:2%"></div></div></div>
+<div class="cat-bar"><div class="label"><span>Online Reputation</span><span>2 / 10</span></div><div class="track"><div class="fill fill-red" style="width:20%"></div></div></div>
 </div>
 
 <div class="section">
-<h2><span class="accent">03.</span> Prioritized Recommendations</h2>
-<ol class="rec-list">
-<li><strong>Build a professional, mobile-first website</strong> — A modern site with services, pricing, location map, hours, and online booking. This is the #1 priority and will immediately make the business discoverable.</li>
-<li><strong>Optimize Google Business Profile</strong> — Add professional photos, complete service list, business description with keywords, and enable messaging. Post weekly updates.</li>
-<li><strong>Set up Instagram and Facebook</strong> — Showcase haircuts, the shop atmosphere, and Gulf Shores lifestyle content. Visual content drives barber shop discovery.</li>
-<li><strong>Implement local SEO strategy</strong> — Target keywords like "barber shop Gulf Shores," "men's haircut Gulf Shores AL," and "barber near me." Build citations on Yelp, Apple Maps, and Bing Places.</li>
-<li><strong>Add online booking capability</strong> — Tourists and locals alike expect to book appointments online. Integrate a simple booking system into the website.</li>
-<li><strong>Launch a review generation campaign</strong> — Actively ask satisfied customers to leave Google reviews. Respond to every review. Aim for 50+ reviews within 6 months.</li>
-<li><strong>Create tourist-targeted content</strong> — Blog posts or pages like "Best Barber Shop Near Gulf Shores Beach" to capture tourist search traffic.</li>
-</ol>
+<h3>Detailed Findings</h3>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Website Quality (0/25)</h4>
+<div class="finding"><h4>No Website Exists</h4><p>There is no website at all. Potential customers searching online hit a dead end. 97% of consumers search online for local businesses. Without a website, Wayne's is invisible to every tourist and new resident searching for a barbershop in Gulf Shores.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">SEO Fundamentals (0/20)</h4>
+<div class="finding"><h4>No SEO Footprint</h4><p>With no website, there is nothing for Google to index beyond the GBP listing. Wayne's cannot rank for any search terms — "barber Gulf Shores," "haircut near me," "men's haircut Gulf Shores" — all of which have strong local intent and purchase-ready searchers.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Content Quality</h4>
+<div class="finding"><h4>No Owned Content</h4><p>There is no owned content anywhere online. No service menu, no photos, no story about the business. Content builds trust. Tourists especially rely on photos and descriptions to choose a barbershop in an unfamiliar town.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Google Business Profile (4/20)</h4>
+<div class="finding warn"><h4>Basic GBP Listing Exists</h4><p>The Google Business Profile exists but is likely under-optimized. There is only one known citation (Yellow Pages). No presence on Apple Maps, Bing Places, or other directories. Without a website backing up the GBP, Wayne's ranks far below competitors in the local pack.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Social Media (0/15)</h4>
+<div class="finding"><h4>Zero Social Media Presence</h4><p>There is absolutely no social media presence — no Facebook, no Instagram, nothing. Social media is free visibility. Instagram especially drives barbershop business through before/after photos. Facebook is where locals check hours and reviews. Gulf Shores tourists check social media to vet businesses.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">User Experience (0/10)</h4>
+<div class="finding"><h4>No Digital Experience Available</h4><p>Without a website or social media, there is no user experience to evaluate. No online booking exists. Customers have no way to learn about services, see photos, check hours, or book online.</p></div>
+
+<h4 style="margin:16px 0 10px;color:#555;text-transform:uppercase;font-size:.85rem;letter-spacing:1px">Online Reputation (2/10)</h4>
+<div class="finding"><h4>Minimal Reputation Signals</h4><p>Reviews exist only on the GBP listing. No testimonials on a website, no social proof beyond basic Google reviews. Tourists make decisions based on online reputation — this is a significant gap.</p></div>
 </div>
 
-<div class="cta-section">
-<h2>Ready to Get Found Online?</h2>
-<p>Wayne's Barber Shop has incredible untapped potential. Let's build a digital presence that matches the quality of your cuts.</p>
-<p style="color:#c9a84c;font-weight:600;font-size:18px;">Schedule Your Free Consultation</p>
-<p style="color:#fff;margin-top:12px;">Contact Aleck at <a href="mailto:jeriel.menendez@gmail.com" style="color:#c9a84c;">jeriel.menendez@gmail.com</a></p>
+<div class="section">
+<h3>Prioritized Recommendations</h3>
+
+<div class="rec">
+<h4>1. URGENT — Build a Website</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>There is no website at all. Potential customers searching online hit a dead end.</dd>
+<dt>Why It Matters</dt><dd>97% of consumers search online for local businesses. Without a website, Wayne's is invisible to every tourist and new resident searching for a barbershop in Gulf Shores. Competitors with websites capture 100% of this traffic.</dd>
+<dt>How to Fix</dt><dd>Build a simple, mobile-first website with online booking, services and pricing, location/hours, and photos of the shop. A single-page site is enough to start.</dd>
+<dt>Estimated Impact</dt><dd>Capture 50-100+ new monthly visitors immediately.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>2. URGENT — Create Facebook and Instagram Pages</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>There is absolutely no social media presence — no Facebook, no Instagram, nothing.</dd>
+<dt>Why It Matters</dt><dd>Social media is free visibility. Instagram especially drives barbershop business through before/after photos. Facebook is where locals check hours and reviews. Gulf Shores tourists check social media to vet businesses.</dd>
+<dt>How to Fix</dt><dd>Create Facebook and Instagram business pages immediately. Post photos of cuts regularly (3x/week). Enable booking through Facebook if possible.</dd>
+<dt>Estimated Impact</dt><dd>Immediate free visibility and social proof for the business.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>3. HIGH — Optimize Google Business Profile</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-high">Priority: Immediate</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>The GBP exists but is likely under-optimized with minimal information and no website link.</dd>
+<dt>Why It Matters</dt><dd>Local SEO is how "near me" searches work. With minimal citations and no website backing up the GBP, Wayne's ranks far below competitors in the local pack.</dd>
+<dt>How to Fix</dt><dd>Fully optimize the GBP with photos, services, hours, keyword-rich business description, and regular posts. Submit to 30+ local directories with consistent NAP data.</dd>
+<dt>Estimated Impact</dt><dd>Improved local pack rankings and visibility for "barber Gulf Shores" searches.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>4. HIGH — Set Up Online Booking</h4>
+<div class="meta"><span class="tag tag-high">High Impact</span><span class="tag tag-med">Priority: This Week</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No online booking system exists. Customers must call or walk in.</dd>
+<dt>Why It Matters</dt><dd>Tourists especially want to book ahead. Online booking reduces friction and captures appointments 24/7.</dd>
+<dt>How to Fix</dt><dd>Implement a booking tool like Booksy or Square Appointments and integrate it with the new website and social media pages.</dd>
+<dt>Estimated Impact</dt><dd>Increased appointment bookings, especially from tourists planning ahead.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>5. MEDIUM — Build Local Citations</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>Only one known citation (Yellow Pages). No presence on Apple Maps, Bing Places, or other directories.</dd>
+<dt>Why It Matters</dt><dd>Citation volume and consistency are key local ranking factors. More citations mean more signals to Google that the business is legitimate and active.</dd>
+<dt>How to Fix</dt><dd>Submit to Yelp, Bing Places, Apple Maps, MapQuest, and 25+ other directories with consistent NAP data.</dd>
+<dt>Estimated Impact</dt><dd>Stronger local search signals and improved map pack rankings.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>6. MEDIUM — Collect and Respond to Google Reviews</h4>
+<div class="meta"><span class="tag tag-med">Medium Impact</span><span class="tag tag-med">Priority: This Month</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>Limited Google reviews reduce trust signals and local ranking power.</dd>
+<dt>Why It Matters</dt><dd>Reviews are a top local ranking factor and the primary trust signal for new customers, especially tourists.</dd>
+<dt>How to Fix</dt><dd>Ask every satisfied customer for a review. Aim for 50+ reviews within 6 months. Respond to every review.</dd>
+<dt>Estimated Impact</dt><dd>Higher local rankings and improved conversion from search to visit.</dd>
+</dl>
+</div>
+
+<div class="rec">
+<h4>7. LOW — Launch Google Ads for Tourist Season</h4>
+<div class="meta"><span class="tag tag-low">Low Impact</span><span class="tag tag-low">Priority: This Quarter</span></div>
+<dl>
+<dt>What's Wrong</dt><dd>No paid advertising to capture high-intent tourist searches.</dd>
+<dt>Why It Matters</dt><dd>"Barber Gulf Shores" keywords will drive immediate bookings during peak months when organic rankings are still building.</dd>
+<dt>How to Fix</dt><dd>Set up a small Google Ads budget targeting barbershop-related keywords in the Gulf Shores area during tourist season.</dd>
+<dt>Estimated Impact</dt><dd>Immediate visibility and bookings while organic SEO builds over time.</dd>
+</dl>
+</div>
+
 </div>
 </div>
-<div class="footer">
-<p><strong>Marketing Built by Aleck</strong> &nbsp;|&nbsp; <a href="mailto:jeriel.menendez@gmail.com">jeriel.menendez@gmail.com</a></p>
-<p style="margin-top:4px;">&copy; 2026 Marketing Built by Aleck. This report is confidential and prepared exclusively for Wayne's Barber Shop.</p>
-</div>
+<footer>
+<p><strong>Marketing Built by Aleck</strong></p>
+<p>jeriel.menendez@gmail.com &bull; Foley, AL 36535</p>
+<p style="margin-top:8px;font-size:.8rem">This report was generated on April 4, 2026. SEO conditions change frequently; a follow-up audit is recommended in 90 days.</p>
+</footer>
 </body>
 </html>
