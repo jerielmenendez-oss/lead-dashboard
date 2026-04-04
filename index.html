@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Pipeline Dashboard — Marketing Built by Aleck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e5e5e5; }
+
+        .header { background: #111; border-bottom: 1px solid #222; padding: 20px 24px; position: sticky; top: 0; z-index: 100; }
+        .header h1 { font-size: 20px; font-weight: 800; }
+        .header h1 span { color: #3b82f6; }
+        .header .subtitle { font-size: 13px; color: #888; margin-top: 4px; }
+
+        .stats-bar { display: flex; gap: 16px; padding: 16px 24px; background: #111; border-bottom: 1px solid #222; flex-wrap: wrap; }
+        .stat { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 8px; padding: 12px 16px; min-width: 120px; }
+        .stat .number { font-size: 24px; font-weight: 800; color: #fff; }
+        .stat .label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+        .stat.fire .number { color: #ef4444; }
+        .stat.hot .number { color: #f97316; }
+        .stat.warm .number { color: #eab308; }
+
+        .filters { padding: 12px 24px; display: flex; gap: 8px; flex-wrap: wrap; background: #0f0f0f; border-bottom: 1px solid #1a1a1a; }
+        .filter-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid #333; background: transparent; color: #aaa; font-size: 12px; cursor: pointer; font-family: inherit; }
+        .filter-btn:hover { border-color: #555; color: #fff; }
+        .filter-btn.active { background: #3b82f6; border-color: #3b82f6; color: #fff; }
+
+        .search-bar { padding: 12px 24px; background: #0f0f0f; }
+        .search-bar input { width: 100%; padding: 10px 16px; border-radius: 8px; border: 1px solid #333; background: #1a1a1a; color: #fff; font-size: 14px; font-family: inherit; outline: none; }
+        .search-bar input:focus { border-color: #3b82f6; }
+
+        .table-container { padding: 0 24px 24px; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 13px; }
+        thead th { background: #1a1a1a; padding: 10px 12px; text-align: left; font-weight: 600; color: #888; text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px; position: sticky; top: 0; border-bottom: 2px solid #333; white-space: nowrap; }
+        tbody tr { border-bottom: 1px solid #1a1a1a; transition: background 0.15s; }
+        tbody tr:hover { background: #151515; }
+        tbody td { padding: 12px; vertical-align: top; }
+
+        .score-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-weight: 700; font-size: 12px; }
+        .score-fire { background: #ef444420; color: #ef4444; }
+        .score-hot { background: #f9731620; color: #f97316; }
+        .score-warm { background: #eab30820; color: #eab308; }
+        .score-cool { background: #3b82f620; color: #3b82f6; }
+        .score-skip { background: #33333340; color: #666; }
+
+        .tier-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .tier-fire { background: #ef4444; color: #fff; }
+        .tier-hot { background: #f97316; color: #fff; }
+        .tier-warm { background: #eab308; color: #000; }
+        .tier-cool { background: #3b82f6; color: #fff; }
+
+        .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+        .status-done { background: #22c55e; }
+        .status-pending { background: #666; }
+        .status-live { background: #3b82f6; }
+
+        .link { color: #3b82f6; text-decoration: none; }
+        .link:hover { text-decoration: underline; }
+
+        .problems { font-size: 11px; color: #999; max-width: 250px; }
+        .problems li { margin-bottom: 2px; }
+
+        .phone-link { color: #22c55e; text-decoration: none; font-weight: 600; }
+        .address-link { color: #eab308; text-decoration: none; font-size: 12px; }
+        .address-link:hover { text-decoration: underline; }
+
+        .business-name { font-weight: 700; color: #fff; font-size: 14px; }
+        .business-type { font-size: 11px; color: #888; margin-top: 2px; }
+
+        .no-website { color: #ef4444; font-weight: 600; font-size: 11px; }
+
+        .actions { display: flex; gap: 6px; flex-wrap: wrap; }
+        .action-btn { padding: 4px 10px; border-radius: 6px; font-size: 11px; text-decoration: none; font-weight: 600; border: 1px solid; }
+        .action-demo { background: #3b82f620; color: #3b82f6; border-color: #3b82f640; }
+        .action-audit { background: #8b5cf620; color: #8b5cf6; border-color: #8b5cf640; }
+        .action-call { background: #22c55e20; color: #22c55e; border-color: #22c55e40; }
+        .action-map { background: #eab30820; color: #eab308; border-color: #eab30840; }
+
+        .last-updated { text-align: center; padding: 20px; color: #555; font-size: 12px; }
+
+        @media (max-width: 768px) {
+            .stats-bar { gap: 8px; }
+            .stat { min-width: 80px; padding: 8px 12px; }
+            .stat .number { font-size: 18px; }
+            table { font-size: 12px; }
+            .header { padding: 16px; }
+            .table-container { padding: 0 8px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Marketing <span>Built by Aleck</span> — Lead Pipeline</h1>
+        <div class="subtitle">Automated lead generation dashboard. Updated by AI agents.</div>
+    </div>
+
+    <div class="stats-bar" id="stats-bar">
+        <div class="stat"><div class="number" id="stat-total">0</div><div class="label">Total Leads</div></div>
+        <div class="stat fire"><div class="number" id="stat-fire">0</div><div class="label">Fire</div></div>
+        <div class="stat hot"><div class="number" id="stat-hot">0</div><div class="label">Hot</div></div>
+        <div class="stat warm"><div class="number" id="stat-warm">0</div><div class="label">Warm</div></div>
+        <div class="stat"><div class="number" id="stat-audited">0</div><div class="label">Audited</div></div>
+        <div class="stat"><div class="number" id="stat-demos">0</div><div class="label">Demos</div></div>
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterLeads('all')">All</button>
+        <button class="filter-btn" onclick="filterLeads('fire')">Fire (80+)</button>
+        <button class="filter-btn" onclick="filterLeads('hot')">Hot (60-79)</button>
+        <button class="filter-btn" onclick="filterLeads('warm')">Warm (40-59)</button>
+        <button class="filter-btn" onclick="filterLeads('no-website')">No Website</button>
+        <button class="filter-btn" onclick="filterLeads('has-demo')">Has Demo</button>
+        <button class="filter-btn" onclick="filterLeads('has-audit')">Has Audit</button>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search by business name, city, or type..." oninput="searchLeads(this.value)">
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Business</th>
+                    <th>Contact</th>
+                    <th>Score</th>
+                    <th>Website</th>
+                    <th>Problems</th>
+                    <th>Audit</th>
+                    <th>Demo</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="leads-table">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="last-updated" id="last-updated"></div>
+
+    <script>
+    // ============================================================
+    // LEAD DATA — Agents update this array when they process leads
+    // ============================================================
+    const LEADS = [
+        {
+            name: "Gulf Coast Auto Repair",
+            type: "Auto Repair",
+            address: "11426 County Road 65, Foley, AL 36535",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "(251) 952-1414",
+            email: "gulfcoastauto65@gmail.com",
+            website: "http://www.gulfcoastautorepair.net/",
+            owner: "Unknown",
+            googleRating: "N/A",
+            reviewCount: "N/A",
+            score: 88,
+            tier: "fire",
+            problems: ["2000s-era website", "No HTTPS", "Shows 'Closed' status", "Not mobile-friendly", "Broken social links (/123)", "'Click to edit' placeholders visible"],
+            auditUrl: "audits/gulf-coast-auto-repair-audit.md",
+            auditScore: 32,
+            demoUrl: "https://jerielmenendez-oss.github.io/lead-dashboard/gulf-coast-auto-repair/",
+            pitch: "Your website shows 'Closed' to anyone who visits, and browsers flag it as not secure. I built you a new one — take a look.",
+            dateScraped: "2026-04-04",
+            hasAudit: true,
+            hasDemo: true,
+            gbp: "Unknown",
+            facebook: "Broken (/123)",
+            instagram: "NONE"
+        },
+        {
+            name: "Foley Service Center, LLC",
+            type: "Auto Repair",
+            address: "Foley, AL",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "Unknown",
+            email: "Unknown",
+            website: "https://site-i7ew1qx7q.godaddysites.com/",
+            owner: "Unknown",
+            googleRating: "N/A",
+            reviewCount: "N/A",
+            score: 85,
+            tier: "fire",
+            problems: ["Free GoDaddy site with ads", "No custom domain", "URL is unmemorizable", "Generic template", "No reviews on site"],
+            auditUrl: null,
+            auditScore: null,
+            demoUrl: "https://jerielmenendez-oss.github.io/lead-dashboard/foley-service-center/",
+            pitch: "Your website has GoDaddy ads running on it — you're paying for a site that advertises someone else. I built you a real one.",
+            dateScraped: "2026-04-04",
+            hasAudit: false,
+            hasDemo: true,
+            gbp: "Unknown",
+            facebook: "NONE",
+            instagram: "NONE"
+        },
+        {
+            name: "Angel's Automotor LLC",
+            type: "Auto Repair",
+            address: "Foley, AL",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "(251) 233-8523",
+            email: "Unknown",
+            website: "https://www.angelsautomotorllc.com/",
+            owner: "Unknown",
+            score: 68,
+            tier: "hot",
+            problems: ["Generic Duda template", "Outdated content (says 12 years, open since 2008)", "No online booking", "No Google reviews widget"],
+            auditUrl: null, auditScore: null, demoUrl: "https://jerielmenendez-oss.github.io/lead-dashboard/angels-automotor/",
+            pitch: "Your site says 12 years experience but you've been open since 2008 — that's 18 years! Let me build something that matches how established you are.",
+            dateScraped: "2026-04-04", hasAudit: false, hasDemo: true,
+            gbp: "Unknown", facebook: "NONE", instagram: "NONE"
+        },
+        {
+            name: "Cutter's Corner",
+            type: "Beauty Salon",
+            address: "7857 Highway 59, Foley, AL 36535",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "(251) 987-0999",
+            email: "Unknown",
+            website: "https://www.mycutterscorner.com/",
+            owner: "Unknown",
+            score: 62,
+            tier: "hot",
+            problems: ["Generic template design", "No online booking", "No Instagram feed", "No before/after gallery"],
+            auditUrl: null, auditScore: null, demoUrl: "https://jerielmenendez-oss.github.io/lead-dashboard/cutters-corner/",
+            pitch: "You're the most stylish salon in Foley but your website doesn't show it. I built you something that matches your work.",
+            dateScraped: "2026-04-04", hasAudit: false, hasDemo: true,
+            gbp: "Yes", facebook: "https://www.facebook.com/mycutterscorner", instagram: "NONE"
+        },
+        {
+            name: "Très Jolie Salon Lofts",
+            type: "Salon Suites",
+            address: "Foley, AL",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "Unknown",
+            email: "Unknown",
+            website: "https://www.tresjoliesalonlofts.com/",
+            owner: "Unknown",
+            score: 52,
+            tier: "warm",
+            problems: ["Wix template", "Brand fragmentation (2 sites)", "No online booking", "Generic for luxury brand"],
+            auditUrl: null, auditScore: null, demoUrl: "https://jerielmenendez-oss.github.io/lead-dashboard/tres-jolie-salon-lofts/",
+            pitch: "You've got two separate websites splitting your brand. Let me combine everything into one premium site.",
+            dateScraped: "2026-04-04", hasAudit: false, hasDemo: true,
+            gbp: "Unknown", facebook: "NONE", instagram: "NONE"
+        },
+        {
+            name: "Doc's Seafood Foley",
+            type: "Restaurant",
+            address: "Foley, AL",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "Unknown",
+            email: "Unknown",
+            website: "https://docsseafoodfoley.com/",
+            owner: "Unknown",
+            score: 45,
+            tier: "warm",
+            problems: ["Menus are PDF downloads", "No online ordering", "No social feed", "Basic WordPress design"],
+            auditUrl: null, auditScore: null, demoUrl: null,
+            pitch: "Your menus are PDFs that customers have to download — most people just leave. Let me put your menu right on the page.",
+            dateScraped: "2026-04-04", hasAudit: false, hasDemo: false,
+            gbp: "Unknown", facebook: "NONE", instagram: "NONE"
+        },
+        {
+            name: "Hairs 2 Ya Salon",
+            type: "Hair Salon",
+            address: "1120 S McKenzie St, Foley, AL 36535",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "(251) 943-1630",
+            email: "Unknown",
+            website: null,
+            owner: "Unknown",
+            score: 92,
+            tier: "fire",
+            problems: ["NO WEBSITE", "Facebook page only", "No way for new customers to find them online"],
+            auditUrl: null, auditScore: null, demoUrl: null,
+            pitch: "You don't have a website — anyone searching 'hair salon Foley' can't find you. I already built you one.",
+            dateScraped: "2026-04-04", hasAudit: false, hasDemo: false,
+            gbp: "Yes", facebook: "https://www.facebook.com/Hairs2YaSalon/", instagram: "NONE"
+        },
+        {
+            name: "Southern Roots Hair Salon",
+            type: "Hair Salon",
+            address: "101 W Fig Ave, Foley, AL 36535",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "(251) 597-0490",
+            email: "Unknown",
+            website: null,
+            owner: "Unknown",
+            score: 92,
+            tier: "fire",
+            problems: ["NO WEBSITE", "Facebook page only", "Walk-ins welcome but can't be found online"],
+            auditUrl: null, auditScore: null, demoUrl: null,
+            pitch: "You rely on walk-ins but have no website — I built you one so people can find you on Google.",
+            dateScraped: "2026-04-04", hasAudit: false, hasDemo: false,
+            gbp: "Yes", facebook: "https://www.facebook.com/SouthernRootsFoley/", instagram: "NONE"
+        },
+        {
+            name: "Eduardo's Barbershop",
+            type: "Barbershop",
+            address: "8735 Hwy 59 Ste A, Foley, AL 36535",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "(251) 494-8200",
+            email: "Unknown",
+            website: "https://eduardo-s-barbershop.placeid.site/",
+            owner: "Eduardo",
+            score: 85,
+            tier: "fire",
+            problems: ["Free Google placeholder site (placeid.site)", "Not a real website", "No services listed", "No booking"],
+            auditUrl: null, auditScore: null, demoUrl: null,
+            pitch: "Your website is a Google placeholder — it's not really a site. I built you a real one with your services and booking.",
+            dateScraped: "2026-04-04", hasAudit: false, hasDemo: false,
+            gbp: "Yes", facebook: "https://www.facebook.com/barberiaeduardo2016/", instagram: "NONE"
+        },
+        {
+            name: "Southern Muscle Factory",
+            type: "Gym",
+            address: "2601 S McKenzie St, Ste 166, Foley, AL 36535",
+            city: "Foley",
+            region: "Baldwin County",
+            phone: "(815) 992-0448",
+            email: "Unknown",
+            website: "https://www.southernmusclefactory.com/",
+            owner: "Marty Meredith (USMC veteran)",
+            score: 55,
+            tier: "warm",
+            problems: ["Website needs evaluation", "Veteran-owned angle not leveraged online", "Check mobile responsiveness"],
+            auditUrl: null, auditScore: null, demoUrl: null,
+            pitch: "You're a veteran-owned gym but your website doesn't tell that story. Let me help you stand out.",
+            dateScraped: "2026-04-04", hasAudit: false, hasDemo: false,
+            gbp: "Yes", facebook: "https://www.facebook.com/SouthernMuscleFactory/", instagram: "NONE"
+        }
+    ];
+
+    // Sort by score descending
+    LEADS.sort((a, b) => b.score - a.score);
+
+    function getTierClass(score) {
+        if (score >= 80) return 'fire';
+        if (score >= 60) return 'hot';
+        if (score >= 40) return 'warm';
+        if (score >= 20) return 'cool';
+        return 'skip';
+    }
+
+    function renderLeads(leads) {
+        const tbody = document.getElementById('leads-table');
+        tbody.innerHTML = leads.map((lead, i) => {
+            const tier = getTierClass(lead.score);
+            const websiteCell = lead.website
+                ? `<a href="${lead.website}" target="_blank" class="link" style="font-size:12px;word-break:break-all;">${new URL(lead.website).hostname}</a>`
+                : '<span class="no-website">NO WEBSITE</span>';
+
+            const problemsList = lead.problems.map(p => `<li>${p}</li>`).join('');
+
+            const auditCell = lead.hasAudit
+                ? `<span class="status-dot status-done"></span>Done (${lead.auditScore}/100)`
+                : '<span class="status-dot status-pending"></span>Pending';
+
+            const demoCell = lead.hasDemo
+                ? `<a href="${lead.demoUrl}" target="_blank" class="link"><span class="status-dot status-live"></span>Live</a>`
+                : '<span class="status-dot status-pending"></span>Pending';
+
+            const actions = [];
+            if (lead.phone && lead.phone !== 'Unknown') actions.push(`<a href="tel:${lead.phone.replace(/[^0-9]/g,'')}" class="action-btn action-call">Call</a>`);
+            if (lead.address && lead.address !== 'Unknown') actions.push(`<a href="https://www.google.com/maps/dir//${encodeURIComponent(lead.address)}" target="_blank" class="action-btn action-map">Map</a>`);
+            if (lead.demoUrl) actions.push(`<a href="${lead.demoUrl}" target="_blank" class="action-btn action-demo">Demo</a>`);
+            if (lead.hasAudit) actions.push(`<a href="${lead.auditUrl}" class="action-btn action-audit">Audit</a>`);
+
+            return `<tr data-tier="${tier}" data-has-demo="${lead.hasDemo}" data-has-audit="${lead.hasAudit}" data-has-website="${!!lead.website}">
+                <td style="color:#555;">${i + 1}</td>
+                <td>
+                    <div class="business-name">${lead.name}</div>
+                    <div class="business-type">${lead.type} — ${lead.city}</div>
+                    ${lead.owner && lead.owner !== 'Unknown' ? `<div style="font-size:11px;color:#666;margin-top:2px;">Owner: ${lead.owner}</div>` : ''}
+                </td>
+                <td>
+                    ${lead.phone && lead.phone !== 'Unknown' ? `<a href="tel:${lead.phone.replace(/[^0-9]/g,'')}" class="phone-link">${lead.phone}</a><br>` : ''}
+                    ${lead.address ? `<a href="https://www.google.com/maps/dir//${encodeURIComponent(lead.address)}" target="_blank" class="address-link">${lead.address}</a>` : ''}
+                </td>
+                <td><span class="score-badge score-${tier}">${lead.score}</span><br><span class="tier-badge tier-${tier}">${tier}</span></td>
+                <td>${websiteCell}</td>
+                <td><ul class="problems">${problemsList}</ul></td>
+                <td>${auditCell}</td>
+                <td>${demoCell}</td>
+                <td><div class="actions">${actions.join('')}</div></td>
+            </tr>`;
+        }).join('');
+
+        // Update stats
+        document.getElementById('stat-total').textContent = leads.length;
+        document.getElementById('stat-fire').textContent = leads.filter(l => l.score >= 80).length;
+        document.getElementById('stat-hot').textContent = leads.filter(l => l.score >= 60 && l.score < 80).length;
+        document.getElementById('stat-warm').textContent = leads.filter(l => l.score >= 40 && l.score < 60).length;
+        document.getElementById('stat-audited').textContent = leads.filter(l => l.hasAudit).length;
+        document.getElementById('stat-demos').textContent = leads.filter(l => l.hasDemo).length;
+    }
+
+    function filterLeads(filter) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active');
+
+        let filtered = LEADS;
+        if (filter === 'fire') filtered = LEADS.filter(l => l.score >= 80);
+        if (filter === 'hot') filtered = LEADS.filter(l => l.score >= 60 && l.score < 80);
+        if (filter === 'warm') filtered = LEADS.filter(l => l.score >= 40 && l.score < 60);
+        if (filter === 'no-website') filtered = LEADS.filter(l => !l.website);
+        if (filter === 'has-demo') filtered = LEADS.filter(l => l.hasDemo);
+        if (filter === 'has-audit') filtered = LEADS.filter(l => l.hasAudit);
+
+        renderLeads(filtered);
+    }
+
+    function searchLeads(query) {
+        if (!query) { renderLeads(LEADS); return; }
+        const q = query.toLowerCase();
+        const filtered = LEADS.filter(l =>
+            l.name.toLowerCase().includes(q) ||
+            l.city.toLowerCase().includes(q) ||
+            l.type.toLowerCase().includes(q) ||
+            (l.owner && l.owner.toLowerCase().includes(q))
+        );
+        renderLeads(filtered);
+    }
+
+    // Initial render
+    renderLeads(LEADS);
+    document.getElementById('last-updated').textContent = `Last updated: ${new Date().toLocaleString()} — Data from AI pipeline agents`;
+    </script>
+</body>
+</html>

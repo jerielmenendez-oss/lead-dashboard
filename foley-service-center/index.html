@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foley Service Center, LLC | Auto Repair in Foley, AL</title>
+  <meta name="description" content="Trusted auto repair in Foley, Alabama. ASE-certified mechanics, 60+ years combined experience, 2-year/24,000-mile warranty on all services. Call 251-943-1611.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f0f0f',
+            accent: '#ff6b35',
+            accentDark: '#e55a25',
+            surface: '#1a1a1a',
+            surfaceLight: '#242424',
+            muted: '#a0a0a0',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0f0f0f; color: #f5f5f5; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .hero-gradient { background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%); }
+    .glow { box-shadow: 0 0 40px rgba(255, 107, 53, 0.15); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(255, 107, 53, 0.1); }
+    .nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(255, 107, 53, 0.5); }
+    }
+    .pulse-cta { animation: pulse-glow 3s ease-in-out infinite; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur bg-primary/90 border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <a href="#hero" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div>
+            <span class="text-lg sm:text-xl font-bold text-white">Foley Service Center</span>
+            <span class="hidden sm:block text-xs text-muted">Foley, Alabama</span>
+          </div>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-sm text-muted hover:text-white transition-colors">Services</a>
+          <a href="#about" class="text-sm text-muted hover:text-white transition-colors">About</a>
+          <a href="#reviews" class="text-sm text-muted hover:text-white transition-colors">Reviews</a>
+          <a href="#hours" class="text-sm text-muted hover:text-white transition-colors">Hours</a>
+          <a href="tel:2519431611" class="bg-accent hover:bg-accentDark text-white font-semibold px-5 py-2.5 rounded-lg transition-all text-sm">
+            Call 251-943-1611
+          </a>
+        </div>
+        <div class="md:hidden flex items-center gap-3">
+          <a href="tel:2519431611" class="bg-accent hover:bg-accentDark text-white font-semibold px-4 py-2 rounded-lg transition-all text-sm">
+            Call Now
+          </a>
+          <button id="menuBtn" class="text-white p-2" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-surface border-t border-white/5">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#services" class="block text-muted hover:text-white transition-colors py-2">Services</a>
+        <a href="#about" class="block text-muted hover:text-white transition-colors py-2">About</a>
+        <a href="#reviews" class="block text-muted hover:text-white transition-colors py-2">Reviews</a>
+        <a href="#hours" class="block text-muted hover:text-white transition-colors py-2">Hours & Location</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-accent rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-64 h-64 bg-accent rounded-full blur-[100px]"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-6">
+          <div class="w-2 h-2 bg-accent rounded-full"></div>
+          <span class="text-accent text-sm font-medium">Trusted Since Day One in Foley, AL</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-tight mb-6">
+          Quality Auto Repairs<br>
+          <span class="text-accent">Backed by Experience</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-muted max-w-2xl mb-8 leading-relaxed">
+          Over 60 years of combined mechanic experience. ASE-certified technicians using advanced diagnostic tools. Every service backed by our 2-year / 24,000-mile warranty.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:2519431611" class="pulse-cta inline-flex items-center justify-center gap-3 bg-accent hover:bg-accentDark text-white font-bold px-8 py-4 rounded-xl transition-all text-lg">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call 251-943-1611
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-accent/50 text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg">
+            View Our Services
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10 max-w-lg">
+          <div>
+            <div class="text-2xl sm:text-3xl font-black text-accent">60+</div>
+            <div class="text-xs sm:text-sm text-muted">Years Combined Experience</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-black text-accent">2yr</div>
+            <div class="text-xs sm:text-sm text-muted">24K Mile Warranty</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-black text-accent">5★</div>
+            <div class="text-xs sm:text-sm text-muted">Customer Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 sm:py-28 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <span class="text-accent text-sm font-semibold uppercase tracking-wider">What We Do</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3">Full-Service Auto Repair</h2>
+        <p class="text-muted mt-4 max-w-2xl mx-auto">From routine maintenance to complex engine repairs — our ASE-certified technicians handle it all with precision and care.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Service Card 1 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Engine Diagnostics & Repair</h3>
+          <p class="text-muted text-sm leading-relaxed">Advanced diagnostic tools to pinpoint check engine lights, performance issues, and engine problems. Full engine repair and replacement services.</p>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Brakes & Suspension</h3>
+          <p class="text-muted text-sm leading-relaxed">Brake pad replacement with 18-month guarantee. Suspension repair with 24-month guarantee. ABS diagnosis, shocks, struts, and wheel alignment.</p>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Electrical Systems</h3>
+          <p class="text-muted text-sm leading-relaxed">Battery testing and replacement, alternator and starter repair, full electrical system diagnosis for all makes and models.</p>
+        </div>
+        <!-- Service Card 4 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">A/C & Heating</h3>
+          <p class="text-muted text-sm leading-relaxed">Complete air conditioning repair, AC recharge, blower motor replacement, and heating system service to keep you comfortable year-round.</p>
+        </div>
+        <!-- Service Card 5 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke-width="2"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Tires & Alignment</h3>
+          <p class="text-muted text-sm leading-relaxed">Brand name and quality used tires. Tire rotation, mounting, flat repair, replacement, wheel alignment, and balancing services.</p>
+        </div>
+        <!-- Service Card 6 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Transmission & Driveline</h3>
+          <p class="text-muted text-sm leading-relaxed">Transmission repair, fluid service, clutch replacement, driveline maintenance, axle replacement, and differential service.</p>
+        </div>
+      </div>
+      <div class="text-center mt-12 fade-in">
+        <a href="tel:2519431611" class="inline-flex items-center gap-2 bg-accent hover:bg-accentDark text-white font-bold px-8 py-4 rounded-xl transition-all text-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Schedule Your Service — 251-943-1611
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 sm:py-28 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <span class="text-accent text-sm font-semibold uppercase tracking-wider">About Our Shop</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 mb-6">Honest, Reliable<br>Auto Care</h2>
+          <p class="text-muted leading-relaxed mb-6">
+            At Foley Service Center, our mechanics have over 60 years of experience between them. They are dedicated to providing high-quality repairs to keep you safe and happy on the road.
+          </p>
+          <p class="text-muted leading-relaxed mb-6">
+            We're committed to providing a stress-free experience to both new and returning customers. Our shop only uses parts from reputable brands to ensure that your vehicle is always ready to drive.
+          </p>
+          <p class="text-muted leading-relaxed mb-8">
+            Whether you're coming in for a routine inspection or a major repair, we promise that you will be completely satisfied with our work. We provide <span class="text-white font-semibold">nationwide 2-year / 24,000-mile warranties</span> with all of our services for your peace of mind.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-primary rounded-xl p-5 border border-white/5">
+              <div class="text-accent font-bold text-lg mb-1">ASE Certified</div>
+              <div class="text-muted text-sm">Professional technicians</div>
+            </div>
+            <div class="bg-primary rounded-xl p-5 border border-white/5">
+              <div class="text-accent font-bold text-lg mb-1">All Makes & Models</div>
+              <div class="text-muted text-sm">Domestic, Asian & European</div>
+            </div>
+            <div class="bg-primary rounded-xl p-5 border border-white/5">
+              <div class="text-accent font-bold text-lg mb-1">Same-Day Service</div>
+              <div class="text-muted text-sm">Fast turnaround times</div>
+            </div>
+            <div class="bg-primary rounded-xl p-5 border border-white/5">
+              <div class="text-accent font-bold text-lg mb-1">Fair Pricing</div>
+              <div class="text-muted text-sm">Transparent, upfront estimates</div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in flex items-center justify-center">
+          <div class="relative w-full max-w-md">
+            <div class="absolute inset-0 bg-accent/10 rounded-3xl blur-2xl"></div>
+            <div class="relative bg-surfaceLight rounded-3xl p-10 border border-white/5 text-center">
+              <div class="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3">Our Quality Promise</h3>
+              <p class="text-muted leading-relaxed">Every service backed by a nationwide 2-year / 24,000-mile warranty. We use only reputable brand parts and stand behind every repair we make.</p>
+              <div class="mt-8 pt-6 border-t border-white/10">
+                <div class="text-accent text-3xl font-black">60+</div>
+                <div class="text-muted text-sm">Years of Combined Mechanic Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="py-20 sm:py-28 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <span class="text-accent text-sm font-semibold uppercase tracking-wider">Customer Reviews</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3">What Our Customers Say</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review 1 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-muted text-sm leading-relaxed mb-6">"On a recommendation of a friend, I reached out to Foley Service Center. I could not be more happy! Within 36 hours, my truck was diagnosed and fixed! The entire diagnosis and repair totaled $535 — after a dealer quoted me $13,000 for an engine replacement! I will be a customer for life!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold">L</div>
+            <div>
+              <div class="text-white font-semibold text-sm">Lawrence C.</div>
+              <div class="text-muted text-xs">via Yelp</div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 2 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-muted text-sm leading-relaxed mb-6">"Foley Service Center got me in the same day! Within a few hours, they had diagnosed the issue, gone to get the part I needed, and had my car running like new again. Every employee was friendly, knowledgeable, and professional. Their prices were fair and they didn't try to upsell me on anything."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold">T</div>
+            <div>
+              <div class="text-white font-semibold text-sm">Tawney M.</div>
+              <div class="text-muted text-xs">via Yelp</div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div class="fade-in bg-surface rounded-2xl p-8 border border-white/5 card-hover">
+          <div class="flex gap-1 mb-4">
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-muted text-sm leading-relaxed mb-6">"Phenomenal service! They not only fixed the blower motor but also repaired a vacuum line so my A/C would come out all vents — FREE OF CHARGE! Don't waste your time or money going anywhere else in Foley. These folks are amazing and honest. 10 Stars!!!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold">J</div>
+            <div>
+              <div class="text-white font-semibold text-sm">JW Smith</div>
+              <div class="text-muted text-xs">via Yelp</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Location Section -->
+  <section id="hours" class="py-20 sm:py-28 bg-surface">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <span class="text-accent text-sm font-semibold uppercase tracking-wider">Visit Us</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3">Hours & Location</h2>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="fade-in">
+          <div class="bg-primary rounded-2xl p-8 border border-white/5 mb-6">
+            <h3 class="text-xl font-bold text-white mb-6">Business Hours</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-muted">Monday</span>
+                <span class="text-white font-medium">8:00 AM – 5:00 PM</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-muted">Tuesday</span>
+                <span class="text-white font-medium">8:00 AM – 5:00 PM</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-muted">Wednesday</span>
+                <span class="text-white font-medium">8:00 AM – 5:00 PM</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-muted">Thursday</span>
+                <span class="text-white font-medium">8:00 AM – 5:00 PM</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-muted">Friday</span>
+                <span class="text-white font-medium">8:00 AM – 5:00 PM</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-white/5">
+                <span class="text-muted">Saturday</span>
+                <span class="text-white/50 font-medium">Closed</span>
+              </div>
+              <div class="flex justify-between items-center py-2">
+                <span class="text-muted">Sunday</span>
+                <span class="text-white/50 font-medium">Closed</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-primary rounded-2xl p-8 border border-white/5">
+            <h3 class="text-xl font-bold text-white mb-4">Contact Info</h3>
+            <div class="space-y-4">
+              <a href="tel:2519431611" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                  <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold group-hover:text-accent transition-colors">251-943-1611</div>
+                  <div class="text-muted text-sm">Tap to call</div>
+                </div>
+              </a>
+              <a href="mailto:FOLEYSERVICECENTER@GMAIL.COM" class="flex items-center gap-4 group">
+                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                  <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold group-hover:text-accent transition-colors">foleyservicecenter@gmail.com</div>
+                  <div class="text-muted text-sm">Send us an email</div>
+                </div>
+              </a>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
+                  <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <div class="text-white font-semibold">Foley, Alabama</div>
+                  <div class="text-muted text-sm">Serving Foley & surrounding areas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="bg-primary rounded-2xl overflow-hidden border border-white/5 h-full min-h-[400px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54880.54069779183!2d-87.71!3d30.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x889a0e1e6c9b2b1d%3A0x3c5e7a2f9a1b4c5d!2sFoley%2C%20AL!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              width="100%" height="100%" style="border:0; min-height:400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="py-20 sm:py-28 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent rounded-full blur-[150px]"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="fade-in">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">Ready to Get Your Vehicle Fixed?</h2>
+        <p class="text-muted text-lg mb-8 max-w-2xl mx-auto">Don't let car trouble slow you down. Our ASE-certified team is ready to get you back on the road — backed by our 2-year / 24,000-mile warranty.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:2519431611" class="pulse-cta inline-flex items-center justify-center gap-3 bg-accent hover:bg-accentDark text-white font-bold px-10 py-5 rounded-xl transition-all text-xl">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call 251-943-1611
+          </a>
+          <a href="https://maps.google.com/?q=Foley+Service+Center+Foley+AL" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-3 border-2 border-white/20 hover:border-accent/50 text-white font-bold px-10 py-5 rounded-xl transition-all text-xl">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-surface border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <span class="text-white font-semibold">Foley Service Center, LLC</span>
+        </div>
+        <p class="text-muted text-sm">&copy; 2025 Foley Service Center, LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Navbar background on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-lg');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+    });
+  </script>
+</body>
+</html>

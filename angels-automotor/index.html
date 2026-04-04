@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel's Automotor LLC | Auto Repair in Foley, AL</title>
+    <meta name="description" content="Trusted auto repair in Foley, AL since 2008. Oil changes, brakes, engine work, tow service & more. Se habla Español. Call (251) 233-8523.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f0f0f',
+                        accent: '#ff6b35',
+                        dark: '#0a0a0a',
+                        darkgray: '#1a1a1a',
+                        medgray: '#2a2a2a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .hero-gradient { background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%); }
+        .accent-glow { box-shadow: 0 0 30px rgba(255, 107, 53, 0.3); }
+        .service-card:hover { transform: translateY(-4px); border-color: #ff6b35; }
+        .service-card { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-dark/95 backdrop-blur-md z-50 border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div>
+                <span class="text-xl font-bold text-white">Angel's</span>
+                <span class="text-xl font-bold text-accent"> Automotor</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+                <a href="#services" class="hover:text-accent transition">Services</a>
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#hours" class="hover:text-accent transition">Hours</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+            </div>
+            <a href="tel:2512338523" class="bg-accent hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition">
+                (251) 233-8523
+            </a>
+            <button id="menuBtn" class="md:hidden text-white text-2xl">&#9776;</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-white/5 px-4 pb-4">
+            <a href="#services" class="block py-3 text-gray-400 hover:text-accent">Services</a>
+            <a href="#about" class="block py-3 text-gray-400 hover:text-accent">About</a>
+            <a href="#hours" class="block py-3 text-gray-400 hover:text-accent">Hours</a>
+            <a href="#contact" class="block py-3 text-gray-400 hover:text-accent">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 pt-24 pb-16 relative z-10">
+            <div class="inline-block bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 text-accent text-sm font-medium mb-6">
+                Serving Foley, AL Since 2008
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+                Auto Repair You<br>
+                Can <span class="text-accent">Count On</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-xl mb-4">
+                18 years of honest, affordable auto repair for Baldwin County. Fast turnaround, fair prices, and a team that treats your car like their own.
+            </p>
+            <p class="text-accent font-semibold mb-8">Se Habla Espa&ntilde;ol</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="tel:2512338523" class="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg text-center transition accent-glow">
+                    Call Now &mdash; (251) 233-8523
+                </a>
+                <a href="#services" class="border border-white/20 hover:border-accent text-white px-8 py-4 rounded-xl font-semibold text-lg text-center transition">
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-darkgray">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-14 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-accent">Services</span></h2>
+                <p class="text-gray-400 max-w-xl mx-auto">From routine maintenance to major repairs, we handle it all at prices that won't break the bank.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 fade-in">
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#9881;</div>
+                    <h3 class="font-semibold text-sm">Engine Work</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128663;</div>
+                    <h3 class="font-semibold text-sm">Brakes</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128260;</div>
+                    <h3 class="font-semibold text-sm">Transmission</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#10052;</div>
+                    <h3 class="font-semibold text-sm">A/C Service</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128736;</div>
+                    <h3 class="font-semibold text-sm">Tune-Ups</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128738;</div>
+                    <h3 class="font-semibold text-sm">Tires &amp; Wheels</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128167;</div>
+                    <h3 class="font-semibold text-sm">Oil Changes</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#8597;</div>
+                    <h3 class="font-semibold text-sm">Alignment</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128296;</div>
+                    <h3 class="font-semibold text-sm">Suspension</h3>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128666;</div>
+                    <h3 class="font-semibold text-sm">Lift Kits</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tow Service Banner -->
+    <section class="py-16 bg-accent relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute -top-10 -right-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 text-center relative z-10 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">&#128666; Tow Service Available</h2>
+            <p class="text-white/90 text-lg max-w-2xl mx-auto mb-6">
+                Stuck on the side of the road? We'll come get you. Angel's Automotor provides tow service to get your vehicle back to safety.
+            </p>
+            <a href="tel:2512335934" class="inline-block bg-white text-accent font-bold px-8 py-4 rounded-xl text-lg hover:bg-gray-100 transition">
+                Call for Tow &mdash; (251) 233-5934
+            </a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-dark">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Trusted by Foley for<br><span class="text-accent">18 Years</span></h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Since opening in 2008, Angel's Automotor has been providing honest, affordable auto repair to residents across Foley, AL and the surrounding Baldwin County area. We want every customer to drive out of our shop safely in the car they love.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Our mechanics do everything possible for a fast but efficient repair you can count on. We take your safety seriously, and our prices are always reasonable.
+                    </p>
+                    <div class="bg-darkgray border border-accent/20 rounded-xl p-5">
+                        <p class="text-accent font-semibold text-lg mb-1">&#127464;&#127476; Se Habla Espa&ntilde;ol</p>
+                        <p class="text-gray-400 text-sm">Nuestro equipo habla ingl&eacute;s y espa&ntilde;ol para que se sienta c&oacute;modo sin importar el idioma que hable.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-darkgray rounded-xl p-6 text-center">
+                        <div class="text-4xl font-black text-accent">18</div>
+                        <div class="text-gray-400 text-sm mt-1">Years in Business</div>
+                    </div>
+                    <div class="bg-darkgray rounded-xl p-6 text-center">
+                        <div class="text-4xl font-black text-accent">10+</div>
+                        <div class="text-gray-400 text-sm mt-1">Services Offered</div>
+                    </div>
+                    <div class="bg-darkgray rounded-xl p-6 text-center">
+                        <div class="text-4xl font-black text-accent">5</div>
+                        <div class="text-gray-400 text-sm mt-1">Days a Week</div>
+                    </div>
+                    <div class="bg-darkgray rounded-xl p-6 text-center">
+                        <div class="text-4xl font-black text-accent">&#9733;</div>
+                        <div class="text-gray-400 text-sm mt-1">Locally Trusted</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Location -->
+    <section id="hours" class="py-20 bg-darkgray">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-14 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hours &amp; <span class="text-accent">Location</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 fade-in">
+                <div class="bg-medgray rounded-xl p-8 border border-white/5">
+                    <h3 class="text-xl font-bold mb-6">Business Hours</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Monday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Tuesday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Wednesday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Thursday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Friday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Saturday</span><span class="text-red-400">Closed</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="text-gray-400">Sunday</span><span class="text-red-400">Closed</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-accent/10 border border-accent/20 rounded-lg p-3 text-center">
+                        <span class="text-accent text-sm font-medium">Closed for lunch 1:00 PM - 2:00 PM</span>
+                    </div>
+                </div>
+                <div class="bg-medgray rounded-xl p-8 border border-white/5">
+                    <h3 class="text-xl font-bold mb-6">Find Us</h3>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start gap-3">
+                            <span class="text-accent text-xl">&#128205;</span>
+                            <div>
+                                <p class="font-medium">18620 County Road 26</p>
+                                <p class="text-gray-400">Foley, AL 36535</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-accent text-xl">&#128222;</span>
+                            <a href="tel:2512338523" class="text-accent hover:underline font-medium">(251) 233-8523</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-accent text-xl">&#128666;</span>
+                            <div>
+                                <p class="font-medium">Tow Service</p>
+                                <a href="tel:2512335934" class="text-accent hover:underline">(251) 233-5934</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.5!2d-87.6836!3d30.3946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDIzJzQwLjYiTiA4N8KwNDEnMDEuMCJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-20 bg-dark relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/2 w-96 h-96 bg-accent rounded-full blur-3xl -translate-x-1/2"></div>
+        </div>
+        <div class="max-w-3xl mx-auto px-4 text-center relative z-10 fade-in">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Your Car <span class="text-accent">Fixed Right?</span></h2>
+            <p class="text-gray-400 text-lg mb-8">Stop by the shop or give us a call. We'll take care of you as soon as possible &mdash; honest service at great prices.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:2512338523" class="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition accent-glow">
+                    Call (251) 233-8523
+                </a>
+                <a href="https://www.google.com/maps/dir//18620+County+Road+26+Foley+AL+36535" target="_blank" class="border border-white/20 hover:border-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition">
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-white/5 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-xl font-bold mb-2">Angel's <span class="text-accent">Automotor</span> LLC</p>
+            <p class="text-gray-500 text-sm">18620 County Road 26, Foley, AL 36535 &bull; (251) 233-8523</p>
+            <p class="text-gray-600 text-xs mt-4">&copy; 2026 Angel's Automotor LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobileMenu a').forEach(a => {
+            a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
+        });
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

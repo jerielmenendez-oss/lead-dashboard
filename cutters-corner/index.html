@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutter's Corner | Beauty Salon in Foley, AL</title>
+    <meta name="description" content="Full-service beauty salon in Foley, AL. Expert cuts, colors, styling, waxing & more. Walk-ins welcome. Call 251-987-0999.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2d2d2d',
+                        accent: '#c9a96e',
+                        dark: '#1a1a1a',
+                        darkgray: '#232323',
+                        medgray: '#2d2d2d',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .hero-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%); }
+        .accent-glow { box-shadow: 0 0 30px rgba(201, 169, 110, 0.25); }
+        .gold-line { width: 60px; height: 3px; background: #c9a96e; }
+        .service-card:hover { transform: translateY(-4px); border-color: #c9a96e; }
+        .service-card { transition: all 0.3s ease; }
+        .review-card { background: linear-gradient(135deg, #232323, #2d2d2d); }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-dark/95 backdrop-blur-md z-50 border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div>
+                <span class="font-display text-2xl text-accent">Cutter's</span>
+                <span class="text-lg text-gray-400 ml-1">Corner</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+                <a href="#services" class="hover:text-accent transition">Services</a>
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#reviews" class="hover:text-accent transition">Reviews</a>
+                <a href="#hours" class="hover:text-accent transition">Hours</a>
+            </div>
+            <a href="tel:2519870999" class="bg-accent hover:bg-yellow-700 text-dark px-5 py-2.5 rounded-lg font-semibold text-sm transition">
+                251-987-0999
+            </a>
+            <button id="menuBtn" class="md:hidden text-white text-2xl">&#9776;</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-white/5 px-4 pb-4">
+            <a href="#services" class="block py-3 text-gray-400 hover:text-accent">Services</a>
+            <a href="#about" class="block py-3 text-gray-400 hover:text-accent">About</a>
+            <a href="#reviews" class="block py-3 text-gray-400 hover:text-accent">Reviews</a>
+            <a href="#hours" class="block py-3 text-gray-400 hover:text-accent">Hours</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 pt-24 pb-16 relative z-10">
+            <div class="gold-line mb-6"></div>
+            <h1 class="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+                Look Great.<br>
+                <span class="text-accent">Feel Great.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-xl mb-8">
+                Foley's favorite beauty salon. Expert cuts, stunning colors, and a team that makes every visit feel like a treat. Walk-ins always welcome.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="tel:2519870999" class="bg-accent hover:bg-yellow-700 text-dark px-8 py-4 rounded-xl font-bold text-lg text-center transition accent-glow">
+                    Call Now &mdash; 251-987-0999
+                </a>
+                <a href="#services" class="border border-white/20 hover:border-accent text-white px-8 py-4 rounded-xl font-semibold text-lg text-center transition">
+                    Our Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-darkgray">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-14 fade-in">
+                <div class="gold-line mx-auto mb-4"></div>
+                <h2 class="font-display text-3xl md:text-4xl mb-4">Salon <span class="text-accent">Services</span></h2>
+                <p class="text-gray-400 max-w-xl mx-auto">From precision cuts to bold color transformations, we deliver looks you'll love.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade-in">
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#9986;</div>
+                    <h3 class="font-semibold">Haircuts</h3>
+                    <p class="text-gray-500 text-sm mt-1">Women &amp; Men</p>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#127912;</div>
+                    <h3 class="font-semibold">Color</h3>
+                    <p class="text-gray-500 text-sm mt-1">Full color &amp; highlights</p>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128132;</div>
+                    <h3 class="font-semibold">Blowouts</h3>
+                    <p class="text-gray-500 text-sm mt-1">Style &amp; finish</p>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#10024;</div>
+                    <h3 class="font-semibold">Waxing</h3>
+                    <p class="text-gray-500 text-sm mt-1">Brows, lip &amp; more</p>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128134;</div>
+                    <h3 class="font-semibold">Styling</h3>
+                    <p class="text-gray-500 text-sm mt-1">Updos &amp; events</p>
+                </div>
+                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
+                    <div class="text-3xl mb-3">&#128153;</div>
+                    <h3 class="font-semibold">Products</h3>
+                    <p class="text-gray-500 text-sm mt-1">Professional haircare</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-dark">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
+                <div>
+                    <div class="gold-line mb-6"></div>
+                    <h2 class="font-display text-3xl md:text-4xl mb-6">A Salon That <span class="text-accent">Cares</span></h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        How great you look on the outside helps you feel great on the inside. At Cutter's Corner, we take the time to pamper you and create the look you want.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Our beauty salon is always up on the latest styles, and we keep learning new techniques for delivering those styles to our customers. We offer outstanding cuts and colors for every age.
+                    </p>
+                    <p class="text-accent font-semibold text-lg">Walk-ins are always welcome!</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-darkgray rounded-xl p-6 text-center border border-accent/10">
+                        <div class="text-4xl font-black text-accent">&#9733;</div>
+                        <div class="text-gray-400 text-sm mt-2">5-Star Reviews</div>
+                    </div>
+                    <div class="bg-darkgray rounded-xl p-6 text-center border border-accent/10">
+                        <div class="text-4xl font-black text-accent">&#9986;</div>
+                        <div class="text-gray-400 text-sm mt-2">Expert Stylists</div>
+                    </div>
+                    <div class="bg-darkgray rounded-xl p-6 text-center border border-accent/10">
+                        <div class="text-4xl font-black text-accent">&#128149;</div>
+                        <div class="text-gray-400 text-sm mt-2">Foley Favorite</div>
+                    </div>
+                    <div class="bg-darkgray rounded-xl p-6 text-center border border-accent/10">
+                        <div class="text-4xl font-black text-accent">&#128587;</div>
+                        <div class="text-gray-400 text-sm mt-2">Walk-Ins OK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="py-20 bg-darkgray">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-14 fade-in">
+                <div class="gold-line mx-auto mb-4"></div>
+                <h2 class="font-display text-3xl md:text-4xl mb-4">What Clients <span class="text-accent">Say</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 fade-in">
+                <div class="review-card rounded-xl p-6 border border-white/5">
+                    <div class="text-accent text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">"Perfect hair cut and her blow out was fantastic. Fun place, very welcoming and entertaining!"</p>
+                    <p class="text-accent text-sm font-medium">&mdash; Google Review</p>
+                </div>
+                <div class="review-card rounded-xl p-6 border border-white/5">
+                    <div class="text-accent text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">"She has been doing my hair for about 4 years now. Biggest shout-out! Absolutely the best stylist around."</p>
+                    <p class="text-accent text-sm font-medium">&mdash; Google Review</p>
+                </div>
+                <div class="review-card rounded-xl p-6 border border-white/5">
+                    <div class="text-accent text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-4">"Great quality salon services, friendly team, and a relaxing atmosphere. Highly recommend Cutter's Corner!"</p>
+                    <p class="text-accent text-sm font-medium">&mdash; Google Review</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Location -->
+    <section id="hours" class="py-20 bg-dark">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-14 fade-in">
+                <div class="gold-line mx-auto mb-4"></div>
+                <h2 class="font-display text-3xl md:text-4xl mb-4">Visit <span class="text-accent">Us</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 fade-in">
+                <div class="bg-darkgray rounded-xl p-8 border border-white/5">
+                    <h3 class="text-xl font-bold mb-6">Salon Hours</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Monday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Tuesday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Wednesday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Thursday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Friday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-white/5">
+                            <span class="text-gray-400">Saturday</span><span class="font-medium">By Appointment</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="text-gray-400">Sunday</span><span class="text-red-400">Closed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-darkgray rounded-xl p-8 border border-white/5">
+                    <h3 class="text-xl font-bold mb-6">Find Us</h3>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start gap-3">
+                            <span class="text-accent text-xl">&#128205;</span>
+                            <div>
+                                <p class="font-medium">7857 Highway 59</p>
+                                <p class="text-gray-400">Foley, AL 36535</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-accent text-xl">&#128222;</span>
+                            <a href="tel:2519870999" class="text-accent hover:underline font-medium">251-987-0999</a>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432!2d-87.6836!3d30.3946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDIzJzQwLjYiTiA4N8KwNDEnMDEuMCJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-darkgray relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/2 w-96 h-96 bg-accent rounded-full blur-3xl -translate-x-1/2"></div>
+        </div>
+        <div class="max-w-3xl mx-auto px-4 text-center relative z-10 fade-in">
+            <div class="gold-line mx-auto mb-6"></div>
+            <h2 class="font-display text-3xl md:text-4xl mb-4">Ready for a New <span class="text-accent">Look?</span></h2>
+            <p class="text-gray-400 text-lg mb-8">Walk in or call ahead. Our stylists are ready to make you look and feel amazing.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:2519870999" class="bg-accent hover:bg-yellow-700 text-dark px-8 py-4 rounded-xl font-bold text-lg transition accent-glow">
+                    Call 251-987-0999
+                </a>
+                <a href="https://www.google.com/maps/dir//7857+Highway+59+Foley+AL+36535" target="_blank" class="border border-white/20 hover:border-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition">
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-white/5 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="font-display text-2xl text-accent mb-2">Cutter's Corner</p>
+            <p class="text-gray-500 text-sm">7857 Highway 59, Foley, AL 36535 &bull; 251-987-0999</p>
+            <p class="text-gray-600 text-xs mt-4">&copy; 2026 Cutter's Corner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobileMenu a').forEach(a => {
+            a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
+        });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
