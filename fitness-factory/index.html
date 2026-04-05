@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Factory | 24/7 Gym in Gulf Shores, AL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        purple: { electric: '#7b2d8e' },
+        pink: { hot: '#ff1493' },
+        dark: '#0d0d0d',
+      },
+      fontFamily: {
+        heading: ['Orbitron', 'sans-serif'],
+        body: ['Exo 2', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Exo 2', sans-serif; background: #0d0d0d; color: #fff; }
+h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; }
+
+.neon-purple { text-shadow: 0 0 10px #7b2d8e, 0 0 40px #7b2d8e, 0 0 80px #7b2d8e; }
+.neon-pink { text-shadow: 0 0 10px #ff1493, 0 0 40px #ff1493, 0 0 80px #ff1493; }
+
+.neon-btn {
+  position: relative;
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px solid #ff1493;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  box-shadow: 0 0 10px #ff1493, inset 0 0 10px rgba(255,20,147,0.1);
+}
+.neon-btn:hover {
+  background: #ff1493;
+  box-shadow: 0 0 20px #ff1493, 0 0 60px #ff1493, inset 0 0 20px rgba(255,20,147,0.3);
+}
+.neon-btn-purple {
+  border-color: #7b2d8e;
+  box-shadow: 0 0 10px #7b2d8e, inset 0 0 10px rgba(123,45,142,0.1);
+}
+.neon-btn-purple:hover {
+  background: #7b2d8e;
+  box-shadow: 0 0 20px #7b2d8e, 0 0 60px #7b2d8e, inset 0 0 20px rgba(123,45,142,0.3);
+}
+
+.glow-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(123,45,142,0.3);
+  border-radius: 12px;
+  transition: all 0.4s;
+}
+.glow-card:hover {
+  border-color: #ff1493;
+  box-shadow: 0 0 30px rgba(255,20,147,0.2);
+  transform: translateY(-4px);
+}
+
+.gradient-line {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #7b2d8e, #ff1493, #7b2d8e, transparent);
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, rgba(13,13,13,0.92) 0%, rgba(123,45,142,0.3) 50%, rgba(13,13,13,0.95) 100%);
+}
+
+.pricing-popular {
+  border: 2px solid #ff1493;
+  box-shadow: 0 0 30px rgba(255,20,147,0.3);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #7b2d8e, #ff1493);
+  margin: 16px auto 0;
+}
+
+nav a { transition: color 0.3s; }
+nav a:hover { color: #ff1493; }
+
+.mobile-menu { display: none; }
+.mobile-menu.active { display: flex; }
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 1.8rem !important; }
+}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-dark/90 backdrop-blur-md border-b border-purple-electric/30">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#" class="font-heading text-xl md:text-2xl font-black tracking-wider">
+      <span class="text-pink-hot">FITNESS</span> <span class="text-purple-electric">FACTORY</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 font-body text-sm tracking-wide uppercase">
+      <a href="#memberships" class="text-gray-300">Memberships</a>
+      <a href="#facility" class="text-gray-300">Facility</a>
+      <a href="#visitors" class="text-gray-300">Visitors</a>
+      <a href="#trainers" class="text-gray-300">Trainers</a>
+      <a href="#contact" class="text-gray-300">Contact</a>
+      <a href="tel:2512987622" class="neon-btn text-xs !py-2 !px-4">(251) 298-7622</a>
+    </div>
+    <button onclick="document.getElementById('mobileMenu').classList.toggle('active')" class="md:hidden text-white text-2xl">&#9776;</button>
+  </div>
+  <div id="mobileMenu" class="mobile-menu flex-col bg-dark/95 border-t border-purple-electric/20 px-4 pb-4 md:hidden">
+    <a href="#memberships" class="py-3 text-gray-300 border-b border-white/5">Memberships</a>
+    <a href="#facility" class="py-3 text-gray-300 border-b border-white/5">Facility</a>
+    <a href="#visitors" class="py-3 text-gray-300 border-b border-white/5">Visitors</a>
+    <a href="#trainers" class="py-3 text-gray-300 border-b border-white/5">Trainers</a>
+    <a href="#contact" class="py-3 text-gray-300 border-b border-white/5">Contact</a>
+    <a href="tel:2512987622" class="neon-btn text-center mt-3 text-sm">(251) 298-7622</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-bg min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-electric rounded-full blur-[150px]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-hot rounded-full blur-[150px]"></div>
+  </div>
+  <div class="relative z-10 text-center px-4 max-w-4xl">
+    <p class="font-body text-pink-hot uppercase tracking-[6px] text-sm mb-4 pulse-glow">Gulf Shores, Alabama</p>
+    <h1 class="hero-title font-heading text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+      24/7 FITNESS<br><span class="neon-purple">IN GULF SHORES</span>
+    </h1>
+    <p class="font-body text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-4">
+      At the Fitness Factory, <strong class="text-pink-hot">progress is our passion.</strong>
+    </p>
+    <p class="font-body text-gray-400 mb-10">Owned & operated by Mike & Miranda since 2022. Open 24 hours, 7 days a week.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#memberships" class="neon-btn">View Memberships</a>
+      <a href="#visitors" class="neon-btn neon-btn-purple">Day Passes from $15</a>
+    </div>
+  </div>
+</section>
+
+<div class="gradient-line"></div>
+
+<!-- Memberships -->
+<section id="memberships" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="section-title font-heading text-3xl md:text-4xl text-center font-bold mb-16">Memberships & <span class="text-pink-hot">Pricing</span></h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Day Pass -->
+      <div class="glow-card p-8 text-center">
+        <h3 class="font-heading text-lg text-purple-electric mb-2">Day Pass</h3>
+        <div class="text-5xl font-heading font-black my-6">$15</div>
+        <p class="text-gray-400 text-sm mb-6">Perfect for tourists & visitors</p>
+        <ul class="text-left text-gray-300 space-y-3 mb-8 text-sm">
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> Full facility access</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> All equipment included</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> 24/7 entry</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> No commitment</li>
+        </ul>
+        <a href="tel:2512987622" class="neon-btn neon-btn-purple text-xs w-full block">Get Started</a>
+      </div>
+      <!-- Monthly -->
+      <div class="glow-card pricing-popular p-8 text-center relative">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-pink-hot text-white font-heading text-xs px-4 py-1 rounded-full tracking-wider">MOST POPULAR</div>
+        <h3 class="font-heading text-lg text-pink-hot mb-2">Monthly</h3>
+        <div class="text-5xl font-heading font-black my-6">$40<span class="text-lg text-gray-400">/mo</span></div>
+        <p class="text-gray-400 text-sm mb-6">Our most popular option</p>
+        <ul class="text-left text-gray-300 space-y-3 mb-8 text-sm">
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> Unlimited 24/7 access</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> All equipment & accessories</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> Cancel anytime</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> Member specials</li>
+        </ul>
+        <a href="tel:2512987622" class="neon-btn text-xs w-full block">Join Now</a>
+      </div>
+      <!-- Annual -->
+      <div class="glow-card p-8 text-center">
+        <h3 class="font-heading text-lg text-purple-electric mb-2">Annual</h3>
+        <div class="text-5xl font-heading font-black my-6">$350<span class="text-lg text-gray-400">/yr</span></div>
+        <p class="text-gray-400 text-sm mb-6">Best value &mdash; save over $100</p>
+        <ul class="text-left text-gray-300 space-y-3 mb-8 text-sm">
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> Unlimited 24/7 access</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> All equipment & accessories</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> Priority specials</li>
+          <li class="flex items-center gap-2"><span class="text-pink-hot">&#9889;</span> Biggest savings</li>
+        </ul>
+        <a href="tel:2512987622" class="neon-btn neon-btn-purple text-xs w-full block">Get Started</a>
+      </div>
+    </div>
+    <p class="text-center text-gray-500 text-sm mt-8">* Pricing shown for demonstration. Call for current rates and specials.</p>
+  </div>
+</section>
+
+<div class="gradient-line"></div>
+
+<!-- Facility -->
+<section id="facility" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="section-title font-heading text-3xl md:text-4xl text-center font-bold mb-16">Our <span class="text-purple-electric">Facility</span></h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="glow-card p-6">
+        <div class="text-3xl mb-3">&#127947;</div>
+        <h3 class="font-heading text-sm text-pink-hot mb-2">Free Weights</h3>
+        <p class="text-gray-400 text-sm">Full dumbbell racks, barbells, and plates for every level of lifter.</p>
+      </div>
+      <div class="glow-card p-6">
+        <div class="text-3xl mb-3">&#9881;</div>
+        <h3 class="font-heading text-sm text-pink-hot mb-2">Pin-Loaded Machines</h3>
+        <p class="text-gray-400 text-sm">Targeted isolation machines to sculpt every muscle group safely.</p>
+      </div>
+      <div class="glow-card p-6">
+        <div class="text-3xl mb-3">&#128170;</div>
+        <h3 class="font-heading text-sm text-pink-hot mb-2">Squat Racks & Bench Presses</h3>
+        <p class="text-gray-400 text-sm">Multiple stations so you never wait on the big lifts.</p>
+      </div>
+      <div class="glow-card p-6">
+        <div class="text-3xl mb-3">&#127939;</div>
+        <h3 class="font-heading text-sm text-pink-hot mb-2">Cardio Zone</h3>
+        <p class="text-gray-400 text-sm">Treadmills, ellipticals, bikes, and more to keep your heart rate up.</p>
+      </div>
+      <div class="glow-card p-6">
+        <div class="text-3xl mb-3">&#9733;</div>
+        <h3 class="font-heading text-sm text-pink-hot mb-2">Fitness Accessories</h3>
+        <p class="text-gray-400 text-sm">Stability balls, foam rollers, jump ropes, medicine balls, steps, boxes, and Bosu balls.</p>
+      </div>
+      <div class="glow-card p-6">
+        <div class="text-3xl mb-3">&#128308;</div>
+        <h3 class="font-heading text-sm text-pink-hot mb-2">Open 24/7</h3>
+        <p class="text-gray-400 text-sm">Early bird or night owl &mdash; train whenever your schedule allows, any day of the year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gradient-line"></div>
+
+<!-- Tourist / Snowbird Welcome -->
+<section id="visitors" class="py-20 px-4 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-pink-hot rounded-full blur-[200px]"></div>
+  </div>
+  <div class="max-w-4xl mx-auto relative z-10">
+    <h2 class="section-title font-heading text-3xl md:text-4xl text-center font-bold mb-6">Welcome, <span class="text-pink-hot">Visitors & Snowbirds</span></h2>
+    <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12 text-lg">
+      Visiting Gulf Shores? Don't let vacation derail your gains. Whether you're here for a week or the whole winter, we've got you covered.
+    </p>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="glow-card p-8">
+        <h3 class="font-heading text-lg text-purple-electric mb-4">&#127796; Tourists</h3>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li>&#10003; Day passes starting at just <strong class="text-white">$15</strong></li>
+          <li>&#10003; Weekly passes available</li>
+          <li>&#10003; No contracts, no hassle</li>
+          <li>&#10003; 24/7 access during your stay</li>
+          <li>&#10003; All equipment included</li>
+        </ul>
+      </div>
+      <div class="glow-card p-8">
+        <h3 class="font-heading text-lg text-purple-electric mb-4">&#10052; Snowbirds</h3>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li>&#10003; Seasonal membership options</li>
+          <li>&#10003; Flexible month-to-month plans</li>
+          <li>&#10003; Welcoming local community</li>
+          <li>&#10003; Stay consistent all winter</li>
+          <li>&#10003; Your home gym away from home</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="tel:2512987622" class="neon-btn">Call for Visitor Rates</a>
+    </div>
+  </div>
+</section>
+
+<div class="gradient-line"></div>
+
+<!-- Trainers -->
+<section id="trainers" class="py-20 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="section-title font-heading text-3xl md:text-4xl font-bold mb-6">Meet the <span class="text-purple-electric">Owners</span></h2>
+    <p class="text-gray-300 max-w-2xl mx-auto mb-12">
+      Mike and Miranda took over Fitness Factory in January 2022 with a simple mission: make progress possible for everyone who walks through the door.
+    </p>
+    <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+      <div class="glow-card p-8">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-purple-electric to-pink-hot mx-auto mb-4 flex items-center justify-center text-3xl font-heading font-black">M</div>
+        <h3 class="font-heading text-lg mb-1">Mike</h3>
+        <p class="text-pink-hot text-sm font-body mb-3">Co-Owner</p>
+        <p class="text-gray-400 text-sm">Dedicated to building a gym where every member feels at home and empowered to hit their goals.</p>
+      </div>
+      <div class="glow-card p-8">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-pink-hot to-purple-electric mx-auto mb-4 flex items-center justify-center text-3xl font-heading font-black">M</div>
+        <h3 class="font-heading text-lg mb-1">Miranda</h3>
+        <p class="text-pink-hot text-sm font-body mb-3">Co-Owner</p>
+        <p class="text-gray-400 text-sm">Passionate about creating a welcoming environment where progress happens every single day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gradient-line"></div>
+
+<!-- Contact -->
+<section id="contact" class="py-20 px-4">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="section-title font-heading text-3xl md:text-4xl text-center font-bold mb-16">Get In <span class="text-pink-hot">Touch</span></h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h3 class="font-heading text-lg text-purple-electric mb-6">Contact Info</h3>
+        <div class="space-y-5 text-gray-300">
+          <div>
+            <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Phone</p>
+            <a href="tel:2512987622" class="text-pink-hot text-lg font-heading hover:underline">(251) 298-7622</a>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Location</p>
+            <p>Gulf Shores, Alabama</p>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-wider text-gray-500 mb-1">Hours</p>
+            <p class="text-pink-hot font-bold">Open 24/7 &mdash; Every Day</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-heading text-lg text-purple-electric mb-6">Send a Message</h3>
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Demo only - form not connected.');">
+          <input type="text" placeholder="Your Name" class="w-full bg-white/5 border border-purple-electric/30 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-pink-hot transition">
+          <input type="email" placeholder="Email Address" class="w-full bg-white/5 border border-purple-electric/30 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-pink-hot transition">
+          <input type="tel" placeholder="Phone Number" class="w-full bg-white/5 border border-purple-electric/30 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-pink-hot transition">
+          <textarea rows="4" placeholder="How can we help?" class="w-full bg-white/5 border border-purple-electric/30 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-pink-hot transition"></textarea>
+          <button type="submit" class="neon-btn w-full text-sm">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-purple-electric/20 py-8 px-4 text-center">
+  <p class="font-heading text-lg mb-2"><span class="text-pink-hot">FITNESS</span> <span class="text-purple-electric">FACTORY</span></p>
+  <p class="text-gray-500 text-sm">Gulf Shores, Alabama &bull; Open 24/7</p>
+  <p class="text-gray-600 text-xs mt-4">&copy; 2026 Fitness Factory. Demo site by Menendez Strategies.</p>
+</footer>
+
+<!-- Smooth scroll -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    document.getElementById('mobileMenu').classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>

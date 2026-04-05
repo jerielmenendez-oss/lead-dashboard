@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talk of the Town Hair Salon | Hair by Kim | Foley, AL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coral: '#e07a5f',
+            sage: '#81b29a',
+            buttercream: '#f2cc8f',
+            slate: '#264653',
+          },
+          fontFamily: {
+            heading: ['Lora', 'serif'],
+            body: ['Fira Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Fira Sans', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Lora', serif; }
+  </style>
+</head>
+<body class="bg-buttercream/30 text-slate">
+
+  <!-- Nav -->
+  <nav class="bg-slate text-buttercream py-3 px-4 sticky top-0 z-50 shadow-md">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <a href="#" class="font-heading text-xl font-bold text-coral">Talk of the Town</a>
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#services" class="hover:text-coral transition">Services</a>
+        <a href="#about" class="hover:text-coral transition">About Kim</a>
+        <a href="#hours" class="hover:text-coral transition">Hours</a>
+        <a href="#reviews" class="hover:text-coral transition">Reviews</a>
+        <a href="#contact" class="hover:text-coral transition">Contact</a>
+      </div>
+      <a href="tel:2519792551" class="md:hidden bg-coral text-white px-4 py-2 rounded-full text-sm font-medium">Call Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-slate to-slate/90 text-buttercream py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-coral font-medium tracking-widest uppercase text-sm mb-4">Foley, Alabama</p>
+      <h1 class="font-heading text-4xl md:text-6xl font-bold mb-6 leading-tight">Hair by Kim<br><span class="text-coral">at Talk of the Town</span></h1>
+      <p class="text-lg md:text-xl text-buttercream/80 max-w-2xl mx-auto mb-8">Your neighborhood stylist for cuts, color, and everything in between. Where every client feels like family.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:2519792551" class="bg-coral hover:bg-coral/90 text-white font-semibold py-3 px-8 rounded-full text-lg transition shadow-lg">
+          &#9742; (251) 979-2551
+        </a>
+        <a href="#services" class="border-2 border-buttercream text-buttercream hover:bg-buttercream hover:text-slate font-semibold py-3 px-8 rounded-full text-lg transition">
+          View Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-4">Our Services</h2>
+      <p class="text-center text-slate/70 mb-12 max-w-xl mx-auto">From a simple trim to a full transformation, Kim has you covered.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border-t-4 border-coral">
+          <div class="text-3xl mb-3">&#9988;</div>
+          <h3 class="font-heading text-xl font-semibold mb-2">Haircuts & Styling</h3>
+          <p class="text-slate/70 text-sm">Precision cuts tailored to your face shape and lifestyle. Men, women, and children welcome.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border-t-4 border-sage">
+          <div class="text-3xl mb-3">&#127912;</div>
+          <h3 class="font-heading text-xl font-semibold mb-2">Color Services</h3>
+          <p class="text-slate/70 text-sm">Full color, highlights, balayage, and corrective color. Vibrant results that last.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border-t-4 border-buttercream">
+          <div class="text-3xl mb-3">&#10024;</div>
+          <h3 class="font-heading text-xl font-semibold mb-2">Treatments</h3>
+          <p class="text-slate/70 text-sm">Deep conditioning, keratin smoothing, and scalp treatments to restore and protect your hair.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border-t-4 border-sage">
+          <div class="text-3xl mb-3">&#128134;</div>
+          <h3 class="font-heading text-xl font-semibold mb-2">Perms & Texture</h3>
+          <p class="text-slate/70 text-sm">Body waves, spiral perms, and relaxers for the texture you've always wanted.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border-t-4 border-coral">
+          <div class="text-3xl mb-3">&#128131;</div>
+          <h3 class="font-heading text-xl font-semibold mb-2">Updos & Special Events</h3>
+          <p class="text-slate/70 text-sm">Wedding styles, prom updos, and event-ready looks that turn heads.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition border-t-4 border-buttercream">
+          <div class="text-3xl mb-3">&#128149;</div>
+          <h3 class="font-heading text-xl font-semibold mb-2">Senior Styles</h3>
+          <p class="text-slate/70 text-sm">Gentle care and classic styles for our most loyal clients. Always welcoming.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Kim -->
+  <section id="about" class="bg-sage/15 py-20 px-4">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="w-48 h-48 rounded-full bg-gradient-to-br from-coral to-buttercream flex items-center justify-center text-white text-6xl shadow-lg flex-shrink-0">
+        K
+      </div>
+      <div>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Meet Kim</h2>
+        <p class="text-slate/80 mb-4 leading-relaxed">With years of experience behind the chair, Kim has built a loyal following in Foley and the surrounding communities. Her philosophy is simple: every client deserves to walk out feeling confident and beautiful.</p>
+        <p class="text-slate/80 leading-relaxed">Talk of the Town isn't just a salon -- it's a neighborhood gathering spot where you'll always be greeted with a warm smile and leave looking your best. Kim takes the time to listen, consult, and craft a style that's uniquely you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours -->
+  <section id="hours" class="py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Salon Hours</h2>
+      <p class="text-slate/70 mb-10">We'd love to see you during the week!</p>
+      <div class="bg-white rounded-2xl shadow-sm overflow-hidden max-w-md mx-auto">
+        <div class="flex justify-between px-6 py-4 border-b border-buttercream/50">
+          <span class="font-medium">Monday</span><span class="text-sage font-semibold">Open</span>
+        </div>
+        <div class="flex justify-between px-6 py-4 border-b border-buttercream/50">
+          <span class="font-medium">Tuesday</span><span class="text-sage font-semibold">Open</span>
+        </div>
+        <div class="flex justify-between px-6 py-4 border-b border-buttercream/50">
+          <span class="font-medium">Wednesday</span><span class="text-sage font-semibold">Open</span>
+        </div>
+        <div class="flex justify-between px-6 py-4 border-b border-buttercream/50">
+          <span class="font-medium">Thursday</span><span class="text-sage font-semibold">Open</span>
+        </div>
+        <div class="flex justify-between px-6 py-4 border-b border-buttercream/50">
+          <span class="font-medium">Friday</span><span class="text-sage font-semibold">Open</span>
+        </div>
+        <div class="flex justify-between px-6 py-4 border-b border-buttercream/50 bg-coral/5">
+          <span class="font-medium text-coral">Saturday</span><span class="text-coral font-semibold">Closed</span>
+        </div>
+        <div class="flex justify-between px-6 py-4 bg-coral/5">
+          <span class="font-medium text-coral">Sunday</span><span class="text-coral font-semibold">Closed</span>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-slate/60">Call for specific appointment times. Walk-ins welcome when available.</p>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="bg-slate py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center text-buttercream mb-12">What Our Clients Say</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-buttercream">
+          <div class="text-coral text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-sm leading-relaxed mb-4 text-buttercream/80">"Kim is amazing! She always knows exactly what I want. I've been going to her for years and wouldn't trust anyone else with my hair."</p>
+          <p class="font-semibold text-sm text-coral">-- Sarah M.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-buttercream">
+          <div class="text-coral text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-sm leading-relaxed mb-4 text-buttercream/80">"Best salon in Foley, hands down. Kim makes you feel like you're catching up with an old friend every time. Plus my color always looks incredible."</p>
+          <p class="font-semibold text-sm text-coral">-- Linda T.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-buttercream">
+          <div class="text-coral text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="text-sm leading-relaxed mb-4 text-buttercream/80">"I moved to Foley and finding Kim was the best thing that happened. She's talented, friendly, and the salon has such a warm atmosphere."</p>
+          <p class="font-semibold text-sm text-coral">-- Rachel D.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Ready for a New Look?</h2>
+      <p class="text-slate/70 mb-8 max-w-lg mx-auto">Give Kim a call to book your appointment. Walk-ins are welcome when the schedule allows!</p>
+      <a href="tel:2519792551" class="inline-block bg-coral hover:bg-coral/90 text-white font-bold py-4 px-10 rounded-full text-xl transition shadow-lg mb-6">
+        &#9742; Call (251) 979-2551
+      </a>
+      <div class="mt-8 text-slate/60">
+        <p class="font-medium text-slate mb-1">Talk of the Town Hair Salon</p>
+        <p>Foley, Alabama</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate text-buttercream/60 py-8 px-4 text-center text-sm">
+    <p>&copy; 2026 Talk of the Town Hair Salon. All rights reserved.</p>
+    <p class="mt-1">Foley, AL &middot; <a href="tel:2519792551" class="text-coral hover:underline">(251) 979-2551</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fireflies Salon and Med Spa | Spanish Fort, AL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        midnight: '#0f172a',
+        firefly: '#fbbf24',
+        softwhite: '#fefce8',
+        warmgray: '#78716c',
+      },
+      fontFamily: {
+        heading: ['Cormorant', 'serif'],
+        body: ['Outfit', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Outfit', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Cormorant', serif; }
+  @keyframes float { 0%,100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(-20px); opacity: 1; } }
+  .firefly-dot { animation: float 3s ease-in-out infinite; }
+</style>
+</head>
+<body class="bg-softwhite text-midnight">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full bg-midnight/95 backdrop-blur z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="#" class="font-heading text-2xl font-semibold text-softwhite tracking-wide">Fireflies <span class="text-firefly">.</span></a>
+    <div class="hidden md:flex gap-8 text-softwhite/60 text-sm font-medium tracking-wide">
+      <a href="#services" class="hover:text-firefly transition">Services</a>
+      <a href="#medspa" class="hover:text-firefly transition">Med Spa</a>
+      <a href="#about" class="hover:text-firefly transition">About</a>
+      <a href="#contact" class="hover:text-firefly transition">Contact</a>
+    </div>
+    <a href="tel:+12516260707" class="bg-firefly hover:bg-yellow-400 text-midnight px-5 py-2 rounded-full text-sm font-semibold transition">(251) 626-0707</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center justify-center bg-midnight overflow-hidden">
+  <!-- Firefly dots -->
+  <div class="absolute w-2 h-2 bg-firefly rounded-full firefly-dot" style="top:20%;left:15%;animation-delay:0s;"></div>
+  <div class="absolute w-1.5 h-1.5 bg-firefly rounded-full firefly-dot" style="top:40%;left:75%;animation-delay:0.8s;"></div>
+  <div class="absolute w-2.5 h-2.5 bg-firefly rounded-full firefly-dot" style="top:65%;left:25%;animation-delay:1.5s;"></div>
+  <div class="absolute w-1 h-1 bg-firefly rounded-full firefly-dot" style="top:30%;left:55%;animation-delay:2.2s;"></div>
+  <div class="absolute w-2 h-2 bg-firefly rounded-full firefly-dot" style="top:75%;left:80%;animation-delay:0.5s;"></div>
+  <div class="absolute w-1.5 h-1.5 bg-firefly rounded-full firefly-dot" style="top:15%;left:90%;animation-delay:1.8s;"></div>
+  <div class="absolute w-3 h-3 bg-firefly/50 rounded-full firefly-dot" style="top:55%;left:50%;animation-delay:1s;"></div>
+  <div class="absolute w-1 h-1 bg-firefly rounded-full firefly-dot" style="top:85%;left:40%;animation-delay:2.5s;"></div>
+
+  <div class="relative text-center px-4 max-w-3xl">
+    <p class="text-firefly uppercase tracking-[0.4em] text-xs font-body font-medium mb-6">Spanish Fort, Alabama</p>
+    <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-semibold text-softwhite leading-[1.1] mb-4">Fireflies</h1>
+    <h2 class="font-heading text-2xl md:text-3xl text-firefly italic mb-8">Salon & Med Spa</h2>
+    <p class="text-softwhite/50 text-lg max-w-lg mx-auto mb-10 font-light">Where beauty glows. Premium salon services and medical aesthetics at the Eastern Shore Centre.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contact" class="bg-firefly hover:bg-yellow-400 text-midnight px-8 py-3 rounded-full font-medium transition">Book a Consultation</a>
+      <a href="#services" class="border border-softwhite/20 hover:border-firefly text-softwhite px-8 py-3 rounded-full font-medium transition">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-20 px-4 bg-softwhite">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-warmgray uppercase tracking-[0.2em] text-xs font-medium">Salon Services</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-semibold mt-2">Beauty Services</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center p-8">
+        <div class="w-16 h-16 bg-midnight/5 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-midnight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-heading text-2xl font-semibold mb-3">Hair</h3>
+        <p class="text-warmgray leading-relaxed text-sm">Cuts, color, highlights, balayage, extensions, and styling by expert colorists and stylists.</p>
+      </div>
+      <div class="text-center p-8">
+        <div class="w-16 h-16 bg-midnight/5 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-midnight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3 class="font-heading text-2xl font-semibold mb-3">Lashes & Brows</h3>
+        <p class="text-warmgray leading-relaxed text-sm">Lash extensions, lash lifts, brow shaping, and tinting for effortless everyday beauty.</p>
+      </div>
+      <div class="text-center p-8">
+        <div class="w-16 h-16 bg-midnight/5 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-midnight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <h3 class="font-heading text-2xl font-semibold mb-3">Nails & Waxing</h3>
+        <p class="text-warmgray leading-relaxed text-sm">Manicures, pedicures, gel nails, and full-body waxing services for a polished finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Med Spa -->
+<section id="medspa" class="py-20 px-4 bg-midnight text-softwhite">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-firefly uppercase tracking-[0.2em] text-xs font-medium">Medical Aesthetics</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-semibold mt-2">Med Spa Services</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-firefly/30 transition">
+        <h3 class="font-heading text-2xl font-semibold mb-3 text-firefly">Botox & Fillers</h3>
+        <p class="text-softwhite/50 leading-relaxed">Expert injectable treatments to smooth wrinkles, restore volume, and enhance your natural beauty with precision.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-firefly/30 transition">
+        <h3 class="font-heading text-2xl font-semibold mb-3 text-firefly">Facials & Peels</h3>
+        <p class="text-softwhite/50 leading-relaxed">Clinical-grade facials and chemical peels customized to your skin type for a radiant, youthful complexion.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-firefly/30 transition">
+        <h3 class="font-heading text-2xl font-semibold mb-3 text-firefly">Skin Treatments</h3>
+        <p class="text-softwhite/50 leading-relaxed">Advanced skin rejuvenation including microneedling, laser treatments, and medical-grade skincare protocols.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-firefly/30 transition">
+        <h3 class="font-heading text-2xl font-semibold mb-3 text-firefly">Body Contouring</h3>
+        <p class="text-softwhite/50 leading-relaxed">Non-invasive body sculpting treatments to help you look and feel your best without downtime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 px-4 bg-softwhite">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="bg-midnight/5 rounded-3xl aspect-[4/5] flex items-center justify-center border border-midnight/10">
+      <p class="text-midnight/20 font-heading text-xl">Audra Maxwell</p>
+    </div>
+    <div>
+      <p class="text-warmgray uppercase tracking-[0.2em] text-xs font-medium">Meet the Owner</p>
+      <h2 class="font-heading text-4xl font-semibold mt-2 mb-6">Audra Maxwell</h2>
+      <p class="text-warmgray leading-relaxed mb-4">Fireflies Salon and Med Spa is Audra Maxwell's vision of a place where beauty and wellness converge. Located in the Eastern Shore Centre, the salon combines high-end aesthetics with a warm, welcoming atmosphere.</p>
+      <p class="text-warmgray leading-relaxed mb-6">From precision hair color to Botox and facials, every service is delivered by trained professionals who treat each client as an individual. Because at Fireflies, you don't just look beautiful -- you glow.</p>
+      <div class="flex gap-6">
+        <div class="text-center"><p class="font-heading text-2xl font-semibold text-midnight">Eastern Shore</p><p class="text-warmgray text-xs mt-1">Centre Location</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 px-4 bg-midnight text-softwhite">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-firefly uppercase tracking-[0.2em] text-xs font-medium">Book Your Visit</p>
+    <h2 class="font-heading text-4xl md:text-5xl font-semibold mt-2 mb-4">Begin Your Glow</h2>
+    <p class="text-softwhite/50 text-lg mb-10 max-w-xl mx-auto">Schedule a consultation or appointment at Fireflies Salon and Med Spa in Spanish Fort.</p>
+    <a href="tel:+12516260707" class="inline-block bg-firefly hover:bg-yellow-400 text-midnight px-10 py-4 rounded-full font-semibold text-xl transition mb-10">(251) 626-0707</a>
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div class="bg-white/5 rounded-2xl p-6">
+        <h4 class="font-heading text-lg font-semibold mb-2">Location</h4>
+        <p class="text-softwhite/50 text-sm">Eastern Shore Centre<br>Spanish Fort, AL</p>
+      </div>
+      <div class="bg-white/5 rounded-2xl p-6">
+        <h4 class="font-heading text-lg font-semibold mb-2">Owner</h4>
+        <p class="text-softwhite/50 text-sm">Audra Maxwell</p>
+      </div>
+      <div class="bg-white/5 rounded-2xl p-6">
+        <h4 class="font-heading text-lg font-semibold mb-2">Website</h4>
+        <p class="text-softwhite/50 text-sm">firefliessalon.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-midnight border-t border-white/5 text-softwhite/30 py-8 text-center text-sm">
+  <p class="font-heading text-softwhite text-lg mb-1">Fireflies Salon & Med Spa</p>
+  <p>Spanish Fort, Alabama</p>
+  <p class="mt-4 text-softwhite/15">Demo site by Menendez Strategies</p>
+</footer>
+
+</body>
+</html>

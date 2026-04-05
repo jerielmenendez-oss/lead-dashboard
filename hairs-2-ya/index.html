@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hairs 2 Ya Salon | Foley, AL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rose: '#e8b4b8',
+            'rose-light': '#f3d1d4',
+            'rose-dark': '#c9969a',
+            cream: '#faf3e0',
+            'cream-dark': '#f0e6cc',
+            charcoal: '#2d2d2d',
+            'charcoal-light': '#4a4a4a',
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Lato', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; color: #2d2d2d; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #faf3e0 0%, #f3d1d4 40%, #e8b4b8 70%, #c9969a 100%);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(232, 180, 184, 0.3);
+    }
+
+    .photo-placeholder {
+      background: linear-gradient(145deg, #e8b4b8 0%, #c9969a 50%, #a07a7e 100%);
+    }
+    .photo-placeholder-alt {
+      background: linear-gradient(145deg, #f3d1d4 0%, #e8b4b8 60%, #c9969a 100%);
+    }
+    .photo-placeholder-warm {
+      background: linear-gradient(145deg, #faf3e0 0%, #f3d1d4 50%, #e8b4b8 100%);
+    }
+
+    .btn-primary {
+      background-color: #e8b4b8;
+      color: #2d2d2d;
+      transition: all 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #c9969a;
+      color: #fff;
+      transform: scale(1.03);
+    }
+
+    .divider-rose {
+      width: 60px;
+      height: 3px;
+      background: #e8b4b8;
+      margin: 0 auto;
+    }
+
+    nav.scrolled {
+      background: rgba(250, 243, 224, 0.97) !important;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body class="bg-cream">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="font-display text-2xl font-bold text-charcoal">Hairs 2 Ya</a>
+      <div class="hidden md:flex items-center gap-8 font-body text-sm tracking-wide">
+        <a href="#services" class="text-charcoal hover:text-rose-dark transition">Services</a>
+        <a href="#about" class="text-charcoal hover:text-rose-dark transition">About</a>
+        <a href="#contact" class="text-charcoal hover:text-rose-dark transition">Contact</a>
+        <a href="tel:2519431630" class="btn-primary px-5 py-2 rounded-full font-semibold text-sm">Call Now</a>
+      </div>
+      <button id="mobile-toggle" class="md:hidden text-charcoal" aria-label="Menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-cream-dark px-6 pb-4">
+      <a href="#services" class="block py-3 text-charcoal border-b border-cream-dark">Services</a>
+      <a href="#about" class="block py-3 text-charcoal border-b border-cream-dark">About</a>
+      <a href="#contact" class="block py-3 text-charcoal border-b border-cream-dark">Contact</a>
+      <a href="tel:2519431630" class="block mt-3 text-center btn-primary py-3 rounded-full font-semibold">Call (251) 943-1630</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-20 right-10 w-72 h-72 rounded-full bg-white blur-3xl"></div>
+      <div class="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-white blur-3xl"></div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="fade-up">
+        <p class="font-body text-sm tracking-[0.3em] uppercase text-charcoal-light mb-4">Foley, Alabama's Favorite Salon</p>
+        <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-charcoal leading-tight mb-6">
+          Beautiful Hair,<br><em class="font-normal text-charcoal-light">Made Personal</em>
+        </h1>
+        <p class="font-body text-lg text-charcoal-light mb-8 max-w-md leading-relaxed">
+          Where Southern hospitality meets expert styling. Walk in or call ahead &mdash; we're here to make you feel your best.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="tel:2519431630" class="btn-primary px-8 py-4 rounded-full font-bold text-center text-lg">
+            Call (251) 943-1630
+          </a>
+          <a href="#services" class="border-2 border-charcoal text-charcoal px-8 py-4 rounded-full font-bold text-center hover:bg-charcoal hover:text-cream transition text-lg">
+            View Services
+          </a>
+        </div>
+      </div>
+      <div class="fade-up hidden md:block">
+        <div class="photo-placeholder rounded-3xl h-[500px] flex items-end justify-center p-8 shadow-2xl relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          <p class="relative text-white/80 font-body text-sm tracking-widest uppercase">Salon Photography</p>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-charcoal-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <p class="font-body text-sm tracking-[0.3em] uppercase text-rose-dark mb-3">What We Offer</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">Our Services</h2>
+        <div class="divider-rose"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Cuts -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 fade-up">
+          <div class="photo-placeholder-warm h-48 flex items-center justify-center">
+            <svg class="w-14 h-14 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Haircuts</h3>
+            <p class="font-body text-charcoal-light text-sm leading-relaxed">Precision cuts for women, men, and children. From classic bobs to modern layers, we shape your perfect look.</p>
+          </div>
+        </div>
+
+        <!-- Color -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 fade-up" style="transition-delay:0.1s">
+          <div class="photo-placeholder-alt h-48 flex items-center justify-center">
+            <svg class="w-14 h-14 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Color</h3>
+            <p class="font-body text-charcoal-light text-sm leading-relaxed">Full color, highlights, balayage, and corrective color. We bring your vision to life with premium products.</p>
+          </div>
+        </div>
+
+        <!-- Styling -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 fade-up" style="transition-delay:0.2s">
+          <div class="photo-placeholder h-48 flex items-center justify-center">
+            <svg class="w-14 h-14 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Styling</h3>
+            <p class="font-body text-charcoal-light text-sm leading-relaxed">Blowouts, updos, special event styling, and bridal hair. Look stunning for every occasion.</p>
+          </div>
+        </div>
+
+        <!-- Treatments -->
+        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300 fade-up" style="transition-delay:0.3s">
+          <div class="photo-placeholder-warm h-48 flex items-center justify-center">
+            <svg class="w-14 h-14 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-xl font-semibold mb-2">Treatments</h3>
+            <p class="font-body text-charcoal-light text-sm leading-relaxed">Deep conditioning, keratin smoothing, scalp treatments, and hair repair for healthier, stronger hair.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-14 fade-up">
+        <a href="tel:2519431630" class="btn-primary inline-block px-10 py-4 rounded-full font-bold text-lg">
+          Book Your Appointment
+        </a>
+        <p class="text-charcoal-light text-sm mt-3 font-body">Online booking coming soon!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div class="fade-up">
+        <div class="photo-placeholder-alt rounded-3xl h-[400px] md:h-[480px] flex items-end justify-center p-8 shadow-xl relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          <p class="relative text-white/80 font-body text-sm tracking-widest uppercase">Our Team</p>
+        </div>
+      </div>
+      <div class="fade-up">
+        <p class="font-body text-sm tracking-[0.3em] uppercase text-rose-dark mb-3">Our Story</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-6">Rooted in Foley</h2>
+        <div class="divider-rose mb-6" style="margin:0"></div>
+        <p class="font-body text-charcoal-light leading-relaxed mb-5">
+          Hairs 2 Ya isn't just a salon &mdash; it's a gathering place. Built on the belief that great hair starts with genuine care, we've been part of the Foley community, serving our neighbors with warmth and skill.
+        </p>
+        <p class="font-body text-charcoal-light leading-relaxed mb-5">
+          Our stylists bring years of experience and a passion for making every client feel at home. Whether you're popping in for a quick trim or treating yourself to a full transformation, you'll always be greeted with a smile and leave feeling confident.
+        </p>
+        <p class="font-body text-charcoal-light leading-relaxed mb-8">
+          We're proud to call Foley, Alabama home &mdash; and we're proud to be <em>your</em> salon.
+        </p>
+        <div class="flex items-center gap-6">
+          <div class="text-center">
+            <p class="font-display text-3xl font-bold text-rose-dark">100%</p>
+            <p class="font-body text-xs text-charcoal-light uppercase tracking-wider">Dedicated</p>
+          </div>
+          <div class="w-px h-12 bg-cream-dark"></div>
+          <div class="text-center">
+            <p class="font-display text-3xl font-bold text-rose-dark">Local</p>
+            <p class="font-body text-xs text-charcoal-light uppercase tracking-wider">Owned</p>
+          </div>
+          <div class="w-px h-12 bg-cream-dark"></div>
+          <div class="text-center">
+            <p class="font-display text-3xl font-bold text-rose-dark">All</p>
+            <p class="font-body text-xs text-charcoal-light uppercase tracking-wider">Welcome</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Banner -->
+  <section class="py-16 hero-gradient">
+    <div class="max-w-3xl mx-auto px-6 text-center fade-up">
+      <svg class="w-10 h-10 mx-auto mb-4 text-charcoal/30" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151C7.563 6.068 6 8.789 6 11h4v10H0z"/></svg>
+      <p class="font-display text-2xl md:text-3xl italic text-charcoal leading-relaxed mb-6">
+        "The best salon experience in Baldwin County. They truly listen to what you want and deliver every time."
+      </p>
+      <p class="font-body text-sm text-charcoal-light tracking-widest uppercase">&mdash; A Happy Client</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <p class="font-body text-sm tracking-[0.3em] uppercase text-rose-dark mb-3">Get In Touch</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">Visit Us</h2>
+        <div class="divider-rose"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <!-- Phone -->
+        <div class="bg-white rounded-2xl p-8 text-center shadow-md fade-up">
+          <div class="w-16 h-16 bg-rose/20 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-rose-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Call Us</h3>
+          <a href="tel:2519431630" class="font-body text-rose-dark font-bold text-xl hover:underline">(251) 943-1630</a>
+          <p class="font-body text-charcoal-light text-sm mt-2">Tap to call on mobile</p>
+        </div>
+
+        <!-- Location -->
+        <div class="bg-white rounded-2xl p-8 text-center shadow-md fade-up" style="transition-delay:0.1s">
+          <div class="w-16 h-16 bg-rose/20 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-rose-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Location</h3>
+          <p class="font-body text-charcoal-light leading-relaxed">Foley, Alabama</p>
+          <p class="font-body text-charcoal-light text-sm mt-2">Baldwin County</p>
+        </div>
+
+        <!-- Social -->
+        <div class="bg-white rounded-2xl p-8 text-center shadow-md fade-up" style="transition-delay:0.2s">
+          <div class="w-16 h-16 bg-rose/20 rounded-full flex items-center justify-center mx-auto mb-5">
+            <svg class="w-7 h-7 text-rose-dark" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-2">Follow Us</h3>
+          <p class="font-body text-charcoal-light">Find us on Facebook</p>
+          <p class="font-body text-rose-dark text-sm mt-2 font-semibold">@Hairs2Ya</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-14 fade-up">
+        <a href="tel:2519431630" class="btn-primary inline-block px-12 py-5 rounded-full font-bold text-xl shadow-lg">
+          Call Now: (251) 943-1630
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal text-white/70 py-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h3 class="font-display text-2xl text-white mb-2">Hairs 2 Ya Salon</h3>
+      <p class="font-body text-sm mb-6">Foley, Alabama &bull; <a href="tel:2519431630" class="text-rose-light hover:underline">(251) 943-1630</a></p>
+      <div class="flex justify-center gap-6 mb-8">
+        <a href="#services" class="text-sm hover:text-white transition">Services</a>
+        <a href="#about" class="text-sm hover:text-white transition">About</a>
+        <a href="#contact" class="text-sm hover:text-white transition">Contact</a>
+      </div>
+      <div class="border-t border-white/10 pt-6">
+        <p class="text-xs">&copy; 2026 Hairs 2 Ya Salon. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>

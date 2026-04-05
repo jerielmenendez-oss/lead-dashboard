@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salon Thirty-One | Aveda Salon - Spanish Fort, Fairhope & Gulf Shores</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;600;700&family=Noto+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        aveda: '#2d5016',
+        earth: '#78350f',
+        linen: '#fef3c7',
+        charcoal: '#292524',
+      },
+      fontFamily: {
+        heading: ['Noto Serif Display', 'serif'],
+        body: ['Noto Sans', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Noto Serif Display', serif; }
+  .leaf-divider { width: 40px; height: 2px; background: #2d5016; display: inline-block; }
+</style>
+</head>
+<body class="bg-linen text-charcoal">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full bg-linen/95 backdrop-blur border-b border-aveda/10 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="#" class="font-heading text-xl font-semibold text-charcoal tracking-wide">Salon <span class="text-aveda">Thirty-One</span></a>
+    <div class="hidden md:flex gap-8 text-charcoal/60 text-sm font-medium">
+      <a href="#services" class="hover:text-aveda transition">Services</a>
+      <a href="#aveda" class="hover:text-aveda transition">Aveda</a>
+      <a href="#locations" class="hover:text-aveda transition">Locations</a>
+      <a href="#contact" class="hover:text-aveda transition">Contact</a>
+    </div>
+    <a href="tel:+12516267255" class="bg-aveda hover:bg-green-800 text-white px-5 py-2 rounded-full text-sm font-medium transition">(251) 626-7255</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center bg-charcoal overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;80&quot; height=&quot;80&quot; viewBox=&quot;0 0 80 80&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M40 0C40 22.091 22.091 40 0 40c22.091 0 40 17.909 40 40 0-22.091 17.909-40 40-40C57.909 40 40 22.091 40 0z&quot; fill=&quot;%232d5016&quot; fill-opacity=&quot;0.3&quot;/%3E%3C/svg%3E');"></div>
+  <div class="relative max-w-6xl mx-auto px-4 py-32 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-aveda uppercase tracking-[0.3em] text-xs font-medium mb-4">Aveda Lifestyle Salon</p>
+      <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-semibold text-linen leading-[1.1] mb-4">Salon<br>Thirty-One</h1>
+      <p class="text-linen/50 text-lg mb-8 max-w-md">Three locations. One philosophy. Beauty rooted in nature, powered by Aveda's plant-based science.</p>
+      <div class="flex flex-wrap gap-3 mb-8">
+        <span class="bg-aveda/20 text-aveda border border-aveda/30 px-4 py-1.5 rounded-full text-sm">Spanish Fort</span>
+        <span class="bg-aveda/20 text-aveda border border-aveda/30 px-4 py-1.5 rounded-full text-sm">Fairhope</span>
+        <span class="bg-aveda/20 text-aveda border border-aveda/30 px-4 py-1.5 rounded-full text-sm">Gulf Shores</span>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-aveda hover:bg-green-800 text-white px-8 py-3 rounded-full font-medium transition text-center">Book Now</a>
+        <a href="#services" class="border border-linen/20 hover:border-aveda text-linen px-8 py-3 rounded-full font-medium transition text-center">Our Services</a>
+      </div>
+    </div>
+    <div class="hidden md:flex justify-center">
+      <div class="w-72 h-96 bg-aveda/20 rounded-[60px] flex items-center justify-center border border-aveda/30">
+        <p class="text-linen/30 font-heading text-xl">Salon Photo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-20 px-4 bg-linen">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-earth uppercase tracking-[0.2em] text-xs font-medium">What We Offer</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-semibold mt-2">Our Services</h2>
+      <div class="mt-4 flex justify-center gap-2"><span class="leaf-divider"></span><span class="leaf-divider"></span><span class="leaf-divider"></span></div>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition border border-aveda/10">
+        <div class="w-14 h-14 bg-aveda/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-aveda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-heading text-xl font-semibold mb-2">Hair Design</h3>
+        <p class="text-charcoal/50 text-sm leading-relaxed">Cuts, color, highlights, balayage, and Aveda botanical treatments.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition border border-aveda/10">
+        <div class="w-14 h-14 bg-aveda/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-aveda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <h3 class="font-heading text-xl font-semibold mb-2">Texture</h3>
+        <p class="text-charcoal/50 text-sm leading-relaxed">Perms, smoothing treatments, and texture services for every hair type.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition border border-aveda/10">
+        <div class="w-14 h-14 bg-aveda/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-aveda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3 class="font-heading text-xl font-semibold mb-2">Skin & Body</h3>
+        <p class="text-charcoal/50 text-sm leading-relaxed">Facials, waxing, and plant-powered body treatments using Aveda products.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition border border-aveda/10">
+        <div class="w-14 h-14 bg-aveda/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-7 h-7 text-aveda" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        </div>
+        <h3 class="font-heading text-xl font-semibold mb-2">Bridal & Events</h3>
+        <p class="text-charcoal/50 text-sm leading-relaxed">Wedding hair, makeup, and group styling for life's most important moments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Aveda -->
+<section id="aveda" class="py-20 px-4 bg-aveda text-white">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-white/60 uppercase tracking-[0.2em] text-xs font-medium">Our Philosophy</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-semibold mt-2 mb-6">Powered by Aveda</h2>
+      <p class="text-white/70 leading-relaxed mb-4">As an Aveda lifestyle salon, every product we use and every treatment we offer is rooted in the art and science of pure flower and plant essences. It's beauty that's good for you and good for the planet.</p>
+      <p class="text-white/70 leading-relaxed mb-6">From responsibly sourced ingredients to high-performance botanical formulas, the Aveda difference is something you can see, feel, and trust.</p>
+      <ul class="space-y-3 text-white/70 text-sm">
+        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-linen rounded-full"></span>Plant-powered, cruelty-free products</li>
+        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-linen rounded-full"></span>Environmentally responsible practices</li>
+        <li class="flex items-center gap-3"><span class="w-2 h-2 bg-linen rounded-full"></span>Professional-grade botanical formulas</li>
+      </ul>
+    </div>
+    <div class="bg-white/10 rounded-3xl aspect-square flex items-center justify-center border border-white/10">
+      <p class="text-white/30 font-heading text-xl">Aveda Products</p>
+    </div>
+  </div>
+</section>
+
+<!-- Locations -->
+<section id="locations" class="py-20 px-4 bg-linen">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-earth uppercase tracking-[0.2em] text-xs font-medium">Find Us</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-semibold mt-2">Three Locations</h2>
+      <div class="mt-4 flex justify-center gap-2"><span class="leaf-divider"></span><span class="leaf-divider"></span><span class="leaf-divider"></span></div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition border border-aveda/10">
+        <div class="w-12 h-12 bg-aveda rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-white font-heading font-bold">SF</span>
+        </div>
+        <h3 class="font-heading text-2xl font-semibold mb-2">Spanish Fort</h3>
+        <p class="text-charcoal/50 text-sm">Our flagship location on the Eastern Shore.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition border border-aveda/10">
+        <div class="w-12 h-12 bg-aveda rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-white font-heading font-bold">FH</span>
+        </div>
+        <h3 class="font-heading text-2xl font-semibold mb-2">Fairhope</h3>
+        <p class="text-charcoal/50 text-sm">In the heart of charming downtown Fairhope.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition border border-aveda/10">
+        <div class="w-12 h-12 bg-aveda rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-white font-heading font-bold">GS</span>
+        </div>
+        <h3 class="font-heading text-2xl font-semibold mb-2">Gulf Shores</h3>
+        <p class="text-charcoal/50 text-sm">Serving the beach community on the coast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 px-4 bg-charcoal text-linen">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="text-aveda uppercase tracking-[0.2em] text-xs font-medium">Ready to Visit?</p>
+    <h2 class="font-heading text-4xl md:text-5xl font-semibold mt-2 mb-4">Book Your Appointment</h2>
+    <p class="text-linen/50 text-lg mb-10">Call us to schedule at any of our three locations along the Alabama Gulf Coast.</p>
+    <a href="tel:+12516267255" class="inline-block bg-aveda hover:bg-green-800 text-white px-10 py-4 rounded-full font-medium text-xl transition mb-6">(251) 626-7255</a>
+    <p class="text-linen/30 text-sm">Spanish Fort | Fairhope | Gulf Shores</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-charcoal border-t border-white/5 text-linen/30 py-8 text-center text-sm">
+  <p class="font-heading text-linen text-lg mb-1">Salon Thirty-One</p>
+  <p>Aveda Lifestyle Salon | Spanish Fort - Fairhope - Gulf Shores</p>
+  <p class="mt-4 text-linen/15">Demo site by Menendez Strategies</p>
+</footer>
+
+</body>
+</html>

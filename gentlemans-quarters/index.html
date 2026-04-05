@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gentleman's Quarters Barbershop | Gulf Shores, AL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        walnut: '#2c1810',
+        'walnut-light': '#3d2519',
+        'walnut-dark': '#1a0e0a',
+        brass: '#b8860b',
+        'brass-light': '#d4a017',
+        'brass-dark': '#8b6508',
+        ivory: '#fffff0',
+        'ivory-dim': '#f5f5dc',
+      },
+      fontFamily: {
+        cinzel: ['Cinzel', 'serif'],
+        raleway: ['Raleway', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+html { scroll-behavior: smooth; }
+body { font-family: 'Raleway', sans-serif; }
+
+/* Art Deco Geometric Pattern */
+.deco-pattern {
+  background-image:
+    linear-gradient(45deg, rgba(184,134,11,0.06) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(184,134,11,0.06) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(184,134,11,0.06) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(184,134,11,0.06) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+}
+
+/* Art Deco Divider */
+.deco-divider {
+  display: flex; align-items: center; gap: 12px; justify-content: center;
+}
+.deco-divider::before, .deco-divider::after {
+  content: ''; height: 1px; width: 80px; background: linear-gradient(90deg, transparent, #b8860b, transparent);
+}
+.deco-diamond {
+  width: 10px; height: 10px; background: #b8860b; transform: rotate(45deg); flex-shrink: 0;
+}
+
+/* Hero corner ornaments */
+.corner-ornament {
+  position: absolute; width: 60px; height: 60px;
+  border-color: rgba(184,134,11,0.4);
+}
+.corner-tl { top: 20px; left: 20px; border-top: 2px solid; border-left: 2px solid; }
+.corner-tr { top: 20px; right: 20px; border-top: 2px solid; border-right: 2px solid; }
+.corner-bl { bottom: 20px; left: 20px; border-bottom: 2px solid; border-left: 2px solid; }
+.corner-br { bottom: 20px; right: 20px; border-bottom: 2px solid; border-right: 2px solid; }
+
+/* Deco border card */
+.service-card {
+  position: relative; border: 1px solid rgba(184,134,11,0.25);
+  background: rgba(44,24,16,0.6); backdrop-filter: blur(4px);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.service-card:hover { border-color: #b8860b; transform: translateY(-4px); }
+
+/* Gold line accent */
+.gold-line { height: 2px; background: linear-gradient(90deg, transparent, #b8860b, transparent); }
+
+/* Scroll fade-in */
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s, transform 0.7s; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* Deco fan shape */
+.deco-fan {
+  width: 120px; height: 60px; border-radius: 120px 120px 0 0;
+  border: 1px solid rgba(184,134,11,0.3); border-bottom: none;
+}
+</style>
+</head>
+<body class="bg-walnut-dark text-ivory">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-walnut-dark/95 backdrop-blur border-b border-brass/20">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#" class="font-cinzel text-brass text-lg md:text-xl tracking-widest uppercase">GQ Barbershop</a>
+    <div class="hidden md:flex items-center gap-8 font-raleway text-sm tracking-wider uppercase text-ivory/70">
+      <a href="#services" class="hover:text-brass transition">Services</a>
+      <a href="#about" class="hover:text-brass transition">About</a>
+      <a href="#visit" class="hover:text-brass transition">Visit</a>
+      <a href="#contact" class="hover:text-brass transition">Contact</a>
+    </div>
+    <a href="https://www.fresha.com" target="_blank" class="bg-brass hover:bg-brass-light text-walnut-dark font-cinzel text-xs tracking-widest uppercase px-5 py-2 transition">Book Now</a>
+    <!-- Mobile menu toggle -->
+    <button id="menuBtn" class="md:hidden text-brass ml-3 text-2xl leading-none">&#9776;</button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-walnut-dark border-t border-brass/20 px-4 pb-4">
+    <a href="#services" class="block py-2 text-ivory/70 hover:text-brass text-sm uppercase tracking-wider">Services</a>
+    <a href="#about" class="block py-2 text-ivory/70 hover:text-brass text-sm uppercase tracking-wider">About</a>
+    <a href="#visit" class="block py-2 text-ivory/70 hover:text-brass text-sm uppercase tracking-wider">Visit</a>
+    <a href="#contact" class="block py-2 text-ivory/70 hover:text-brass text-sm uppercase tracking-wider">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center justify-center deco-pattern overflow-hidden">
+  <div class="corner-ornament corner-tl"></div>
+  <div class="corner-ornament corner-tr"></div>
+  <div class="corner-ornament corner-bl"></div>
+  <div class="corner-ornament corner-br"></div>
+
+  <!-- Decorative radial -->
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <div class="w-[500px] h-[500px] rounded-full border border-brass/10"></div>
+  </div>
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <div class="w-[350px] h-[350px] rounded-full border border-brass/5"></div>
+  </div>
+
+  <div class="relative text-center px-6 max-w-3xl">
+    <!-- Deco fan ornament -->
+    <div class="flex justify-center mb-6"><div class="deco-fan"></div></div>
+
+    <p class="font-raleway text-brass tracking-[0.35em] uppercase text-sm mb-4">Gulf Shores, Alabama</p>
+    <h1 class="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide leading-tight mb-4">
+      Gentleman's<br>Quarters
+    </h1>
+    <div class="gold-line w-48 mx-auto my-6"></div>
+    <p class="font-cinzel text-brass-light text-lg md:text-2xl tracking-widest uppercase mb-2">The Gentleman's Experience</p>
+    <p class="font-raleway text-ivory/60 text-base md:text-lg mt-4 max-w-xl mx-auto leading-relaxed">
+      Where tradition meets craft. Premium grooming in the heart of the Gulf Coast.
+    </p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://www.fresha.com" target="_blank" class="bg-brass hover:bg-brass-light text-walnut-dark font-cinzel tracking-widest uppercase text-sm px-8 py-4 transition inline-block">
+        Book Your Appointment
+      </a>
+      <a href="tel:2514245871" class="border border-brass/40 hover:border-brass text-brass font-cinzel tracking-widest uppercase text-sm px-8 py-4 transition inline-block">
+        (251) 424-5871
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-brass/40">
+    <span class="text-xs tracking-widest uppercase font-raleway">Scroll</span>
+    <div class="w-px h-8 bg-gradient-to-b from-brass/40 to-transparent"></div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-24 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16 fade-up">
+      <p class="font-raleway text-brass tracking-[0.3em] uppercase text-xs mb-3">Our Craft</p>
+      <h2 class="font-cinzel text-3xl md:text-5xl font-semibold mb-4">Services</h2>
+      <div class="deco-divider"><div class="deco-diamond"></div></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Service Cards -->
+      <div class="service-card p-8 text-center fade-up">
+        <div class="text-brass text-3xl mb-4">&#9986;</div>
+        <h3 class="font-cinzel text-lg tracking-wider mb-2">Classic Haircut</h3>
+        <p class="text-ivory/50 text-sm leading-relaxed">Precision cut with hot towel finish and styling. The cornerstone of every gentleman's routine.</p>
+      </div>
+      <div class="service-card p-8 text-center fade-up">
+        <div class="text-brass text-3xl mb-4">&#128136;</div>
+        <h3 class="font-cinzel text-lg tracking-wider mb-2">Hot Towel Shave</h3>
+        <p class="text-ivory/50 text-sm leading-relaxed">Straight razor shave with premium lather, warm towels, and aftershave balm.</p>
+      </div>
+      <div class="service-card p-8 text-center fade-up">
+        <div class="text-brass text-3xl mb-4">&#9996;</div>
+        <h3 class="font-cinzel text-lg tracking-wider mb-2">Beard Sculpt</h3>
+        <p class="text-ivory/50 text-sm leading-relaxed">Expert beard shaping, trimming, and conditioning for a distinguished look.</p>
+      </div>
+      <div class="service-card p-8 text-center fade-up">
+        <div class="text-brass text-3xl mb-4">&#127919;</div>
+        <h3 class="font-cinzel text-lg tracking-wider mb-2">Haircut &amp; Beard Combo</h3>
+        <p class="text-ivory/50 text-sm leading-relaxed">The full gentleman's treatment. Haircut paired with a fresh beard lineup.</p>
+      </div>
+      <div class="service-card p-8 text-center fade-up">
+        <div class="text-brass text-3xl mb-4">&#128142;</div>
+        <h3 class="font-cinzel text-lg tracking-wider mb-2">The Quarters Experience</h3>
+        <p class="text-ivory/50 text-sm leading-relaxed">Our signature service. Cut, hot shave, beard detail, and scalp treatment.</p>
+      </div>
+      <div class="service-card p-8 text-center fade-up">
+        <div class="text-brass text-3xl mb-4">&#127754;</div>
+        <h3 class="font-cinzel text-lg tracking-wider mb-2">Vacation Fresh-Up</h3>
+        <p class="text-ivory/50 text-sm leading-relaxed">Visiting the Gulf? Walk-in quick cut and style to keep you looking sharp on the coast.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12 fade-up">
+      <a href="https://www.fresha.com" target="_blank" class="inline-block bg-brass hover:bg-brass-light text-walnut-dark font-cinzel tracking-widest uppercase text-sm px-10 py-4 transition">
+        View Full Menu &amp; Book
+      </a>
+      <p class="text-ivory/40 text-xs mt-3 font-raleway">Booking powered by Fresha</p>
+    </div>
+  </div>
+</section>
+
+<!-- Decorative Break -->
+<div class="flex justify-center py-4"><div class="gold-line w-2/3 max-w-md"></div></div>
+
+<!-- About -->
+<section id="about" class="py-24 px-4 deco-pattern">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12 fade-up">
+      <p class="font-raleway text-brass tracking-[0.3em] uppercase text-xs mb-3">Our Story</p>
+      <h2 class="font-cinzel text-3xl md:text-5xl font-semibold mb-4">About the Quarters</h2>
+      <div class="deco-divider"><div class="deco-diamond"></div></div>
+    </div>
+
+    <div class="max-w-2xl mx-auto text-center fade-up">
+      <p class="text-ivory/70 leading-relaxed text-base md:text-lg mb-6">
+        Gentleman's Quarters isn't just a barbershop -- it's a destination. Nestled in the vibrant Gulf Shores community, we've crafted a space where the art of grooming is elevated to an experience.
+      </p>
+      <p class="text-ivory/70 leading-relaxed text-base md:text-lg mb-6">
+        Every detail, from the warm wood interiors to the precision of each cut, reflects our commitment to the craft. Whether you're a local or visiting Alabama's most beautiful coastline, you'll leave feeling like a true gentleman.
+      </p>
+      <p class="text-ivory/50 leading-relaxed text-sm italic">
+        "A great haircut isn't just about how you look. It's about how you feel walking out the door."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Visit / Location (Tourist-Friendly) -->
+<section id="visit" class="py-24 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16 fade-up">
+      <p class="font-raleway text-brass tracking-[0.3em] uppercase text-xs mb-3">Plan Your Visit</p>
+      <h2 class="font-cinzel text-3xl md:text-5xl font-semibold mb-4">Find Us in Gulf Shores</h2>
+      <div class="deco-divider"><div class="deco-diamond"></div></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <!-- Info cards -->
+      <div class="space-y-6 fade-up">
+        <div class="service-card p-6">
+          <h3 class="font-cinzel text-brass tracking-wider text-sm uppercase mb-3">&#127965; Visiting the Gulf Coast?</h3>
+          <p class="text-ivory/60 text-sm leading-relaxed">
+            Gulf Shores is Alabama's premier beach destination. Whether you're here for the white sand beaches, fishing charters, or the legendary seafood, make Gentleman's Quarters part of your trip. Look sharp for dinner at The Hangout or a sunset at Gulf State Park.
+          </p>
+        </div>
+        <div class="service-card p-6">
+          <h3 class="font-cinzel text-brass tracking-wider text-sm uppercase mb-3">&#128205; Location</h3>
+          <p class="text-ivory/60 text-sm leading-relaxed">
+            Gulf Shores, Alabama<br>
+            Conveniently located near the main beach strip. Easy to find, with plenty of parking.
+          </p>
+        </div>
+        <div class="service-card p-6">
+          <h3 class="font-cinzel text-brass tracking-wider text-sm uppercase mb-3">&#128197; Walk-Ins &amp; Appointments</h3>
+          <p class="text-ivory/60 text-sm leading-relaxed">
+            We welcome walk-ins when availability allows, but booking ahead via Fresha guarantees your spot -- especially during peak tourist season (March-September).
+          </p>
+        </div>
+      </div>
+
+      <!-- Map placeholder -->
+      <div class="fade-up">
+        <div class="border border-brass/20 bg-walnut/50 aspect-video flex items-center justify-center">
+          <div class="text-center p-8">
+            <p class="text-brass font-cinzel tracking-wider text-lg mb-2">Gulf Shores, AL</p>
+            <p class="text-ivory/40 text-sm mb-4">Alabama's Gulf Coast</p>
+            <a href="https://maps.google.com/?q=Gulf+Shores+AL" target="_blank" class="text-brass text-sm underline hover:text-brass-light transition">
+              Open in Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+        <div class="mt-6 service-card p-6 text-center">
+          <p class="font-cinzel text-brass tracking-wider text-sm uppercase mb-2">&#9742; Call Us</p>
+          <a href="tel:2514245871" class="text-ivory text-2xl font-cinzel tracking-wider hover:text-brass transition">(251) 424-5871</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="py-20 px-4 deco-pattern relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-walnut-dark via-transparent to-walnut-dark"></div>
+  <div class="relative max-w-3xl mx-auto text-center fade-up">
+    <h2 class="font-cinzel text-3xl md:text-4xl font-semibold mb-4">Ready for the Gentleman's Experience?</h2>
+    <p class="text-ivory/60 font-raleway mb-8 max-w-lg mx-auto">
+      Book your appointment online in seconds. Walk out looking and feeling your absolute best.
+    </p>
+    <a href="https://www.fresha.com" target="_blank" class="inline-block bg-brass hover:bg-brass-light text-walnut-dark font-cinzel tracking-widest uppercase text-sm px-12 py-5 transition">
+      Book on Fresha
+    </a>
+  </div>
+</section>
+
+<!-- Contact / Footer -->
+<footer id="contact" class="bg-walnut-dark border-t border-brass/15 py-16 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-10 text-center md:text-left">
+      <div>
+        <h3 class="font-cinzel text-brass tracking-widest uppercase text-sm mb-4">Gentleman's Quarters</h3>
+        <p class="text-ivory/40 text-sm leading-relaxed">
+          Premium barbershop in Gulf Shores, Alabama. Serving locals and visitors with the finest in men's grooming.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-cinzel text-brass tracking-widest uppercase text-sm mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm text-ivory/50">
+          <li><a href="#services" class="hover:text-brass transition">Services</a></li>
+          <li><a href="#about" class="hover:text-brass transition">About</a></li>
+          <li><a href="#visit" class="hover:text-brass transition">Visit</a></li>
+          <li><a href="https://www.fresha.com" target="_blank" class="hover:text-brass transition">Book Online</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-cinzel text-brass tracking-widest uppercase text-sm mb-4">Contact</h3>
+        <p class="text-ivory/50 text-sm mb-2">
+          <a href="tel:2514245871" class="hover:text-brass transition">(251) 424-5871</a>
+        </p>
+        <p class="text-ivory/50 text-sm mb-2">Gulf Shores, Alabama</p>
+        <p class="text-ivory/40 text-xs mt-4">Book appointments via Fresha</p>
+      </div>
+    </div>
+
+    <div class="gold-line mt-12 mb-6"></div>
+
+    <div class="flex flex-col md:flex-row justify-between items-center text-ivory/30 text-xs">
+      <p>&copy; 2026 Gentleman's Quarters Barbershop. All rights reserved.</p>
+      <p class="mt-2 md:mt-0">Website by <span class="text-brass/60">Menendez Strategies</span></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile menu toggle
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+});
+// Close mobile menu on link click
+document.querySelectorAll('#mobileMenu a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
+});
+
+// Scroll fade-in
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

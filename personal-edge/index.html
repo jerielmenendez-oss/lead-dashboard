@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Edge Fitness | Daphne, AL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700;800;900&family=Saira:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            carbon: '#1a1a1a',
+            cyan: '#00e5ff',
+            dgray: '#2d2d2d',
+          },
+          fontFamily: {
+            heading: ['Exo', 'sans-serif'],
+            body: ['Saira', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Saira', sans-serif; }
+    .glow { text-shadow: 0 0 30px rgba(0,229,255,0.3); }
+    .card-glow { box-shadow: 0 0 20px rgba(0,229,255,0.1); }
+    .card-glow:hover { box-shadow: 0 0 30px rgba(0,229,255,0.25); }
+    .gradient-line { background: linear-gradient(90deg, transparent, #00e5ff, transparent); }
+  </style>
+</head>
+<body class="bg-carbon text-white">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full bg-carbon/90 backdrop-blur-md z-50 border-b border-dgray">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="font-heading font-800 text-xl tracking-wider">PERSONAL <span class="text-cyan">EDGE</span></a>
+      <div class="hidden md:flex gap-8 font-body text-sm tracking-wide">
+        <a href="#programs" class="hover:text-cyan transition">Programs</a>
+        <a href="#about" class="hover:text-cyan transition">About</a>
+        <a href="#results" class="hover:text-cyan transition">Results</a>
+        <a href="#contact" class="hover:text-cyan transition">Contact</a>
+      </div>
+      <a href="tel:2516510927" class="bg-cyan text-carbon font-heading font-700 px-5 py-2 text-sm hover:bg-cyan/80 transition">CALL NOW</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <div class="absolute inset-0 bg-gradient-to-br from-carbon via-dgray/30 to-carbon"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-cyan/5 blur-3xl"></div>
+    <div class="relative text-center px-4 max-w-4xl">
+      <p class="font-body text-cyan tracking-[0.3em] text-sm mb-6 uppercase">Daphne, Alabama</p>
+      <h1 class="font-heading font-900 text-5xl md:text-7xl lg:text-8xl leading-tight mb-6">
+        ELEVATE YOUR<br><span class="text-cyan glow">PERFORMANCE</span>
+      </h1>
+      <p class="font-body text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-300">
+        Premium one-on-one personal training designed to push your limits and unlock results you didn't think were possible.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="bg-cyan text-carbon font-heading font-700 px-8 py-4 text-lg hover:bg-cyan/80 transition tracking-wide">START YOUR TRANSFORMATION</a>
+        <a href="#programs" class="border border-cyan/40 text-cyan font-heading font-600 px-8 py-4 text-lg hover:bg-cyan/10 transition tracking-wide">VIEW PROGRAMS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-cyan font-body tracking-[0.3em] text-sm text-center mb-3 uppercase">What We Offer</p>
+      <h2 class="font-heading font-800 text-4xl md:text-5xl text-center mb-4">TRAINING <span class="text-cyan">PROGRAMS</span></h2>
+      <div class="gradient-line h-px w-40 mx-auto mb-16"></div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-dgray/50 border border-dgray p-8 card-glow transition-all duration-300 hover:-translate-y-1">
+          <div class="text-cyan text-4xl mb-4 font-heading font-800">01</div>
+          <h3 class="font-heading font-700 text-xl mb-3">1-ON-1 TRAINING</h3>
+          <p class="font-body text-gray-400 font-300 leading-relaxed">Fully customized sessions tailored to your goals, fitness level, and schedule. Every rep has a purpose.</p>
+        </div>
+        <div class="bg-dgray/50 border border-cyan/30 p-8 card-glow transition-all duration-300 hover:-translate-y-1">
+          <div class="text-cyan text-4xl mb-4 font-heading font-800">02</div>
+          <h3 class="font-heading font-700 text-xl mb-3">STRENGTH & CONDITIONING</h3>
+          <p class="font-body text-gray-400 font-300 leading-relaxed">Build functional strength, improve athletic performance, and develop a body that performs as good as it looks.</p>
+        </div>
+        <div class="bg-dgray/50 border border-dgray p-8 card-glow transition-all duration-300 hover:-translate-y-1">
+          <div class="text-cyan text-4xl mb-4 font-heading font-800">03</div>
+          <h3 class="font-heading font-700 text-xl mb-3">NUTRITION COACHING</h3>
+          <p class="font-body text-gray-400 font-300 leading-relaxed">Sustainable nutrition strategies that fuel your training and accelerate your results. No fads, just science.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-4 bg-dgray/30">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="bg-dgray border border-dgray aspect-square flex items-center justify-center">
+            <p class="text-gray-600 font-body text-sm tracking-wider uppercase">Trainer Photo</p>
+          </div>
+        </div>
+        <div>
+          <p class="text-cyan font-body tracking-[0.3em] text-sm mb-3 uppercase">Your Coach</p>
+          <h2 class="font-heading font-800 text-4xl md:text-5xl mb-6">GARRETT<br><span class="text-cyan">WILLIAMSON</span></h2>
+          <div class="gradient-line h-px w-20 mb-8"></div>
+          <p class="font-body text-gray-400 font-300 leading-relaxed mb-6">
+            With years of dedicated experience in personal training, Garrett brings an intensity and precision to every session that gets results. Based in Daphne, AL, he's built a reputation for transforming clients who are serious about reaching the next level.
+          </p>
+          <p class="font-body text-gray-400 font-300 leading-relaxed mb-8">
+            Whether you're training for competition, recovering from injury, or just ready to commit to real change &mdash; Garrett's approach is built on accountability, science-backed programming, and relentless support.
+          </p>
+          <a href="tel:2516510927" class="inline-block bg-cyan text-carbon font-heading font-700 px-6 py-3 hover:bg-cyan/80 transition tracking-wide">BOOK A CONSULTATION</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-cyan font-body tracking-[0.3em] text-sm text-center mb-3 uppercase">Proof in the Work</p>
+      <h2 class="font-heading font-800 text-4xl md:text-5xl text-center mb-4">TRANSFORMATION <span class="text-cyan">RESULTS</span></h2>
+      <div class="gradient-line h-px w-40 mx-auto mb-16"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-dgray/50 border border-dgray aspect-[3/4] flex items-center justify-center">
+          <p class="text-gray-600 font-body text-sm tracking-wider uppercase">Before / After</p>
+        </div>
+        <div class="bg-dgray/50 border border-dgray aspect-[3/4] flex items-center justify-center">
+          <p class="text-gray-600 font-body text-sm tracking-wider uppercase">Before / After</p>
+        </div>
+        <div class="bg-dgray/50 border border-dgray aspect-[3/4] flex items-center justify-center">
+          <p class="text-gray-600 font-body text-sm tracking-wider uppercase">Before / After</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-4 bg-dgray/30">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-cyan font-body tracking-[0.3em] text-sm mb-3 uppercase">Get Started</p>
+      <h2 class="font-heading font-800 text-4xl md:text-5xl mb-4">READY TO <span class="text-cyan">TRAIN?</span></h2>
+      <div class="gradient-line h-px w-40 mx-auto mb-10"></div>
+      <p class="font-body text-gray-400 font-300 text-lg mb-10 max-w-xl mx-auto">
+        Take the first step. Call or text Garrett to schedule your free consultation and find out what your edge looks like.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+        <a href="tel:2516510927" class="bg-cyan text-carbon font-heading font-700 px-8 py-4 text-xl hover:bg-cyan/80 transition tracking-wide">(251) 651-0927</a>
+      </div>
+      <div class="text-gray-500 font-body text-sm">
+        <p>Personal Edge Fitness &bull; Daphne, AL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-carbon border-t border-dgray py-8 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-heading font-700 tracking-wider">PERSONAL <span class="text-cyan">EDGE</span></p>
+      <p class="font-body text-gray-600 text-sm">&copy; 2026 Personal Edge Fitness. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel's Automotor LLC | Auto Repair in Foley, AL</title>
-    <meta name="description" content="Trusted auto repair in Foley, AL since 2008. Oil changes, brakes, engine work, tow service & more. Se habla Español. Call (251) 233-8523.">
+    <title>Angel's Automotor LLC — Auto Repair in Foley, AL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#0f0f0f',
-                        accent: '#ff6b35',
-                        dark: '#0a0a0a',
-                        darkgray: '#1a1a1a',
-                        medgray: '#2a2a2a',
+                        charcoal: '#1c1c1c',
+                        'charcoal-light': '#2a2a2a',
+                        orange: '#e8611a',
+                        'orange-dark': '#c9520f',
+                        tan: '#d4a574',
+                        cream: '#f5efe6',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Rajdhani', 'sans-serif'],
+                        body: ['Work Sans', 'sans-serif'],
                     }
                 }
             }
@@ -28,285 +29,301 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .hero-gradient { background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%); }
-        .accent-glow { box-shadow: 0 0 30px rgba(255, 107, 53, 0.3); }
-        .service-card:hover { transform: translateY(-4px); border-color: #ff6b35; }
+        body { font-family: 'Work Sans', sans-serif; background: #1c1c1c; color: #f5efe6; }
+        .font-heading { font-family: 'Rajdhani', sans-serif; }
+        .gear-spin { animation: spin 20s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(232,97,26,0.2); }
         .service-card { transition: all 0.3s ease; }
+        .hero-gradient { background: linear-gradient(135deg, #1c1c1c 0%, #2a2a2a 50%, #1c1c1c 100%); }
+        .orange-glow { text-shadow: 0 0 40px rgba(232,97,26,0.3); }
+        .border-accent { border-image: linear-gradient(to right, #e8611a, #d4a574) 1; }
     </style>
 </head>
-<body class="bg-dark text-white font-sans">
+<body class="overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-dark/95 backdrop-blur-md z-50 border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div>
-                <span class="text-xl font-bold text-white">Angel's</span>
-                <span class="text-xl font-bold text-accent"> Automotor</span>
-            </div>
-            <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
-                <a href="#services" class="hover:text-accent transition">Services</a>
-                <a href="#about" class="hover:text-accent transition">About</a>
-                <a href="#hours" class="hover:text-accent transition">Hours</a>
-                <a href="#contact" class="hover:text-accent transition">Contact</a>
-            </div>
-            <a href="tel:2512338523" class="bg-accent hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition">
-                (251) 233-8523
-            </a>
-            <button id="menuBtn" class="md:hidden text-white text-2xl">&#9776;</button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-white/5 px-4 pb-4">
-            <a href="#services" class="block py-3 text-gray-400 hover:text-accent">Services</a>
-            <a href="#about" class="block py-3 text-gray-400 hover:text-accent">About</a>
-            <a href="#hours" class="block py-3 text-gray-400 hover:text-accent">Hours</a>
-            <a href="#contact" class="block py-3 text-gray-400 hover:text-accent">Contact</a>
-        </div>
-    </nav>
+<!-- Gear SVG Defs -->
+<svg class="hidden">
+    <defs>
+        <symbol id="gear" viewBox="0 0 100 100">
+            <path fill="currentColor" d="M50 20a30 30 0 1 0 0 60 30 30 0 0 0 0-60zm0 48a18 18 0 1 1 0-36 18 18 0 0 1 0 36z"/>
+            <rect fill="currentColor" x="46" y="2" width="8" height="18" rx="3"/>
+            <rect fill="currentColor" x="46" y="80" width="8" height="18" rx="3"/>
+            <rect fill="currentColor" x="2" y="46" width="18" height="8" rx="3"/>
+            <rect fill="currentColor" x="80" y="46" width="18" height="8" rx="3"/>
+            <rect fill="currentColor" x="14" y="14" width="8" height="18" rx="3" transform="rotate(45 18 23)"/>
+            <rect fill="currentColor" x="78" y="68" width="8" height="18" rx="3" transform="rotate(45 82 77)"/>
+            <rect fill="currentColor" x="68" y="14" width="18" height="8" rx="3" transform="rotate(45 77 18)"/>
+            <rect fill="currentColor" x="14" y="78" width="18" height="8" rx="3" transform="rotate(45 23 82)"/>
+        </symbol>
+        <symbol id="wrench" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+        </symbol>
+    </defs>
+</svg>
 
-    <!-- Hero -->
-    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 left-20 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 bg-charcoal/95 backdrop-blur border-b border-orange/20">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <svg class="w-7 h-7 text-orange"><use href="#gear"/></svg>
+            <span class="font-heading font-bold text-xl tracking-wide text-cream">ANGEL'S <span class="text-orange">AUTOMOTOR</span></span>
         </div>
-        <div class="max-w-6xl mx-auto px-4 pt-24 pb-16 relative z-10">
-            <div class="inline-block bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 text-accent text-sm font-medium mb-6">
-                Serving Foley, AL Since 2008
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-cream/80">
+            <a href="#services" class="hover:text-orange transition">Services</a>
+            <a href="#towing" class="hover:text-orange transition">Towing</a>
+            <a href="#about" class="hover:text-orange transition">About</a>
+            <a href="#contact" class="hover:text-orange transition">Contact</a>
+        </div>
+        <a href="tel:2512338523" class="bg-orange hover:bg-orange-dark text-white font-heading font-semibold px-4 py-2 rounded text-sm transition">
+            (251) 233-8523
+        </a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-gradient relative min-h-screen flex items-center pt-16">
+    <!-- Decorative gears -->
+    <svg class="gear-spin absolute top-20 right-10 w-32 h-32 text-orange/5"><use href="#gear"/></svg>
+    <svg class="gear-spin absolute bottom-20 left-5 w-48 h-48 text-tan/5" style="animation-direction:reverse;animation-duration:30s"><use href="#gear"/></svg>
+
+    <div class="max-w-6xl mx-auto px-4 py-20 md:py-32 relative z-10">
+        <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-1.5 mb-6">
+                <svg class="w-4 h-4 text-orange"><use href="#wrench"/></svg>
+                <span class="text-orange font-medium text-sm tracking-wide">TRUSTED SINCE 2008</span>
             </div>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
-                Auto Repair You<br>
-                Can <span class="text-accent">Count On</span>
+            <h1 class="font-heading font-bold text-5xl md:text-7xl leading-tight mb-4 orange-glow">
+                <span class="text-cream">18 Years Serving</span><br>
+                <span class="text-orange">Baldwin County</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-400 max-w-xl mb-4">
-                18 years of honest, affordable auto repair for Baldwin County. Fast turnaround, fair prices, and a team that treats your car like their own.
+            <p class="text-cream/70 text-lg md:text-xl max-w-xl mb-8 leading-relaxed">
+                Family-owned auto repair you can count on. From oil changes to engine rebuilds, we treat every vehicle like it's our own.
             </p>
-            <p class="text-accent font-semibold mb-8">Se Habla Espa&ntilde;ol</p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="tel:2512338523" class="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg text-center transition accent-glow">
-                    Call Now &mdash; (251) 233-8523
+            <div class="flex flex-wrap gap-4 mb-10">
+                <a href="tel:2512338523" class="bg-orange hover:bg-orange-dark text-white font-heading font-semibold text-lg px-8 py-3.5 rounded transition flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    Call Now
                 </a>
-                <a href="#services" class="border border-white/20 hover:border-accent text-white px-8 py-4 rounded-xl font-semibold text-lg text-center transition">
-                    View Services
+                <a href="#services" class="border-2 border-tan/40 hover:border-orange text-cream font-heading font-semibold text-lg px-8 py-3.5 rounded transition">
+                    Our Services
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="py-20 bg-darkgray">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-14 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-accent">Services</span></h2>
-                <p class="text-gray-400 max-w-xl mx-auto">From routine maintenance to major repairs, we handle it all at prices that won't break the bank.</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 fade-in">
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#9881;</div>
-                    <h3 class="font-semibold text-sm">Engine Work</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128663;</div>
-                    <h3 class="font-semibold text-sm">Brakes</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128260;</div>
-                    <h3 class="font-semibold text-sm">Transmission</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#10052;</div>
-                    <h3 class="font-semibold text-sm">A/C Service</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128736;</div>
-                    <h3 class="font-semibold text-sm">Tune-Ups</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128738;</div>
-                    <h3 class="font-semibold text-sm">Tires &amp; Wheels</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128167;</div>
-                    <h3 class="font-semibold text-sm">Oil Changes</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#8597;</div>
-                    <h3 class="font-semibold text-sm">Alignment</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128296;</div>
-                    <h3 class="font-semibold text-sm">Suspension</h3>
-                </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-5 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128666;</div>
-                    <h3 class="font-semibold text-sm">Lift Kits</h3>
+            <!-- Se Habla Español badge -->
+            <div class="inline-flex items-center gap-3 bg-charcoal-light border border-tan/20 rounded-lg px-5 py-3">
+                <span class="text-2xl">🇲🇽</span>
+                <div>
+                    <p class="text-orange font-heading font-bold text-lg leading-tight">Se Habla Español</p>
+                    <p class="text-cream/50 text-sm">Servicio en su idioma</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Tow Service Banner -->
-    <section class="py-16 bg-accent relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute -top-10 -right-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+    <!-- Bottom fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-charcoal to-transparent"></div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 md:py-28 bg-charcoal relative">
+    <svg class="gear-spin absolute top-10 right-20 w-24 h-24 text-orange/5" style="animation-duration:25s"><use href="#gear"/></svg>
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-14">
+            <p class="text-orange font-heading font-semibold tracking-widest uppercase text-sm mb-2">What We Do</p>
+            <h2 class="font-heading font-bold text-4xl md:text-5xl text-cream">Full-Service <span class="text-orange">Auto Repair</span></h2>
         </div>
-        <div class="max-w-6xl mx-auto px-4 text-center relative z-10 fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">&#128666; Tow Service Available</h2>
-            <p class="text-white/90 text-lg max-w-2xl mx-auto mb-6">
-                Stuck on the side of the road? We'll come get you. Angel's Automotor provides tow service to get your vehicle back to safety.
-            </p>
-            <a href="tel:2512335934" class="inline-block bg-white text-accent font-bold px-8 py-4 rounded-xl text-lg hover:bg-gray-100 transition">
-                Call for Tow &mdash; (251) 233-5934
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <!-- Service cards -->
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Alignment</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Suspension</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3a9 9 0 11-9 9"/><path d="M3 12h3m6-9v3"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">A/C Service</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Tires & Wheels</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange"><use href="#wrench"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Tune-Ups</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Brakes</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3v18m-5-4l5 4 5-4"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Oil Change</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange"><use href="#gear"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Transmission</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Engine Work</h3>
+            </div>
+            <div class="service-card bg-charcoal-light border border-tan/10 rounded-xl p-5 text-center group cursor-default">
+                <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M5 20l4-16m6 16l4-16"/></svg>
+                </div>
+                <h3 class="font-heading font-semibold text-cream text-sm">Lift Kits</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TOW SERVICE -->
+<section id="towing" class="py-16 md:py-20 bg-charcoal-light relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-orange/5 to-transparent"></div>
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+            <div class="flex-1">
+                <div class="inline-flex items-center gap-2 bg-orange/10 border border-orange/30 rounded-full px-4 py-1.5 mb-4">
+                    <span class="text-orange font-heading font-semibold text-sm tracking-wide">24/7 AVAILABLE</span>
+                </div>
+                <h2 class="font-heading font-bold text-4xl md:text-5xl text-cream mb-4">Need a <span class="text-orange">Tow?</span></h2>
+                <p class="text-cream/60 text-lg mb-6 max-w-lg">Stranded on the road? We offer reliable towing service throughout Baldwin County. Call our dedicated tow line — we'll come get you.</p>
+                <a href="tel:2512335934" class="inline-flex items-center gap-3 bg-orange hover:bg-orange-dark text-white font-heading font-bold text-2xl px-8 py-4 rounded-lg transition">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    (251) 233-5934
+                </a>
+                <p class="text-tan/60 text-sm mt-3">Dedicated Tow Line</p>
+            </div>
+            <div class="flex-shrink-0">
+                <div class="w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-orange/20 flex items-center justify-center bg-charcoal">
+                    <svg class="w-24 h-24 text-orange/40" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+                        <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10m10 0H3m10 0a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 11-4 0m4 0H17m-4 0H3m0 0a2 2 0 11-2-2"/>
+                        <path d="M13 6h3l4 5v5"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ESPAÑOL CALLOUT -->
+<section class="py-12 bg-charcoal border-y border-tan/10">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="bg-gradient-to-r from-charcoal-light via-charcoal to-charcoal-light border border-tan/15 rounded-2xl p-8 md:p-12">
+            <span class="text-4xl mb-4 block">🇲🇽 🇺🇸</span>
+            <h2 class="font-heading font-bold text-3xl md:text-4xl text-orange mb-3">Se Habla Español</h2>
+            <p class="text-cream/60 text-lg max-w-lg mx-auto mb-6">Ofrecemos servicio completo en español. No importa lo que necesite su vehículo, estamos aquí para ayudarle.</p>
+            <a href="tel:2512338523" class="inline-flex items-center gap-2 bg-orange/10 border border-orange/40 text-orange font-heading font-semibold px-6 py-3 rounded-lg hover:bg-orange hover:text-white transition">
+                Llámenos: (251) 233-8523
             </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About -->
-    <section id="about" class="py-20 bg-dark">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
+<!-- ABOUT -->
+<section id="about" class="py-20 md:py-28 bg-charcoal-light relative">
+    <svg class="gear-spin absolute bottom-10 right-10 w-36 h-36 text-tan/5" style="animation-duration:35s"><use href="#gear"/></svg>
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-orange font-heading font-semibold tracking-widest uppercase text-sm mb-2">Our Story</p>
+            <h2 class="font-heading font-bold text-4xl md:text-5xl text-cream mb-6">Your <span class="text-tan">Family Mechanic</span> Since 2008</h2>
+            <div class="w-16 h-1 bg-orange mx-auto mb-8 rounded-full"></div>
+            <p class="text-cream/60 text-lg leading-relaxed mb-6">
+                For 18 years, Angel's Automotor has been the shop Baldwin County trusts. We started with a simple promise: honest work at fair prices. That hasn't changed.
+            </p>
+            <p class="text-cream/60 text-lg leading-relaxed mb-8">
+                From routine oil changes to complex engine rebuilds, lift kit installations to transmission work, we handle it all under one roof. Our bilingual team makes sure every customer feels at home — whether you speak English or Spanish.
+            </p>
+            <div class="grid grid-cols-3 gap-6 max-w-md mx-auto">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Trusted by Foley for<br><span class="text-accent">18 Years</span></h2>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Since opening in 2008, Angel's Automotor has been providing honest, affordable auto repair to residents across Foley, AL and the surrounding Baldwin County area. We want every customer to drive out of our shop safely in the car they love.
-                    </p>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Our mechanics do everything possible for a fast but efficient repair you can count on. We take your safety seriously, and our prices are always reasonable.
-                    </p>
-                    <div class="bg-darkgray border border-accent/20 rounded-xl p-5">
-                        <p class="text-accent font-semibold text-lg mb-1">&#127464;&#127476; Se Habla Espa&ntilde;ol</p>
-                        <p class="text-gray-400 text-sm">Nuestro equipo habla ingl&eacute;s y espa&ntilde;ol para que se sienta c&oacute;modo sin importar el idioma que hable.</p>
-                    </div>
+                    <p class="font-heading font-bold text-3xl text-orange">18</p>
+                    <p class="text-cream/40 text-sm">Years</p>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-darkgray rounded-xl p-6 text-center">
-                        <div class="text-4xl font-black text-accent">18</div>
-                        <div class="text-gray-400 text-sm mt-1">Years in Business</div>
-                    </div>
-                    <div class="bg-darkgray rounded-xl p-6 text-center">
-                        <div class="text-4xl font-black text-accent">10+</div>
-                        <div class="text-gray-400 text-sm mt-1">Services Offered</div>
-                    </div>
-                    <div class="bg-darkgray rounded-xl p-6 text-center">
-                        <div class="text-4xl font-black text-accent">5</div>
-                        <div class="text-gray-400 text-sm mt-1">Days a Week</div>
-                    </div>
-                    <div class="bg-darkgray rounded-xl p-6 text-center">
-                        <div class="text-4xl font-black text-accent">&#9733;</div>
-                        <div class="text-gray-400 text-sm mt-1">Locally Trusted</div>
-                    </div>
+                <div>
+                    <p class="font-heading font-bold text-3xl text-orange">10+</p>
+                    <p class="text-cream/40 text-sm">Services</p>
+                </div>
+                <div>
+                    <p class="font-heading font-bold text-3xl text-orange">2</p>
+                    <p class="text-cream/40 text-sm">Languages</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Hours & Location -->
-    <section id="hours" class="py-20 bg-darkgray">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-14 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Hours &amp; <span class="text-accent">Location</span></h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8 fade-in">
-                <div class="bg-medgray rounded-xl p-8 border border-white/5">
-                    <h3 class="text-xl font-bold mb-6">Business Hours</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Monday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Tuesday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Wednesday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Thursday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Friday</span><span class="font-medium">9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Saturday</span><span class="text-red-400">Closed</span>
-                        </div>
-                        <div class="flex justify-between py-2">
-                            <span class="text-gray-400">Sunday</span><span class="text-red-400">Closed</span>
-                        </div>
-                    </div>
-                    <div class="mt-4 bg-accent/10 border border-accent/20 rounded-lg p-3 text-center">
-                        <span class="text-accent text-sm font-medium">Closed for lunch 1:00 PM - 2:00 PM</span>
-                    </div>
+<!-- CONTACT -->
+<section id="contact" class="py-20 md:py-28 bg-charcoal relative">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-14">
+            <p class="text-orange font-heading font-semibold tracking-widest uppercase text-sm mb-2">Get In Touch</p>
+            <h2 class="font-heading font-bold text-4xl md:text-5xl text-cream">Ready to <span class="text-orange">Schedule?</span></h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <!-- Shop Phone -->
+            <a href="tel:2512338523" class="bg-charcoal-light border border-tan/10 rounded-xl p-6 text-center hover:border-orange/40 transition group">
+                <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 </div>
-                <div class="bg-medgray rounded-xl p-8 border border-white/5">
-                    <h3 class="text-xl font-bold mb-6">Find Us</h3>
-                    <div class="space-y-4 mb-6">
-                        <div class="flex items-start gap-3">
-                            <span class="text-accent text-xl">&#128205;</span>
-                            <div>
-                                <p class="font-medium">18620 County Road 26</p>
-                                <p class="text-gray-400">Foley, AL 36535</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-accent text-xl">&#128222;</span>
-                            <a href="tel:2512338523" class="text-accent hover:underline font-medium">(251) 233-8523</a>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-accent text-xl">&#128666;</span>
-                            <div>
-                                <p class="font-medium">Tow Service</p>
-                                <a href="tel:2512335934" class="text-accent hover:underline">(251) 233-5934</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rounded-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432.5!2d-87.6836!3d30.3946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDIzJzQwLjYiTiA4N8KwNDEnMDEuMCJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                <p class="text-cream/50 text-sm mb-1">Shop Phone</p>
+                <p class="font-heading font-bold text-xl text-orange">(251) 233-8523</p>
+                <p class="text-cream/40 text-xs mt-2">Tap to call</p>
+            </a>
+            <!-- Tow Phone -->
+            <a href="tel:2512335934" class="bg-charcoal-light border border-tan/10 rounded-xl p-6 text-center hover:border-orange/40 transition group">
+                <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10m14-5h3l3 4v5h-3m-7 0h-4m0 0a2 2 0 11-4 0m4 0a2 2 0 104 0"/></svg>
                 </div>
-            </div>
+                <p class="text-cream/50 text-sm mb-1">Tow Service</p>
+                <p class="font-heading font-bold text-xl text-orange">(251) 233-5934</p>
+                <p class="text-cream/40 text-xs mt-2">Tap to call</p>
+            </a>
+            <!-- Address -->
+            <a href="https://maps.google.com/?q=18620+County+Road+26+Foley+AL+36535" target="_blank" class="bg-charcoal-light border border-tan/10 rounded-xl p-6 text-center hover:border-orange/40 transition group">
+                <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition">
+                    <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <p class="text-cream/50 text-sm mb-1">Location</p>
+                <p class="font-heading font-bold text-base text-cream">18620 County Road 26</p>
+                <p class="text-cream/60 text-sm">Foley, AL 36535</p>
+                <p class="text-cream/40 text-xs mt-2">Get directions</p>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA -->
-    <section id="contact" class="py-20 bg-dark relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-0 left-1/2 w-96 h-96 bg-accent rounded-full blur-3xl -translate-x-1/2"></div>
+<!-- FOOTER -->
+<footer class="bg-charcoal-light border-t border-tan/10 py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+        <div class="flex items-center justify-center gap-2 mb-3">
+            <svg class="w-5 h-5 text-orange"><use href="#gear"/></svg>
+            <span class="font-heading font-bold text-lg text-cream">ANGEL'S <span class="text-orange">AUTOMOTOR</span> LLC</span>
         </div>
-        <div class="max-w-3xl mx-auto px-4 text-center relative z-10 fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Your Car <span class="text-accent">Fixed Right?</span></h2>
-            <p class="text-gray-400 text-lg mb-8">Stop by the shop or give us a call. We'll take care of you as soon as possible &mdash; honest service at great prices.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:2512338523" class="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition accent-glow">
-                    Call (251) 233-8523
-                </a>
-                <a href="https://www.google.com/maps/dir//18620+County+Road+26+Foley+AL+36535" target="_blank" class="border border-white/20 hover:border-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition">
-                    Get Directions
-                </a>
-            </div>
-        </div>
-    </section>
+        <p class="text-cream/30 text-sm">18620 County Road 26, Foley, AL 36535</p>
+        <p class="text-cream/20 text-xs mt-3">&copy; 2026 Angel's Automotor LLC. All rights reserved.</p>
+    </div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="bg-primary border-t border-white/5 py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-xl font-bold mb-2">Angel's <span class="text-accent">Automotor</span> LLC</p>
-            <p class="text-gray-500 text-sm">18620 County Road 26, Foley, AL 36535 &bull; (251) 233-8523</p>
-            <p class="text-gray-600 text-xs mt-4">&copy; 2026 Angel's Automotor LLC. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.querySelectorAll('#mobileMenu a').forEach(a => {
-            a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
-        });
-        // Fade-in on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrossFit Fairhope | Fairhope, AL</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        fire: '#dc2626',
+        concrete: '#6b7280',
+        dark: '#111827',
+      },
+      fontFamily: {
+        heading: ['Barlow Condensed', 'sans-serif'],
+        body: ['Barlow', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Barlow Condensed', sans-serif; }
+  .red-line { width: 60px; height: 4px; background: #dc2626; }
+</style>
+</head>
+<body class="bg-dark text-white">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full bg-dark/95 backdrop-blur border-b border-white/5 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="#" class="font-heading text-2xl font-black uppercase tracking-wider">Cross<span class="text-fire">Fit</span> Fairhope</a>
+    <div class="hidden md:flex gap-8 text-white/60 text-sm font-medium uppercase tracking-wider">
+      <a href="#wod" class="hover:text-fire transition">Training</a>
+      <a href="#about" class="hover:text-fire transition">About</a>
+      <a href="#join" class="hover:text-fire transition">Join</a>
+    </div>
+    <a href="tel:+12519294693" class="bg-fire hover:bg-red-700 text-white px-5 py-2 rounded text-sm font-bold uppercase tracking-wider transition">(251) 929-4693</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-dark via-dark/90 to-dark"></div>
+  <div class="absolute inset-0 opacity-5" style="background: repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 3px);"></div>
+  <div class="relative text-center px-4 max-w-4xl">
+    <div class="red-line mx-auto mb-8"></div>
+    <h1 class="font-heading text-6xl md:text-8xl lg:text-9xl font-black uppercase leading-none tracking-tight">
+      No Excuses.<br><span class="text-fire">Just Work.</span>
+    </h1>
+    <p class="text-white/50 text-lg md:text-xl mt-8 mb-10 max-w-lg mx-auto">CrossFit Fairhope. Established 2020. The Eastern Shore's home for functional fitness, grit, and community.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="tel:+12519294693" class="bg-fire hover:bg-red-700 text-white px-10 py-4 rounded font-bold text-lg uppercase tracking-wider transition">Call to Join</a>
+      <a href="#wod" class="border-2 border-white/20 hover:border-fire text-white px-10 py-4 rounded font-bold text-lg uppercase tracking-wider transition">See Programs</a>
+    </div>
+  </div>
+</section>
+
+<!-- WOD / Training -->
+<section id="wod" class="py-20 px-4 bg-dark border-t border-white/5">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-16">
+      <div class="red-line mb-4"></div>
+      <h2 class="font-heading text-5xl md:text-6xl font-black uppercase">Training Programs</h2>
+      <p class="text-white/50 mt-2 text-lg">Scalable. Challenging. Results-driven.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white/5 border border-white/10 rounded-lg p-8 hover:border-fire/50 transition">
+        <span class="text-fire font-heading text-5xl font-black">01</span>
+        <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-3">CrossFit Classes</h3>
+        <p class="text-white/50 leading-relaxed">Coach-led group WODs combining weightlifting, gymnastics, and metabolic conditioning. Every workout scaled to your level.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-lg p-8 hover:border-fire/50 transition">
+        <span class="text-fire font-heading text-5xl font-black">02</span>
+        <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-3">Open Gym</h3>
+        <p class="text-white/50 leading-relaxed">Access to equipment and space for your own programming. Work on skills, hit extra volume, or follow your own plan.</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-lg p-8 hover:border-fire/50 transition">
+        <span class="text-fire font-heading text-5xl font-black">03</span>
+        <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-3">Foundations</h3>
+        <p class="text-white/50 leading-relaxed">New to CrossFit? Our foundations course teaches you every movement safely before you jump into group classes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 px-4 bg-fire">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="red-line mb-4" style="background:white;"></div>
+      <h2 class="font-heading text-5xl font-black uppercase mb-6">Built Different Since 2020</h2>
+      <p class="text-white/80 leading-relaxed mb-4">Owner Kimberly Hansel opened CrossFit Fairhope with a mission: bring world-class functional fitness to the Eastern Shore. No gimmicks. No shortcuts. Just proven methodology and coaches who care.</p>
+      <p class="text-white/80 leading-relaxed mb-6">Whether you're a competitive athlete or a first-timer, this is your box. Show up, put in the work, and watch what happens.</p>
+      <div class="flex gap-8">
+        <div><p class="text-4xl font-heading font-black">2020</p><p class="text-white/60 text-sm">Established</p></div>
+        <div><p class="text-4xl font-heading font-black">CF</p><p class="text-white/60 text-sm">Affiliated</p></div>
+      </div>
+    </div>
+    <div class="bg-dark/30 rounded-lg aspect-square flex items-center justify-center">
+      <p class="text-white/30 font-heading text-xl uppercase">Box Photo</p>
+    </div>
+  </div>
+</section>
+
+<!-- Join -->
+<section id="join" class="py-20 px-4 bg-dark border-t border-white/5">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="red-line mx-auto mb-6"></div>
+    <h2 class="font-heading text-5xl md:text-6xl font-black uppercase mb-4">Ready to Start?</h2>
+    <p class="text-white/50 text-lg mb-10">Your first step is a phone call. No pressure, just a conversation about your goals and how CrossFit Fairhope can help you crush them.</p>
+    <a href="tel:+12519294693" class="inline-block bg-fire hover:bg-red-700 text-white px-12 py-5 rounded font-black text-2xl uppercase tracking-wider transition">(251) 929-4693</a>
+    <div class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-white/5 border border-white/10 rounded-lg p-6">
+        <h4 class="font-heading text-xl font-bold uppercase mb-2">Location</h4>
+        <p class="text-white/50">Fairhope, AL</p>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-lg p-6">
+        <h4 class="font-heading text-xl font-bold uppercase mb-2">Owner</h4>
+        <p class="text-white/50">Kimberly Hansel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark border-t border-white/5 text-white/30 py-8 text-center text-sm">
+  <p class="font-heading text-white text-lg uppercase tracking-wider mb-1">CrossFit Fairhope</p>
+  <p>Fairhope, Alabama | Est. 2020</p>
+  <p class="mt-4 text-white/15">Demo site by Menendez Strategies</p>
+</footer>
+
+</body>
+</html>

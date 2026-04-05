@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cutter's Corner | Beauty Salon in Foley, AL</title>
-    <meta name="description" content="Full-service beauty salon in Foley, AL. Expert cuts, colors, styling, waxing & more. Walk-ins welcome. Call 251-987-0999.">
+    <title>Cutter's Corner | Foley's Most Stylish Beauty Salon</title>
+    <meta name="description" content="Foley's most stylish beauty salon. Expert cuts, color, styling & treatments for all ages. Pampering you deserve. Call 251-987-0999.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2d2d2d',
-                        accent: '#c9a96e',
-                        dark: '#1a1a1a',
-                        darkgray: '#232323',
-                        medgray: '#2d2d2d',
+                        plum: '#4a0e4e',
+                        'plum-dark': '#3a0b3e',
+                        'plum-deep': '#2e0830',
+                        gold: '#d4af37',
+                        'gold-light': '#e8cc6e',
+                        lavender: '#e6e0f3',
+                        'lavender-light': '#f3f0fa',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Playfair Display', 'serif'],
+                        display: ['Abril Fatface', 'serif'],
+                        body: ['Karla', 'sans-serif'],
                     }
                 }
             }
@@ -29,273 +31,320 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        body { font-family: 'Karla', sans-serif; }
+        .font-display { font-family: 'Abril Fatface', serif; }
+
+        /* Sparkle animation */
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .sparkle-container { position: relative; overflow: hidden; }
+        .sparkle {
+            position: absolute;
+            width: 4px; height: 4px;
+            background: #d4af37;
+            border-radius: 50%;
+            animation: sparkle 3s infinite;
+            box-shadow: 0 0 6px 2px rgba(212,175,55,0.4);
+        }
+        .shimmer-text {
+            background: linear-gradient(90deg, #d4af37 0%, #f5e6a3 25%, #d4af37 50%, #f5e6a3 75%, #d4af37 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s linear infinite;
+        }
+        .shimmer-line {
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .hero-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%); }
-        .accent-glow { box-shadow: 0 0 30px rgba(201, 169, 110, 0.25); }
-        .gold-line { width: 60px; height: 3px; background: #c9a96e; }
-        .service-card:hover { transform: translateY(-4px); border-color: #c9a96e; }
         .service-card { transition: all 0.3s ease; }
-        .review-card { background: linear-gradient(135deg, #232323, #2d2d2d); }
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(74,14,78,0.3); border-color: #d4af37; }
+        .hero-bg {
+            background: radial-gradient(ellipse at 30% 20%, rgba(74,14,78,0.9) 0%, rgba(46,8,48,1) 50%, rgba(30,5,32,1) 100%);
+        }
+        .plum-gradient { background: linear-gradient(135deg, #4a0e4e, #2e0830); }
+        .gallery-placeholder {
+            background: linear-gradient(135deg, #3a0b3e, #4a0e4e);
+            border: 2px dashed rgba(212,175,55,0.3);
+        }
     </style>
 </head>
-<body class="bg-dark text-white font-sans">
+<body class="bg-plum-deep text-white font-body">
+
+    <!-- Sparkle particles injected by JS -->
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-dark/95 backdrop-blur-md z-50 border-b border-white/5">
+    <nav class="fixed top-0 w-full bg-plum-deep/95 backdrop-blur-md z-50 border-b border-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <div>
-                <span class="font-display text-2xl text-accent">Cutter's</span>
-                <span class="text-lg text-gray-400 ml-1">Corner</span>
+                <span class="font-display text-2xl shimmer-text">Cutter's Corner</span>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
-                <a href="#services" class="hover:text-accent transition">Services</a>
-                <a href="#about" class="hover:text-accent transition">About</a>
-                <a href="#reviews" class="hover:text-accent transition">Reviews</a>
-                <a href="#hours" class="hover:text-accent transition">Hours</a>
+            <div class="hidden md:flex items-center gap-8 text-sm tracking-wide">
+                <a href="#services" class="text-lavender hover:text-gold transition">Services</a>
+                <a href="#about" class="text-lavender hover:text-gold transition">About</a>
+                <a href="#gallery" class="text-lavender hover:text-gold transition">Gallery</a>
+                <a href="#reviews" class="text-lavender hover:text-gold transition">Reviews</a>
+                <a href="#contact" class="text-lavender hover:text-gold transition">Contact</a>
             </div>
-            <a href="tel:2519870999" class="bg-accent hover:bg-yellow-700 text-dark px-5 py-2.5 rounded-lg font-semibold text-sm transition">
-                251-987-0999
+            <a href="tel:2519870999" class="bg-gold text-plum-deep font-bold px-5 py-2 rounded-full text-sm hover:bg-gold-light transition">
+                Call Now
             </a>
-            <button id="menuBtn" class="md:hidden text-white text-2xl">&#9776;</button>
-        </div>
-        <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-white/5 px-4 pb-4">
-            <a href="#services" class="block py-3 text-gray-400 hover:text-accent">Services</a>
-            <a href="#about" class="block py-3 text-gray-400 hover:text-accent">About</a>
-            <a href="#reviews" class="block py-3 text-gray-400 hover:text-accent">Reviews</a>
-            <a href="#hours" class="block py-3 text-gray-400 hover:text-accent">Hours</a>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-20 right-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
-        </div>
-        <div class="max-w-6xl mx-auto px-4 pt-24 pb-16 relative z-10">
-            <div class="gold-line mb-6"></div>
-            <h1 class="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-                Look Great.<br>
-                <span class="text-accent">Feel Great.</span>
+    <section class="hero-bg sparkle-container min-h-screen flex items-center justify-center text-center px-4 pt-20">
+        <div class="max-w-3xl mx-auto fade-in">
+            <div class="w-16 h-[2px] bg-gold mx-auto mb-6 shimmer-line"></div>
+            <h1 class="font-display text-4xl sm:text-5xl md:text-7xl leading-tight mb-6">
+                Foley's Most <span class="shimmer-text">Stylish</span> Beauty Salon
             </h1>
-            <p class="text-lg md:text-xl text-gray-400 max-w-xl mb-8">
-                Foley's favorite beauty salon. Expert cuts, stunning colors, and a team that makes every visit feel like a treat. Walk-ins always welcome.
+            <p class="text-lavender text-lg sm:text-xl mb-8 max-w-xl mx-auto leading-relaxed">
+                Where glamour meets expertise. Cuts, color, and styling that make you shine — for every age and every style.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="tel:2519870999" class="bg-accent hover:bg-yellow-700 text-dark px-8 py-4 rounded-xl font-bold text-lg text-center transition accent-glow">
-                    Call Now &mdash; 251-987-0999
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:2519870999" class="bg-gold text-plum-deep font-bold px-8 py-4 rounded-full text-lg hover:bg-gold-light transition shadow-lg shadow-gold/20">
+                    &#9743; Book Your Look — 251-987-0999
                 </a>
-                <a href="#services" class="border border-white/20 hover:border-accent text-white px-8 py-4 rounded-xl font-semibold text-lg text-center transition">
+                <a href="#services" class="border-2 border-gold/40 text-gold px-8 py-4 rounded-full text-lg hover:border-gold hover:bg-gold/10 transition">
                     Our Services
                 </a>
             </div>
+            <div class="w-16 h-[2px] bg-gold mx-auto mt-10 shimmer-line"></div>
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-20 bg-darkgray">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-14 fade-in">
-                <div class="gold-line mx-auto mb-4"></div>
-                <h2 class="font-display text-3xl md:text-4xl mb-4">Salon <span class="text-accent">Services</span></h2>
-                <p class="text-gray-400 max-w-xl mx-auto">From precision cuts to bold color transformations, we deliver looks you'll love.</p>
+    <section id="services" class="py-20 px-4 bg-plum-deep">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3">What We Do</p>
+                <h2 class="font-display text-3xl sm:text-5xl mb-4">Our Services</h2>
+                <div class="w-16 h-[2px] bg-gold mx-auto shimmer-line"></div>
+                <p class="text-lavender mt-6 max-w-xl mx-auto">The latest styles, premium products, and the pampering you deserve — all under one roof.</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade-in">
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#9986;</div>
-                    <h3 class="font-semibold">Haircuts</h3>
-                    <p class="text-gray-500 text-sm mt-1">Women &amp; Men</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="service-card bg-plum/60 border border-gold/10 rounded-2xl p-8 text-center fade-in">
+                    <div class="text-4xl mb-4">&#9986;</div>
+                    <h3 class="font-display text-xl mb-3 text-gold">Precision Cuts</h3>
+                    <p class="text-lavender text-sm leading-relaxed">From classic trims to trendy styles — haircuts for women, men, and kids that fit your personality perfectly.</p>
                 </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#127912;</div>
-                    <h3 class="font-semibold">Color</h3>
-                    <p class="text-gray-500 text-sm mt-1">Full color &amp; highlights</p>
+                <div class="service-card bg-plum/60 border border-gold/10 rounded-2xl p-8 text-center fade-in">
+                    <div class="text-4xl mb-4">&#127912;</div>
+                    <h3 class="font-display text-xl mb-3 text-gold">Color & Highlights</h3>
+                    <p class="text-lavender text-sm leading-relaxed">Balayage, highlights, full color, corrective color — we bring your vision to life with vibrant, lasting results.</p>
                 </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128132;</div>
-                    <h3 class="font-semibold">Blowouts</h3>
-                    <p class="text-gray-500 text-sm mt-1">Style &amp; finish</p>
+                <div class="service-card bg-plum/60 border border-gold/10 rounded-2xl p-8 text-center fade-in">
+                    <div class="text-4xl mb-4">&#128131;</div>
+                    <h3 class="font-display text-xl mb-3 text-gold">Blowouts & Styling</h3>
+                    <p class="text-lavender text-sm leading-relaxed">Special occasion updos, sleek blowouts, or everyday styling — leave looking and feeling your absolute best.</p>
                 </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#10024;</div>
-                    <h3 class="font-semibold">Waxing</h3>
-                    <p class="text-gray-500 text-sm mt-1">Brows, lip &amp; more</p>
+                <div class="service-card bg-plum/60 border border-gold/10 rounded-2xl p-8 text-center fade-in">
+                    <div class="text-4xl mb-4">&#10024;</div>
+                    <h3 class="font-display text-xl mb-3 text-gold">Treatments & Repair</h3>
+                    <p class="text-lavender text-sm leading-relaxed">Deep conditioning, keratin smoothing, and restorative treatments to bring damaged hair back to life.</p>
                 </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128134;</div>
-                    <h3 class="font-semibold">Styling</h3>
-                    <p class="text-gray-500 text-sm mt-1">Updos &amp; events</p>
+                <div class="service-card bg-plum/60 border border-gold/10 rounded-2xl p-8 text-center fade-in">
+                    <div class="text-4xl mb-4">&#128133;</div>
+                    <h3 class="font-display text-xl mb-3 text-gold">Waxing</h3>
+                    <p class="text-lavender text-sm leading-relaxed">Quick, gentle waxing services for brows, lip, chin, and more — smooth results every time.</p>
                 </div>
-                <div class="service-card bg-medgray border border-white/5 rounded-xl p-6 text-center cursor-default">
-                    <div class="text-3xl mb-3">&#128153;</div>
-                    <h3 class="font-semibold">Products</h3>
-                    <p class="text-gray-500 text-sm mt-1">Professional haircare</p>
+                <div class="service-card bg-plum/60 border border-gold/10 rounded-2xl p-8 text-center fade-in">
+                    <div class="text-4xl mb-4">&#128717;</div>
+                    <h3 class="font-display text-xl mb-3 text-gold">Premium Products</h3>
+                    <p class="text-lavender text-sm leading-relaxed">Professional-grade shampoos, conditioners, and styling products so you can keep the salon look at home.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-20 bg-dark">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
-                <div>
-                    <div class="gold-line mb-6"></div>
-                    <h2 class="font-display text-3xl md:text-4xl mb-6">A Salon That <span class="text-accent">Cares</span></h2>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        How great you look on the outside helps you feel great on the inside. At Cutter's Corner, we take the time to pamper you and create the look you want.
+    <section id="about" class="py-20 px-4 bg-plum/40">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3">About Us</p>
+                    <h2 class="font-display text-3xl sm:text-4xl mb-6">More Than Just a Salon</h2>
+                    <div class="w-16 h-[2px] bg-gold mb-6 shimmer-line"></div>
+                    <p class="text-lavender leading-relaxed mb-4">
+                        At Cutter's Corner, we believe everyone deserves to look and feel amazing. Located right on Highway 59 in Foley, we've built a reputation for delivering the latest styles with a personal, pampering touch.
                     </p>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Our beauty salon is always up on the latest styles, and we keep learning new techniques for delivering those styles to our customers. We offer outstanding cuts and colors for every age.
+                    <p class="text-lavender leading-relaxed mb-6">
+                        Our talented stylists stay on top of the newest trends and techniques — from precision cuts to stunning color transformations. Whether you're 5 or 85, walk in and let us make your day.
                     </p>
-                    <p class="text-accent font-semibold text-lg">Walk-ins are always welcome!</p>
+                    <div class="flex gap-8">
+                        <div class="text-center">
+                            <p class="font-display text-3xl text-gold">All</p>
+                            <p class="text-lavender text-sm mt-1">Ages Welcome</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-display text-3xl text-gold">Latest</p>
+                            <p class="text-lavender text-sm mt-1">Styles & Trends</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-display text-3xl text-gold">Pure</p>
+                            <p class="text-lavender text-sm mt-1">Pampering</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-darkgray rounded-xl p-6 text-center border border-accent/10">
-                        <div class="text-4xl font-black text-accent">&#9733;</div>
-                        <div class="text-gray-400 text-sm mt-2">5-Star Reviews</div>
+                <div class="fade-in">
+                    <div class="bg-plum rounded-2xl border border-gold/20 p-10 text-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 shimmer-line"></div>
+                        <div class="text-6xl mb-4">&#128135;&#8205;&#9792;&#65039;</div>
+                        <h3 class="font-display text-2xl text-gold mb-3">Meet Our Team</h3>
+                        <p class="text-lavender leading-relaxed">A passionate crew of stylists who live and breathe hair. We listen, we create, and we make sure you leave with a smile.</p>
+                        <div class="mt-6 flex justify-center gap-4">
+                            <div class="w-14 h-14 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center text-2xl">&#9986;</div>
+                            <div class="w-14 h-14 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center text-2xl">&#127912;</div>
+                            <div class="w-14 h-14 rounded-full bg-gold/20 border border-gold/30 flex items-center justify-center text-2xl">&#10024;</div>
+                        </div>
                     </div>
-                    <div class="bg-darkgray rounded-xl p-6 text-center border border-accent/10">
-                        <div class="text-4xl font-black text-accent">&#9986;</div>
-                        <div class="text-gray-400 text-sm mt-2">Expert Stylists</div>
-                    </div>
-                    <div class="bg-darkgray rounded-xl p-6 text-center border border-accent/10">
-                        <div class="text-4xl font-black text-accent">&#128149;</div>
-                        <div class="text-gray-400 text-sm mt-2">Foley Favorite</div>
-                    </div>
-                    <div class="bg-darkgray rounded-xl p-6 text-center border border-accent/10">
-                        <div class="text-4xl font-black text-accent">&#128587;</div>
-                        <div class="text-gray-400 text-sm mt-2">Walk-Ins OK</div>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Gallery -->
+    <section id="gallery" class="py-20 px-4 bg-plum-deep">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3">Transformations</p>
+                <h2 class="font-display text-3xl sm:text-5xl mb-4">Before & After</h2>
+                <div class="w-16 h-[2px] bg-gold mx-auto shimmer-line"></div>
+                <p class="text-lavender mt-6 max-w-xl mx-auto">See the magic our stylists create every day.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-placeholder rounded-2xl h-72 flex flex-col items-center justify-center fade-in">
+                    <div class="text-5xl mb-3 opacity-40">&#128247;</div>
+                    <p class="text-gold/50 font-bold text-sm">Before & After</p>
+                    <p class="text-lavender/40 text-xs mt-1">Color Transformation</p>
+                </div>
+                <div class="gallery-placeholder rounded-2xl h-72 flex flex-col items-center justify-center fade-in">
+                    <div class="text-5xl mb-3 opacity-40">&#128247;</div>
+                    <p class="text-gold/50 font-bold text-sm">Before & After</p>
+                    <p class="text-lavender/40 text-xs mt-1">Balayage Highlights</p>
+                </div>
+                <div class="gallery-placeholder rounded-2xl h-72 flex flex-col items-center justify-center fade-in">
+                    <div class="text-5xl mb-3 opacity-40">&#128247;</div>
+                    <p class="text-gold/50 font-bold text-sm">Before & After</p>
+                    <p class="text-lavender/40 text-xs mt-1">Precision Cut & Style</p>
+                </div>
+                <div class="gallery-placeholder rounded-2xl h-72 flex flex-col items-center justify-center fade-in">
+                    <div class="text-5xl mb-3 opacity-40">&#128247;</div>
+                    <p class="text-gold/50 font-bold text-sm">Before & After</p>
+                    <p class="text-lavender/40 text-xs mt-1">Wedding Updo</p>
+                </div>
+                <div class="gallery-placeholder rounded-2xl h-72 flex flex-col items-center justify-center fade-in">
+                    <div class="text-5xl mb-3 opacity-40">&#128247;</div>
+                    <p class="text-gold/50 font-bold text-sm">Before & After</p>
+                    <p class="text-lavender/40 text-xs mt-1">Keratin Treatment</p>
+                </div>
+                <div class="gallery-placeholder rounded-2xl h-72 flex flex-col items-center justify-center fade-in">
+                    <div class="text-5xl mb-3 opacity-40">&#128247;</div>
+                    <p class="text-gold/50 font-bold text-sm">Before & After</p>
+                    <p class="text-lavender/40 text-xs mt-1">Bold Color Change</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Reviews -->
-    <section id="reviews" class="py-20 bg-darkgray">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-14 fade-in">
-                <div class="gold-line mx-auto mb-4"></div>
-                <h2 class="font-display text-3xl md:text-4xl mb-4">What Clients <span class="text-accent">Say</span></h2>
+    <section id="reviews" class="py-20 px-4 bg-plum/40">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3">Client Love</p>
+                <h2 class="font-display text-3xl sm:text-5xl mb-4">What They're Saying</h2>
+                <div class="w-16 h-[2px] bg-gold mx-auto shimmer-line"></div>
             </div>
-            <div class="grid md:grid-cols-3 gap-6 fade-in">
-                <div class="review-card rounded-xl p-6 border border-white/5">
-                    <div class="text-accent text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">"Perfect hair cut and her blow out was fantastic. Fun place, very welcoming and entertaining!"</p>
-                    <p class="text-accent text-sm font-medium">&mdash; Google Review</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-plum-deep border border-gold/10 rounded-2xl p-8 fade-in">
+                    <div class="text-gold text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-lavender leading-relaxed mb-4">"Best salon in Foley, hands down! They always know exactly what I want and my color lasts forever. I won't go anywhere else."</p>
+                    <p class="text-gold font-bold text-sm">— Jessica M.</p>
                 </div>
-                <div class="review-card rounded-xl p-6 border border-white/5">
-                    <div class="text-accent text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">"She has been doing my hair for about 4 years now. Biggest shout-out! Absolutely the best stylist around."</p>
-                    <p class="text-accent text-sm font-medium">&mdash; Google Review</p>
+                <div class="bg-plum-deep border border-gold/10 rounded-2xl p-8 fade-in">
+                    <div class="text-gold text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-lavender leading-relaxed mb-4">"I brought my daughter for her first real haircut and they made her feel like a princess. So sweet and patient. Love this place!"</p>
+                    <p class="text-gold font-bold text-sm">— Amanda R.</p>
                 </div>
-                <div class="review-card rounded-xl p-6 border border-white/5">
-                    <div class="text-accent text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="text-gray-300 text-sm leading-relaxed mb-4">"Great quality salon services, friendly team, and a relaxing atmosphere. Highly recommend Cutter's Corner!"</p>
-                    <p class="text-accent text-sm font-medium">&mdash; Google Review</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hours & Location -->
-    <section id="hours" class="py-20 bg-dark">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-14 fade-in">
-                <div class="gold-line mx-auto mb-4"></div>
-                <h2 class="font-display text-3xl md:text-4xl mb-4">Visit <span class="text-accent">Us</span></h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8 fade-in">
-                <div class="bg-darkgray rounded-xl p-8 border border-white/5">
-                    <h3 class="text-xl font-bold mb-6">Salon Hours</h3>
-                    <div class="space-y-3">
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Monday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Tuesday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Wednesday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Thursday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Friday</span><span class="font-medium">9:00 AM - 5:00 PM</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-white/5">
-                            <span class="text-gray-400">Saturday</span><span class="font-medium">By Appointment</span>
-                        </div>
-                        <div class="flex justify-between py-2">
-                            <span class="text-gray-400">Sunday</span><span class="text-red-400">Closed</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-darkgray rounded-xl p-8 border border-white/5">
-                    <h3 class="text-xl font-bold mb-6">Find Us</h3>
-                    <div class="space-y-4 mb-6">
-                        <div class="flex items-start gap-3">
-                            <span class="text-accent text-xl">&#128205;</span>
-                            <div>
-                                <p class="font-medium">7857 Highway 59</p>
-                                <p class="text-gray-400">Foley, AL 36535</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-accent text-xl">&#128222;</span>
-                            <a href="tel:2519870999" class="text-accent hover:underline font-medium">251-987-0999</a>
-                        </div>
-                    </div>
-                    <div class="rounded-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432!2d-87.6836!3d30.3946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDIzJzQwLjYiTiA4N8KwNDEnMDEuMCJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                <div class="bg-plum-deep border border-gold/10 rounded-2xl p-8 fade-in">
+                    <div class="text-gold text-lg mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="text-lavender leading-relaxed mb-4">"Got my hair done for a wedding and received so many compliments. The stylists here are true artists. Highly recommend!"</p>
+                    <p class="text-gold font-bold text-sm">— Kayla T.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-20 bg-darkgray relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-0 left-1/2 w-96 h-96 bg-accent rounded-full blur-3xl -translate-x-1/2"></div>
-        </div>
-        <div class="max-w-3xl mx-auto px-4 text-center relative z-10 fade-in">
-            <div class="gold-line mx-auto mb-6"></div>
-            <h2 class="font-display text-3xl md:text-4xl mb-4">Ready for a New <span class="text-accent">Look?</span></h2>
-            <p class="text-gray-400 text-lg mb-8">Walk in or call ahead. Our stylists are ready to make you look and feel amazing.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:2519870999" class="bg-accent hover:bg-yellow-700 text-dark px-8 py-4 rounded-xl font-bold text-lg transition accent-glow">
-                    Call 251-987-0999
-                </a>
-                <a href="https://www.google.com/maps/dir//7857+Highway+59+Foley+AL+36535" target="_blank" class="border border-white/20 hover:border-accent text-white px-8 py-4 rounded-xl font-semibold text-lg transition">
-                    Get Directions
-                </a>
+    <!-- Contact / CTA -->
+    <section id="contact" class="py-20 px-4 sparkle-container hero-bg">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <p class="text-gold tracking-[0.3em] uppercase text-sm mb-3">Ready?</p>
+            <h2 class="font-display text-3xl sm:text-5xl mb-6">Your Best Look Awaits</h2>
+            <div class="w-16 h-[2px] bg-gold mx-auto mb-8 shimmer-line"></div>
+            <p class="text-lavender text-lg mb-10 max-w-xl mx-auto">Walk-ins welcome or call ahead to book your appointment. We can't wait to pamper you.</p>
+            <a href="tel:2519870999" class="inline-block bg-gold text-plum-deep font-bold px-10 py-5 rounded-full text-xl hover:bg-gold-light transition shadow-lg shadow-gold/20 mb-10">
+                &#9743; Call 251-987-0999
+            </a>
+            <div class="grid sm:grid-cols-3 gap-8 mt-8">
+                <div>
+                    <p class="text-gold font-bold mb-1">Address</p>
+                    <p class="text-lavender text-sm">7857 Highway 59<br>Foley, AL 36535</p>
+                </div>
+                <div>
+                    <p class="text-gold font-bold mb-1">Phone</p>
+                    <a href="tel:2519870999" class="text-lavender text-sm hover:text-gold transition">251-987-0999</a>
+                </div>
+                <div>
+                    <p class="text-gold font-bold mb-1">Email</p>
+                    <a href="mailto:gabby.cutterscorner@gmail.com" class="text-lavender text-sm hover:text-gold transition">gabby.cutterscorner@gmail.com</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary border-t border-white/5 py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="font-display text-2xl text-accent mb-2">Cutter's Corner</p>
-            <p class="text-gray-500 text-sm">7857 Highway 59, Foley, AL 36535 &bull; 251-987-0999</p>
-            <p class="text-gray-600 text-xs mt-4">&copy; 2026 Cutter's Corner. All rights reserved.</p>
-        </div>
+    <footer class="bg-plum-deep border-t border-gold/10 py-8 px-4 text-center">
+        <p class="font-display text-xl shimmer-text mb-2">Cutter's Corner</p>
+        <p class="text-lavender/50 text-sm">&copy; 2026 Cutter's Corner. All rights reserved.</p>
+        <p class="text-lavender/30 text-xs mt-2">7857 Highway 59, Foley, AL 36535 &bull; 251-987-0999</p>
     </footer>
 
+    <!-- Scripts -->
     <script>
-        document.getElementById('menuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        });
-        document.querySelectorAll('#mobileMenu a').forEach(a => {
-            a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
-        });
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        // Fade-in on scroll
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+        // Sparkle particles
+        function createSparkles(container) {
+            for (let i = 0; i < 20; i++) {
+                const s = document.createElement('div');
+                s.className = 'sparkle';
+                s.style.left = Math.random() * 100 + '%';
+                s.style.top = Math.random() * 100 + '%';
+                s.style.animationDelay = Math.random() * 5 + 's';
+                s.style.animationDuration = (2 + Math.random() * 3) + 's';
+                s.style.width = s.style.height = (2 + Math.random() * 4) + 'px';
+                container.appendChild(s);
+            }
+        }
+        document.querySelectorAll('.sparkle-container').forEach(createSparkles);
     </script>
 </body>
 </html>

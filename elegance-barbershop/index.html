@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elegance Barbershop | Foley, AL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#191970',
+            platinum: '#e5e4e2',
+            electric: '#0077b6',
+          },
+          fontFamily: {
+            heading: ['"DM Serif Display"', 'serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    .geo-line {
+      position: absolute;
+      background: rgba(0,119,182,0.12);
+    }
+    .geo-line-h { height: 1px; width: 120px; }
+    .geo-line-v { width: 1px; height: 120px; }
+    .geo-corner {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 1px solid rgba(0,119,182,0.18);
+    }
+    .service-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(25,25,112,0.12);
+    }
+  </style>
+</head>
+<body class="bg-white text-midnight">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-midnight/95 backdrop-blur z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="font-heading text-2xl text-white tracking-wide">Elegance</a>
+      <div class="hidden md:flex gap-8 text-sm text-platinum/80 font-medium">
+        <a href="#services" class="hover:text-white transition">Services</a>
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#gallery" class="hover:text-white transition">Gallery</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </div>
+      <a href="tel:2512230776" class="bg-electric text-white text-sm font-semibold px-5 py-2.5 rounded hover:bg-electric/90 transition">Call Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center bg-midnight overflow-hidden">
+    <!-- Geometric accents -->
+    <div class="geo-corner top-20 left-10 border-t border-l"></div>
+    <div class="geo-corner bottom-20 right-10 border-b border-r"></div>
+    <div class="geo-line geo-line-h top-1/3 left-0"></div>
+    <div class="geo-line geo-line-h bottom-1/3 right-0"></div>
+    <div class="geo-line geo-line-v top-0 right-1/4"></div>
+
+    <div class="max-w-6xl mx-auto px-6 pt-24 pb-16 text-center relative z-10">
+      <p class="text-electric tracking-[0.3em] uppercase text-sm mb-4 font-medium">Premium Grooming in Foley, AL</p>
+      <h1 class="font-heading text-5xl md:text-7xl text-white leading-tight mb-6">
+        Where Style<br>Meets <span class="text-electric">Precision</span>
+      </h1>
+      <p class="text-platinum/70 text-lg max-w-xl mx-auto mb-10">
+        Classic cuts, modern fades, and meticulous detail. Elegance Barbershop delivers an experience, not just a haircut.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:2512230776" class="bg-electric text-white font-semibold px-8 py-4 rounded text-lg hover:bg-electric/90 transition">
+          Book by Phone &mdash; (251) 223-0776
+        </a>
+        <a href="#services" class="border border-platinum/30 text-platinum font-medium px-8 py-4 rounded text-lg hover:border-electric hover:text-electric transition">
+          View Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-electric tracking-[0.25em] uppercase text-sm font-medium text-center mb-2">What We Offer</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-center mb-16">Our Services</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="service-card bg-platinum/30 rounded-lg p-8 border border-platinum">
+          <div class="w-12 h-12 bg-midnight rounded flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.121 14.121A3 3 0 1 0 9.88 9.88m4.242 4.242L9.878 9.879m4.243 4.242L20 20M9.879 9.879 4 4"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Classic Haircut</h3>
+          <p class="text-midnight/60 text-sm leading-relaxed">Precision cut with hot towel finish and styling. A timeless look, perfectly executed.</p>
+        </div>
+
+        <div class="service-card bg-platinum/30 rounded-lg p-8 border border-platinum">
+          <div class="w-12 h-12 bg-midnight rounded flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Skin Fade</h3>
+          <p class="text-midnight/60 text-sm leading-relaxed">Seamless blending from skin to length. Sharp, clean, and perfectly tapered every time.</p>
+        </div>
+
+        <div class="service-card bg-platinum/30 rounded-lg p-8 border border-platinum">
+          <div class="w-12 h-12 bg-midnight rounded flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Beard Trim & Shape</h3>
+          <p class="text-midnight/60 text-sm leading-relaxed">Expert shaping, hot towel treatment, and beard oil finish for a polished look.</p>
+        </div>
+
+        <div class="service-card bg-platinum/30 rounded-lg p-8 border border-platinum">
+          <div class="w-12 h-12 bg-midnight rounded flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Hot Towel Shave</h3>
+          <p class="text-midnight/60 text-sm leading-relaxed">Traditional straight-razor shave with premium lather and a soothing hot towel wrap.</p>
+        </div>
+
+        <div class="service-card bg-platinum/30 rounded-lg p-8 border border-platinum">
+          <div class="w-12 h-12 bg-midnight rounded flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 10h16M10 4v16"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Kids Cut</h3>
+          <p class="text-midnight/60 text-sm leading-relaxed">Patient, friendly cuts for the little guys. Same precision, extra care.</p>
+        </div>
+
+        <div class="service-card bg-platinum/30 rounded-lg p-8 border border-platinum">
+          <div class="w-12 h-12 bg-midnight rounded flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2 L2 7 L12 12 L22 7Z"/><path d="M2 17 L12 22 L22 17"/><path d="M2 12 L12 17 L22 12"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">The Full Package</h3>
+          <p class="text-midnight/60 text-sm leading-relaxed">Haircut, beard trim, hot towel, and styling. The complete Elegance experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM / GALLERY -->
+  <section id="gallery" class="py-24 bg-midnight">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-electric tracking-[0.25em] uppercase text-sm font-medium text-center mb-2">Follow Our Work</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-white text-center mb-4">@EleganceBarbershop</h2>
+      <p class="text-platinum/50 text-center mb-12">Fresh cuts, clean fades, and satisfied clients &mdash; daily.</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-square bg-platinum/10 rounded-lg flex items-center justify-center border border-platinum/10">
+          <svg class="w-8 h-8 text-electric/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+        <div class="aspect-square bg-platinum/10 rounded-lg flex items-center justify-center border border-platinum/10">
+          <svg class="w-8 h-8 text-electric/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+        <div class="aspect-square bg-platinum/10 rounded-lg flex items-center justify-center border border-platinum/10">
+          <svg class="w-8 h-8 text-electric/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+        <div class="aspect-square bg-platinum/10 rounded-lg flex items-center justify-center border border-platinum/10">
+          <svg class="w-8 h-8 text-electric/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+      </div>
+      <p class="text-center mt-6">
+        <a href="#" class="text-electric text-sm font-medium hover:underline">Follow on Instagram &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-white relative overflow-hidden">
+    <div class="geo-corner top-10 right-10 border-t border-r" style="border-color: rgba(0,119,182,0.15);"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-electric tracking-[0.25em] uppercase text-sm font-medium mb-2">Our Story</p>
+      <h2 class="font-heading text-4xl md:text-5xl mb-8">About Elegance</h2>
+      <p class="text-midnight/70 text-lg leading-relaxed mb-6">
+        Elegance Barbershop is Foley's destination for men who take their grooming seriously. We blend old-school craftsmanship with modern techniques in a clean, comfortable environment where every detail matters.
+      </p>
+      <p class="text-midnight/70 text-lg leading-relaxed">
+        Whether it's a sharp fade, a classic taper, or a straight-razor shave, our barbers deliver consistency and style every visit. Walk-ins welcome. Appointments preferred.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-midnight">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-electric tracking-[0.25em] uppercase text-sm font-medium mb-2">Get In Touch</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-white mb-8">Visit Elegance</h2>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div>
+          <h3 class="text-electric font-semibold mb-2">Call Us</h3>
+          <a href="tel:2512230776" class="text-white text-lg hover:text-electric transition">(251) 223-0776</a>
+        </div>
+        <div>
+          <h3 class="text-electric font-semibold mb-2">Location</h3>
+          <p class="text-platinum/70">Foley, Alabama</p>
+        </div>
+        <div>
+          <h3 class="text-electric font-semibold mb-2">Follow Us</h3>
+          <a href="#" class="text-white hover:text-electric transition">Instagram</a>
+        </div>
+      </div>
+
+      <a href="tel:2512230776" class="inline-block bg-electric text-white font-semibold text-lg px-10 py-4 rounded hover:bg-electric/90 transition">
+        Tap to Call &mdash; (251) 223-0776
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-midnight border-t border-platinum/10 py-8">
+    <div class="max-w-6xl mx-auto px-6 text-center text-platinum/40 text-sm">
+      <p>&copy; 2026 Elegance Barbershop &middot; Foley, AL &middot; All rights reserved.</p>
+      <p class="mt-1">Demo site by Menendez Strategies</p>
+    </div>
+  </footer>
+
+</body>
+</html>

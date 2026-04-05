@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blonde & Blush Beauty Studio | Robertsdale, AL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blush: '#f4c2c2',
+            mauve: '#b87d8b',
+            warm: '#fdfbf9',
+            charcoal: '#333333',
+          },
+          fontFamily: {
+            heading: ['Marcellus', 'serif'],
+            body: ['Mulish', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Mulish', sans-serif; background: #fdfbf9; }
+    .brush-blob {
+      position: absolute;
+      border-radius: 50% 40% 60% 45%;
+      opacity: 0.12;
+      filter: blur(40px);
+    }
+    .brush-stroke {
+      position: absolute;
+      width: 200px;
+      height: 8px;
+      border-radius: 50%;
+      opacity: 0.15;
+    }
+    .service-item {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(184,125,139,0.15);
+    }
+  </style>
+</head>
+<body class="text-charcoal">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-warm/95 backdrop-blur z-50 border-b border-blush/40">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="font-heading text-2xl text-mauve tracking-wide">Blonde & Blush</a>
+      <div class="hidden md:flex gap-8 text-sm text-charcoal/60 font-semibold">
+        <a href="#services" class="hover:text-mauve transition">Services</a>
+        <a href="#about" class="hover:text-mauve transition">About</a>
+        <a href="#gallery" class="hover:text-mauve transition">Gallery</a>
+        <a href="#contact" class="hover:text-mauve transition">Contact</a>
+      </div>
+      <a href="tel:2519492247" class="bg-mauve text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-mauve/85 transition">Book Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <!-- Watercolor blobs -->
+    <div class="brush-blob bg-blush w-96 h-96 -top-20 -right-20"></div>
+    <div class="brush-blob bg-mauve w-72 h-72 bottom-10 -left-10"></div>
+    <div class="brush-blob bg-blush w-48 h-48 top-1/2 right-1/4"></div>
+    <!-- Brush strokes -->
+    <div class="brush-stroke bg-blush top-1/4 left-10 rotate-[-8deg]"></div>
+    <div class="brush-stroke bg-mauve bottom-1/3 right-16 rotate-[5deg]"></div>
+
+    <div class="max-w-5xl mx-auto px-6 pt-28 pb-16 text-center relative z-10">
+      <p class="text-mauve tracking-[0.3em] uppercase text-sm mb-4 font-semibold">Robertsdale, AL</p>
+      <h1 class="font-heading text-5xl md:text-7xl text-charcoal leading-tight mb-6">
+        Beauty That Feels<br>Like <span class="text-mauve">You</span>
+      </h1>
+      <p class="text-charcoal/60 text-lg max-w-lg mx-auto mb-10">
+        Color, cuts, styling, and self-care. Blonde & Blush is your space to feel confident and radiant.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="bg-mauve text-white font-semibold px-8 py-4 rounded-full text-lg hover:bg-mauve/85 transition">
+          Book on GlossGenius
+        </a>
+        <a href="tel:2519492247" class="border-2 border-mauve/40 text-mauve font-semibold px-8 py-4 rounded-full text-lg hover:border-mauve hover:bg-mauve/5 transition">
+          Call (251) 949-2247
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 relative">
+    <div class="brush-blob bg-blush w-64 h-64 -top-10 right-0 opacity-[0.08]"></div>
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-mauve tracking-[0.25em] uppercase text-sm font-semibold text-center mb-2">What We Do</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-center mb-4">Our Services</h2>
+      <p class="text-charcoal/50 text-center mb-16 max-w-md mx-auto">From hair to lashes, we've got you covered with personalized care.</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="service-item bg-white rounded-2xl p-8 border border-blush/50">
+          <div class="w-12 h-12 bg-blush/30 rounded-full flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-mauve" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.121 14.121A3 3 0 1 0 9.88 9.88m4.242 4.242L9.878 9.879m4.243 4.242L20 20M9.879 9.879 4 4"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Haircuts & Styling</h3>
+          <p class="text-charcoal/55 text-sm leading-relaxed">Precision cuts and blowouts tailored to your face shape and lifestyle.</p>
+        </div>
+
+        <div class="service-item bg-white rounded-2xl p-8 border border-blush/50">
+          <div class="w-12 h-12 bg-blush/30 rounded-full flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-mauve" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12s1.5 4 4 4 4-4 4-4-1.5-4-4-4-4 4-4 4"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Color & Highlights</h3>
+          <p class="text-charcoal/55 text-sm leading-relaxed">Balayage, foils, vivids, and corrective color. Your vision, perfected.</p>
+        </div>
+
+        <div class="service-item bg-white rounded-2xl p-8 border border-blush/50">
+          <div class="w-12 h-12 bg-blush/30 rounded-full flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-mauve" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Treatments</h3>
+          <p class="text-charcoal/55 text-sm leading-relaxed">Deep conditioning, keratin smoothing, and scalp treatments for healthier hair.</p>
+        </div>
+
+        <div class="service-item bg-white rounded-2xl p-8 border border-blush/50">
+          <div class="w-12 h-12 bg-blush/30 rounded-full flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-mauve" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"/><path d="M5 19.5C5.5 18 7 15 12 15c3 0 5 1 7 3"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Bridal & Events</h3>
+          <p class="text-charcoal/55 text-sm leading-relaxed">Special occasion styling that makes you feel like the best version of yourself.</p>
+        </div>
+
+        <div class="service-item bg-white rounded-2xl p-8 border border-blush/50">
+          <div class="w-12 h-12 bg-blush/30 rounded-full flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-mauve" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 3v18M18 3v18M6 12h12"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Extensions</h3>
+          <p class="text-charcoal/55 text-sm leading-relaxed">Natural-looking length and volume with professional application and blending.</p>
+        </div>
+
+        <div class="service-item bg-white rounded-2xl p-8 border border-blush/50">
+          <div class="w-12 h-12 bg-blush/30 rounded-full flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-mauve" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="font-heading text-xl mb-2">Lashes & Extras</h3>
+          <p class="text-charcoal/55 text-sm leading-relaxed">Lash extensions, brow shaping, and finishing touches to complete your look.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section class="py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blush/20 to-mauve/15"></div>
+    <div class="brush-blob bg-mauve w-80 h-80 -bottom-20 -left-20 opacity-[0.08]"></div>
+    <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+      <h2 class="font-heading text-3xl md:text-4xl mb-4">Ready to Book?</h2>
+      <p class="text-charcoal/60 mb-8 text-lg">Schedule your appointment online in seconds through GlossGenius.</p>
+      <a href="#" class="inline-block bg-mauve text-white font-semibold text-lg px-10 py-4 rounded-full hover:bg-mauve/85 transition shadow-lg shadow-mauve/20">
+        Book on GlossGenius
+      </a>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section id="gallery" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-mauve tracking-[0.25em] uppercase text-sm font-semibold text-center mb-2">Follow Along</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-center mb-4">@BlondeAndBlush</h2>
+      <p class="text-charcoal/45 text-center mb-12">Transformations, inspo, and behind-the-chair moments.</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-square bg-blush/20 rounded-2xl flex items-center justify-center border border-blush/30">
+          <svg class="w-8 h-8 text-mauve/30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+        <div class="aspect-square bg-blush/20 rounded-2xl flex items-center justify-center border border-blush/30">
+          <svg class="w-8 h-8 text-mauve/30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+        <div class="aspect-square bg-blush/20 rounded-2xl flex items-center justify-center border border-blush/30">
+          <svg class="w-8 h-8 text-mauve/30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+        <div class="aspect-square bg-blush/20 rounded-2xl flex items-center justify-center border border-blush/30">
+          <svg class="w-8 h-8 text-mauve/30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </div>
+      </div>
+      <p class="text-center mt-6">
+        <a href="#" class="text-mauve text-sm font-semibold hover:underline">Follow on Instagram &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blush/10"></div>
+    <div class="brush-blob bg-blush w-60 h-60 top-0 right-10 opacity-[0.06]"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <p class="text-mauve tracking-[0.25em] uppercase text-sm font-semibold mb-2">Our Story</p>
+      <h2 class="font-heading text-4xl md:text-5xl mb-8">About Blonde & Blush</h2>
+      <p class="text-charcoal/65 text-lg leading-relaxed mb-6">
+        Blonde & Blush Beauty Studio is a boutique salon in Robertsdale, Alabama, built on the belief that every client deserves personalized attention and a space that feels like their own.
+      </p>
+      <p class="text-charcoal/65 text-lg leading-relaxed">
+        From balayage to blowouts, lash extensions to bridal styling, we bring artistry and care to everything we do. Your beauty goals are our priority.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-charcoal">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-blush tracking-[0.25em] uppercase text-sm font-semibold mb-2">Get In Touch</p>
+      <h2 class="font-heading text-4xl md:text-5xl text-white mb-8">Visit the Studio</h2>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div>
+          <h3 class="text-blush font-semibold mb-2">Call Us</h3>
+          <a href="tel:2519492247" class="text-white text-lg hover:text-blush transition">(251) 949-2247</a>
+        </div>
+        <div>
+          <h3 class="text-blush font-semibold mb-2">Location</h3>
+          <p class="text-white/60">Robertsdale, Alabama</p>
+        </div>
+        <div>
+          <h3 class="text-blush font-semibold mb-2">Follow Us</h3>
+          <div class="flex gap-4 justify-center">
+            <a href="#" class="text-white hover:text-blush transition">Instagram</a>
+            <a href="#" class="text-white hover:text-blush transition">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="bg-mauve text-white font-semibold text-lg px-10 py-4 rounded-full hover:bg-mauve/85 transition">
+          Book on GlossGenius
+        </a>
+        <a href="tel:2519492247" class="border-2 border-blush/40 text-blush font-semibold text-lg px-10 py-4 rounded-full hover:border-blush transition">
+          Call (251) 949-2247
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal border-t border-white/10 py-8">
+    <div class="max-w-6xl mx-auto px-6 text-center text-white/30 text-sm">
+      <p>&copy; 2026 Blonde & Blush Beauty Studio &middot; Robertsdale, AL &middot; All rights reserved.</p>
+      <p class="mt-1">Demo site by Menendez Strategies</p>
+    </div>
+  </footer>
+
+</body>
+</html>

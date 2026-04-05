@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Jones Hair Salon | Orange Beach, AL | Since 1967</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        black: '#1a1a1a',
+                        pearl: '#f8f6f0',
+                        gold: '#c5a55a',
+                        wine: '#722f37',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Spectral', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .ornament::before, .ornament::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #c5a55a, transparent);
+        }
+        .ornament-icon {
+            margin: 0 1.5rem;
+            color: #c5a55a;
+            font-size: 1.25rem;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #c5a55a, transparent);
+        }
+        @media (max-width: 768px) {
+            .timeline-line { left: 1.5rem; }
+        }
+        .hero-bg {
+            background: linear-gradient(160deg, #1a1a1a 0%, #2a2a2a 40%, #1a1a1a 100%);
+        }
+        .gold-glow {
+            text-shadow: 0 0 40px rgba(197, 165, 90, 0.3);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-pearl text-black font-body">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-sm border-b border-gold/20">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="font-heading text-pearl text-xl tracking-widest uppercase">Anthony Jones</div>
+            <div class="hidden md:flex items-center gap-8 text-pearl/80 text-sm tracking-wider uppercase">
+                <a href="#legacy" class="hover:text-gold transition-colors">Legacy</a>
+                <a href="#services" class="hover:text-gold transition-colors">Services</a>
+                <a href="#about" class="hover:text-gold transition-colors">About</a>
+                <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+            </div>
+            <a href="tel:2519741514" class="bg-gold/20 border border-gold/40 text-gold px-4 py-2 text-sm tracking-wider hover:bg-gold hover:text-black transition-all">
+                CALL NOW
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-4 pt-20">
+        <div class="max-w-4xl">
+            <p class="text-gold tracking-[0.4em] uppercase text-sm mb-6 font-body">Orange Beach, Alabama</p>
+            <div class="flex items-center justify-center mb-8 ornament">
+                <span class="ornament-icon">&#9830;</span>
+            </div>
+            <h1 class="font-heading text-pearl text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 gold-glow">
+                Anthony Jones<br><span class="text-gold italic font-normal text-4xl md:text-5xl lg:text-6xl">Hair Salon</span>
+            </h1>
+            <div class="flex items-center justify-center mb-8 ornament">
+                <span class="ornament-icon">&#9830;</span>
+            </div>
+            <p class="text-pearl/60 font-heading text-2xl md:text-3xl italic mb-4">57 Years of Excellence</p>
+            <p class="text-gold/80 tracking-[0.3em] uppercase text-xs mb-12">Est. 1967</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="tel:2519741514" class="bg-gold text-black px-8 py-4 text-sm tracking-widest uppercase font-semibold hover:bg-gold/80 transition-all">
+                    Book Your Appointment
+                </a>
+                <a href="#legacy" class="border border-pearl/30 text-pearl px-8 py-4 text-sm tracking-widest uppercase hover:border-gold hover:text-gold transition-all">
+                    Our Story
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ornamental Divider -->
+    <div class="bg-black py-6">
+        <div class="flex items-center justify-center max-w-2xl mx-auto px-8 ornament">
+            <span class="ornament-icon">&#10022;</span>
+        </div>
+    </div>
+
+    <!-- Legacy Timeline -->
+    <section id="legacy" class="bg-black py-24 px-4">
+        <div class="max-w-5xl mx-auto text-center mb-16 fade-in">
+            <p class="text-gold tracking-[0.3em] uppercase text-sm mb-4">Our Heritage</p>
+            <h2 class="font-heading text-pearl text-4xl md:text-5xl font-bold mb-6">A Legacy of Style</h2>
+            <p class="text-pearl/60 max-w-2xl mx-auto text-lg leading-relaxed">
+                For over five decades, Anthony Jones Hair Salon has been the cornerstone of style and elegance on the Gulf Coast.
+            </p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+            <div class="timeline-line hidden md:block"></div>
+
+            <!-- Timeline Items -->
+            <div class="space-y-12 md:space-y-16">
+                <div class="fade-in relative flex flex-col md:flex-row items-center gap-6">
+                    <div class="md:w-1/2 md:text-right md:pr-12">
+                        <span class="text-gold font-heading text-3xl font-bold">1967</span>
+                        <h3 class="text-pearl font-heading text-xl mt-2 mb-2">The Beginning</h3>
+                        <p class="text-pearl/50 text-sm leading-relaxed">Anthony Jones opens his first chair in Orange Beach, bringing world-class technique to the Alabama Gulf Coast.</p>
+                    </div>
+                    <div class="hidden md:block w-4 h-4 rounded-full bg-gold border-4 border-black z-10 absolute left-1/2 -translate-x-1/2"></div>
+                    <div class="md:w-1/2 md:pl-12"></div>
+                </div>
+
+                <div class="fade-in relative flex flex-col md:flex-row items-center gap-6">
+                    <div class="md:w-1/2 md:pr-12"></div>
+                    <div class="hidden md:block w-4 h-4 rounded-full bg-gold border-4 border-black z-10 absolute left-1/2 -translate-x-1/2"></div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <span class="text-gold font-heading text-3xl font-bold">1980s</span>
+                        <h3 class="text-pearl font-heading text-xl mt-2 mb-2">Growing Reputation</h3>
+                        <p class="text-pearl/50 text-sm leading-relaxed">Word of mouth spreads as Anthony becomes the go-to stylist for the region, building a loyal clientele spanning generations.</p>
+                    </div>
+                </div>
+
+                <div class="fade-in relative flex flex-col md:flex-row items-center gap-6">
+                    <div class="md:w-1/2 md:text-right md:pr-12">
+                        <span class="text-gold font-heading text-3xl font-bold">2000s</span>
+                        <h3 class="text-pearl font-heading text-xl mt-2 mb-2">New Era</h3>
+                        <p class="text-pearl/50 text-sm leading-relaxed">The salon evolves with the times while maintaining the timeless craftsmanship that built its name.</p>
+                    </div>
+                    <div class="hidden md:block w-4 h-4 rounded-full bg-gold border-4 border-black z-10 absolute left-1/2 -translate-x-1/2"></div>
+                    <div class="md:w-1/2 md:pl-12"></div>
+                </div>
+
+                <div class="fade-in relative flex flex-col md:flex-row items-center gap-6">
+                    <div class="md:w-1/2 md:pr-12"></div>
+                    <div class="hidden md:block w-4 h-4 rounded-full bg-gold border-4 border-black z-10 absolute left-1/2 -translate-x-1/2"></div>
+                    <div class="md:w-1/2 md:pl-12">
+                        <span class="text-gold font-heading text-3xl font-bold">Today</span>
+                        <h3 class="text-pearl font-heading text-xl mt-2 mb-2">57 Years Strong</h3>
+                        <p class="text-pearl/50 text-sm leading-relaxed">Still serving the community with the same passion, precision, and personal touch that started it all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 px-4 bg-pearl">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="text-gold tracking-[0.3em] uppercase text-sm mb-4">What We Offer</p>
+                <h2 class="font-heading text-black text-4xl md:text-5xl font-bold mb-6">Our Services</h2>
+                <div class="flex items-center justify-center max-w-xs mx-auto ornament">
+                    <span class="ornament-icon">&#9830;</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="fade-in bg-white border border-black/10 p-8 text-center hover:border-gold/50 transition-all group">
+                    <div class="text-gold text-3xl mb-4">&#9986;</div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Precision Cuts</h3>
+                    <p class="text-black/60 text-sm leading-relaxed">Expert cuts tailored to your face shape, lifestyle, and personal style. Men's and women's cuts available.</p>
+                </div>
+
+                <div class="fade-in bg-white border border-black/10 p-8 text-center hover:border-gold/50 transition-all group">
+                    <div class="text-gold text-3xl mb-4">&#10024;</div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Color & Highlights</h3>
+                    <p class="text-black/60 text-sm leading-relaxed">From subtle highlights to bold transformations, our color services bring your vision to life.</p>
+                </div>
+
+                <div class="fade-in bg-white border border-black/10 p-8 text-center hover:border-gold/50 transition-all group">
+                    <div class="text-gold text-3xl mb-4">&#127913;</div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Styling</h3>
+                    <p class="text-black/60 text-sm leading-relaxed">Special occasion styling, blowouts, and updos for every event from casual to black-tie.</p>
+                </div>
+
+                <div class="fade-in bg-white border border-black/10 p-8 text-center hover:border-gold/50 transition-all group">
+                    <div class="text-gold text-3xl mb-4">&#128136;</div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Treatments</h3>
+                    <p class="text-black/60 text-sm leading-relaxed">Deep conditioning, keratin treatments, and restorative care to keep your hair healthy and vibrant.</p>
+                </div>
+
+                <div class="fade-in bg-white border border-black/10 p-8 text-center hover:border-gold/50 transition-all group">
+                    <div class="text-gold text-3xl mb-4">&#128135;</div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Men's Grooming</h3>
+                    <p class="text-black/60 text-sm leading-relaxed">Classic barbering meets modern style. Cuts, beard trims, and grooming for the distinguished gentleman.</p>
+                </div>
+
+                <div class="fade-in bg-white border border-black/10 p-8 text-center hover:border-gold/50 transition-all group">
+                    <div class="text-gold text-3xl mb-4">&#128142;</div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Consultations</h3>
+                    <p class="text-black/60 text-sm leading-relaxed">Complimentary consultations to discuss your hair goals and create a personalized plan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Anthony -->
+    <section id="about" class="bg-black py-24 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12 fade-in">
+                <div class="md:w-2/5">
+                    <div class="aspect-[3/4] bg-gradient-to-br from-wine/30 to-black border-2 border-gold/30 flex items-center justify-center">
+                        <div class="text-center p-8">
+                            <div class="text-gold text-6xl mb-4 font-heading">AJ</div>
+                            <p class="text-pearl/40 text-sm tracking-widest uppercase">Owner & Master Stylist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-3/5">
+                    <p class="text-gold tracking-[0.3em] uppercase text-sm mb-4">Meet the Master</p>
+                    <h2 class="font-heading text-pearl text-4xl md:text-5xl font-bold mb-6">Anthony Jones</h2>
+                    <div class="w-16 h-0.5 bg-gold mb-6"></div>
+                    <p class="text-pearl/60 text-lg leading-relaxed mb-6">
+                        With over five decades behind the chair, Anthony Jones has perfected his craft through thousands of clients and countless styles. What began as a young man's passion in 1967 has become a Gulf Coast institution.
+                    </p>
+                    <p class="text-pearl/60 text-lg leading-relaxed mb-8">
+                        Anthony's philosophy is simple: every client deserves to leave feeling like the best version of themselves. That personal touch and dedication to excellence is why families have trusted him for three generations.
+                    </p>
+                    <div class="flex items-center gap-8">
+                        <div class="text-center">
+                            <span class="text-gold font-heading text-3xl font-bold block">57+</span>
+                            <span class="text-pearl/40 text-xs tracking-wider uppercase">Years</span>
+                        </div>
+                        <div class="w-px h-12 bg-gold/30"></div>
+                        <div class="text-center">
+                            <span class="text-gold font-heading text-3xl font-bold block">3</span>
+                            <span class="text-pearl/40 text-xs tracking-wider uppercase">Generations</span>
+                        </div>
+                        <div class="w-px h-12 bg-gold/30"></div>
+                        <div class="text-center">
+                            <span class="text-gold font-heading text-3xl font-bold block">1</span>
+                            <span class="text-pearl/40 text-xs tracking-wider uppercase">Passion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 px-4 bg-wine/10">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <p class="text-gold tracking-[0.3em] uppercase text-sm mb-4">Get In Touch</p>
+            <h2 class="font-heading text-black text-4xl md:text-5xl font-bold mb-6">Book Your Visit</h2>
+            <div class="flex items-center justify-center max-w-xs mx-auto ornament mb-8">
+                <span class="ornament-icon">&#9830;</span>
+            </div>
+            <p class="text-black/60 text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
+                Ready to experience the difference that 57 years of expertise makes? Call us today to schedule your appointment.
+            </p>
+
+            <a href="tel:2519741514" class="inline-block bg-black text-gold px-12 py-5 text-lg tracking-widest font-heading hover:bg-wine transition-all mb-8">
+                (251) 974-1514
+            </a>
+
+            <div class="mt-12 grid sm:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Location</h4>
+                    <p class="text-black/60">Orange Beach, AL</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Phone</h4>
+                    <a href="tel:2519741514" class="text-wine hover:text-gold transition-colors">(251) 974-1514</a>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-2">Current Site</h4>
+                    <a href="https://anthonyjonesinc.net" target="_blank" class="text-wine hover:text-gold transition-colors">anthonyjonesinc.net</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-4 text-center">
+        <div class="font-heading text-pearl text-2xl tracking-widest mb-2">Anthony Jones</div>
+        <p class="text-gold/60 text-sm tracking-wider mb-6">Hair Salon &middot; Orange Beach, AL &middot; Since 1967</p>
+        <div class="flex items-center justify-center max-w-xs mx-auto ornament mb-6">
+            <span class="ornament-icon text-sm">&#9830;</span>
+        </div>
+        <p class="text-pearl/30 text-xs">Demo website &mdash; designed by Menendez Strategies</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

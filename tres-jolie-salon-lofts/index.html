@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tr&egrave;s Jolie Salon Lofts | Premium Salon Suites in Foley, AL</title>
-    <meta name="description" content="Luxury salon lofts in Foley, AL. Independent beauty professionals, boutique shopping, and premium salon services all under one roof.">
+    <title>Tres Jolie Salon Lofts | Foley, AL</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1a1a1a',
-                        accent: '#c9a96e',
-                        accentLight: '#d4b87a',
-                        dark: '#0f0f0f',
-                        darkgray: '#1a1a1a',
-                        medgray: '#242424',
+                        emerald: '#0d5c3f',
+                        'emerald-light': '#147a54',
+                        rose: '#b76e79',
+                        'rose-light': '#d4949d',
+                        cream: '#fff8f0',
+                        'cream-dark': '#f5ece0',
+                        charcoal: '#2d2d2d',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Playfair Display', 'serif'],
+                        heading: ['Libre Baskerville', 'serif'],
+                        body: ['Quicksand', 'sans-serif'],
                     }
                 }
             }
@@ -30,264 +30,260 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        body { font-family: 'Quicksand', sans-serif; color: #2d2d2d; }
+        h1, h2, h3, h4 { font-family: 'Libre Baskerville', serif; }
+        .rose-gold-gradient { background: linear-gradient(135deg, #b76e79 0%, #d4949d 50%, #b76e79 100%); }
+        .emerald-gradient { background: linear-gradient(135deg, #0d5c3f 0%, #147a54 100%); }
+        .decorative-line { width: 60px; height: 2px; background: #b76e79; }
+        .provider-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .provider-card { transition: all 0.3s ease; }
+        .service-card:hover { border-color: #b76e79; }
+        .service-card { transition: border-color 0.3s ease; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-        .hero-gradient { background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 40%, #1f1a14 100%); }
-        .accent-glow { box-shadow: 0 0 30px rgba(201, 169, 110, 0.2); }
-        .gold-line { width: 60px; height: 3px; background: linear-gradient(90deg, #c9a96e, #d4b87a); }
-        .loft-card:hover { transform: translateY(-4px); border-color: #c9a96e; }
-        .loft-card { transition: all 0.3s ease; }
     </style>
 </head>
-<body class="bg-dark text-white font-sans">
+<body class="bg-cream">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-dark/95 backdrop-blur-md z-50 border-b border-accent/10">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div>
-                <span class="font-display text-2xl text-accent">Tr&egrave;s Jolie</span>
-                <span class="text-sm text-gray-400 ml-1">Salon Lofts</span>
+    <nav class="fixed top-0 w-full bg-cream/95 backdrop-blur-sm z-50 border-b border-cream-dark">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="font-heading text-emerald text-xl md:text-2xl tracking-wide">Tres Jolie</a>
+            <button id="menuBtn" class="md:hidden text-charcoal">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+            <div id="menuItems" class="hidden md:flex items-center gap-8 font-body text-sm font-medium tracking-wide uppercase">
+                <a href="#providers" class="text-charcoal hover:text-rose transition-colors">Providers</a>
+                <a href="#services" class="text-charcoal hover:text-rose transition-colors">Services</a>
+                <a href="#boutique" class="text-charcoal hover:text-rose transition-colors">Boutique</a>
+                <a href="#visit" class="text-charcoal hover:text-rose transition-colors">Visit</a>
+                <a href="#contact" class="bg-emerald text-cream px-5 py-2 rounded-full hover:bg-emerald-light transition-colors">Contact</a>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
-                <a href="#lofts" class="hover:text-accent transition">Salon Lofts</a>
-                <a href="#boutique" class="hover:text-accent transition">Boutique</a>
-                <a href="#about" class="hover:text-accent transition">About</a>
-                <a href="#visit" class="hover:text-accent transition">Visit</a>
-            </div>
-            <a href="#visit" class="bg-accent hover:bg-accentLight text-dark px-5 py-2.5 rounded-lg font-semibold text-sm transition">
-                Visit Us
-            </a>
-            <button id="menuBtn" class="md:hidden text-white text-2xl">&#9776;</button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden bg-dark border-t border-accent/10 px-4 pb-4">
-            <a href="#lofts" class="block py-3 text-gray-400 hover:text-accent">Salon Lofts</a>
-            <a href="#boutique" class="block py-3 text-gray-400 hover:text-accent">Boutique</a>
-            <a href="#about" class="block py-3 text-gray-400 hover:text-accent">About</a>
-            <a href="#visit" class="block py-3 text-gray-400 hover:text-accent">Visit</a>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-cream border-t border-cream-dark px-4 pb-4">
+            <a href="#providers" class="block py-2 text-charcoal font-body text-sm">Providers</a>
+            <a href="#services" class="block py-2 text-charcoal font-body text-sm">Services</a>
+            <a href="#boutique" class="block py-2 text-charcoal font-body text-sm">Boutique</a>
+            <a href="#visit" class="block py-2 text-charcoal font-body text-sm">Visit</a>
+            <a href="#contact" class="block py-2 text-rose font-body text-sm font-semibold">Contact</a>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.03]">
-            <div class="absolute top-20 right-20 w-[500px] h-[500px] bg-accent rounded-full blur-3xl"></div>
-            <div class="absolute bottom-20 left-10 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+    <section class="relative min-h-screen flex items-center justify-center emerald-gradient overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-64 h-64 rounded-full border border-white/30"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full border border-white/20"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-white/10"></div>
         </div>
-        <div class="max-w-6xl mx-auto px-4 pt-24 pb-16 relative z-10">
-            <div class="gold-line mb-6"></div>
-            <p class="text-accent uppercase tracking-[0.3em] text-sm font-medium mb-4">Foley, Alabama</p>
-            <h1 class="font-display text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-                Where Beauty<br>
-                Meets <span class="text-accent">Luxury</span>
+        <div class="relative text-center px-6 max-w-3xl mx-auto">
+            <p class="font-body text-rose-light text-sm md:text-base tracking-[0.3em] uppercase mb-6">Salon Lofts & Boutique</p>
+            <h1 class="font-heading text-cream text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
+                Tres Jolie<br><span class="text-rose-light">Salon Lofts</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-400 max-w-xl mb-8">
-                Premium salon lofts for independent beauty professionals &mdash; plus a curated boutique. Your one-stop destination for beauty and style in Baldwin County.
+            <div class="decorative-line mx-auto mb-6"></div>
+            <p class="font-body text-cream/80 text-lg md:text-xl mb-4 italic font-light">
+                "We believe that beauty comes from within."
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#lofts" class="bg-accent hover:bg-accentLight text-dark px-8 py-4 rounded-xl font-bold text-lg text-center transition accent-glow">
-                    Explore Our Lofts
-                </a>
-                <a href="#boutique" class="border border-accent/30 hover:border-accent text-accent px-8 py-4 rounded-xl font-semibold text-lg text-center transition">
-                    Shop the Boutique
-                </a>
+            <p class="font-body text-cream/60 text-base md:text-lg mb-10 max-w-xl mx-auto">
+                Skilled stylists, nail technician &amp; permanent makeup artist &mdash; all under one roof in Foley, Alabama.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#providers" class="rose-gold-gradient text-white font-body font-semibold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">Meet Our Providers</a>
+                <a href="#contact" class="border-2 border-cream/40 text-cream font-body font-semibold px-8 py-3 rounded-full hover:bg-cream/10 transition-colors">Book a Visit</a>
             </div>
         </div>
     </section>
 
-    <!-- Salon Lofts -->
-    <section id="lofts" class="py-20 bg-darkgray">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-14 fade-in">
-                <div class="gold-line mx-auto mb-4"></div>
-                <h2 class="font-display text-3xl md:text-4xl mb-4">Our Salon <span class="text-accent">Lofts</span></h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Independent beauty professionals, each with their own private suite. Find the perfect stylist, esthetician, or nail tech for you.</p>
+    <!-- Providers -->
+    <section id="providers" class="py-20 md:py-28 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="font-body text-rose text-sm tracking-[0.2em] uppercase mb-3">Our Team</p>
+                <h2 class="font-heading text-emerald text-3xl md:text-4xl mb-4">Meet the Providers</h2>
+                <div class="decorative-line mx-auto mb-6"></div>
+                <p class="font-body text-charcoal/70 max-w-xl mx-auto">Each provider is an independent professional who sets their own pricing and specialties. Contact them directly to book.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-6 fade-in">
-                <div class="loft-card bg-medgray border border-white/5 rounded-xl p-8 text-center">
-                    <div class="text-4xl mb-4">&#9986;</div>
-                    <h3 class="font-display text-xl text-accent mb-2">Hair Stylists</h3>
-                    <p class="text-gray-400 text-sm">Cuts, color, highlights, balayage, blowouts, and special occasion styling from experienced professionals.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Provider placeholder cards -->
+                <div class="provider-card bg-white rounded-2xl p-8 text-center shadow-sm border border-cream-dark">
+                    <div class="w-24 h-24 rounded-full bg-cream-dark mx-auto mb-5 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-rose/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                    </div>
+                    <h3 class="font-heading text-emerald text-lg mb-1">Stylist Name</h3>
+                    <p class="font-body text-rose text-sm mb-3">Hair Stylist</p>
+                    <p class="font-body text-charcoal/60 text-sm">Specializing in color, cuts &amp; styling. Contact for pricing and availability.</p>
                 </div>
-                <div class="loft-card bg-medgray border border-white/5 rounded-xl p-8 text-center">
-                    <div class="text-4xl mb-4">&#10024;</div>
-                    <h3 class="font-display text-xl text-accent mb-2">Estheticians</h3>
-                    <p class="text-gray-400 text-sm">Facials, waxing, lash extensions, skincare treatments, and more in a relaxing private setting.</p>
+                <div class="provider-card bg-white rounded-2xl p-8 text-center shadow-sm border border-cream-dark">
+                    <div class="w-24 h-24 rounded-full bg-cream-dark mx-auto mb-5 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-rose/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                    </div>
+                    <h3 class="font-heading text-emerald text-lg mb-1">Nail Technician</h3>
+                    <p class="font-body text-rose text-sm mb-3">Nails &amp; Nail Art</p>
+                    <p class="font-body text-charcoal/60 text-sm">Manicures, pedicures, gel, acrylics &amp; custom nail art.</p>
                 </div>
-                <div class="loft-card bg-medgray border border-white/5 rounded-xl p-8 text-center">
-                    <div class="text-4xl mb-4">&#128133;</div>
-                    <h3 class="font-display text-xl text-accent mb-2">Nail Techs</h3>
-                    <p class="text-gray-400 text-sm">Manicures, pedicures, gel, acrylics, and nail art from skilled nail artists in dedicated suites.</p>
+                <div class="provider-card bg-white rounded-2xl p-8 text-center shadow-sm border border-cream-dark">
+                    <div class="w-24 h-24 rounded-full bg-cream-dark mx-auto mb-5 flex items-center justify-center">
+                        <svg class="w-10 h-10 text-rose/40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                    </div>
+                    <h3 class="font-heading text-emerald text-lg mb-1">PMU Artist</h3>
+                    <p class="font-body text-rose text-sm mb-3">Permanent Makeup</p>
+                    <p class="font-body text-charcoal/60 text-sm">Microblading, lip blush, eyeliner &amp; more. Consultation required.</p>
                 </div>
             </div>
-            <div class="text-center mt-10 fade-in">
-                <div class="bg-medgray border border-accent/20 rounded-xl p-6 inline-block max-w-lg">
-                    <p class="text-accent font-semibold mb-2">Are you a beauty professional?</p>
-                    <p class="text-gray-400 text-sm">Interested in leasing a loft? Contact us to learn about available suites and become part of the Tr&egrave;s Jolie family.</p>
+            <p class="text-center font-body text-charcoal/50 text-sm mt-8 italic">Provider details and photos coming soon. Each provider sets their own pricing.</p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 md:py-28 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="font-body text-rose text-sm tracking-[0.2em] uppercase mb-3">What We Offer</p>
+                <h2 class="font-heading text-emerald text-3xl md:text-4xl mb-4">Our Services</h2>
+                <div class="decorative-line mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="service-card border-2 border-cream-dark rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-4">&#9986;</div>
+                    <h3 class="font-heading text-emerald text-base mb-2">Hair Services</h3>
+                    <p class="font-body text-charcoal/60 text-sm">Cuts, color, highlights, balayage, extensions &amp; styling for all hair types.</p>
+                </div>
+                <div class="service-card border-2 border-cream-dark rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-4">&#128133;</div>
+                    <h3 class="font-heading text-emerald text-base mb-2">Nail Services</h3>
+                    <p class="font-body text-charcoal/60 text-sm">Manicures, pedicures, gel, acrylics, dip powder &amp; custom nail art.</p>
+                </div>
+                <div class="service-card border-2 border-cream-dark rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-4">&#10024;</div>
+                    <h3 class="font-heading text-emerald text-base mb-2">Permanent Makeup</h3>
+                    <p class="font-body text-charcoal/60 text-sm">Microblading, powder brows, lip blush &amp; eyeliner tattooing.</p>
+                </div>
+                <div class="service-card border-2 border-cream-dark rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-4">&#128156;</div>
+                    <h3 class="font-heading text-emerald text-base mb-2">Beauty &amp; More</h3>
+                    <p class="font-body text-charcoal/60 text-sm">Lashes, waxing, facials &amp; additional beauty services.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Boutique -->
-    <section id="boutique" class="py-20 bg-dark">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
-                <div>
-                    <div class="gold-line mb-6"></div>
-                    <h2 class="font-display text-3xl md:text-4xl mb-6">The <span class="text-accent">Boutique</span></h2>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        More than just a salon &mdash; Tr&egrave;s Jolie features a curated boutique with unique fashion finds, accessories, and gifts. Shop local while you wait for your appointment or stop in just to browse.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-darkgray rounded-lg p-4 border border-accent/10 text-center">
-                            <span class="text-2xl">&#128092;</span>
-                            <p class="text-sm text-gray-400 mt-2">Fashion</p>
-                        </div>
-                        <div class="bg-darkgray rounded-lg p-4 border border-accent/10 text-center">
-                            <span class="text-2xl">&#128141;</span>
-                            <p class="text-sm text-gray-400 mt-2">Accessories</p>
-                        </div>
-                        <div class="bg-darkgray rounded-lg p-4 border border-accent/10 text-center">
-                            <span class="text-2xl">&#127873;</span>
-                            <p class="text-sm text-gray-400 mt-2">Gifts</p>
-                        </div>
-                        <div class="bg-darkgray rounded-lg p-4 border border-accent/10 text-center">
-                            <span class="text-2xl">&#128132;</span>
-                            <p class="text-sm text-gray-400 mt-2">Beauty Products</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-darkgray rounded-2xl p-10 border border-accent/10 text-center">
-                    <div class="text-6xl text-accent mb-4">&#128717;</div>
-                    <h3 class="font-display text-2xl text-accent mb-3">Shop &amp; Style</h3>
-                    <p class="text-gray-400">Get your hair done and find the perfect outfit to match &mdash; all in one stop.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="py-20 bg-darkgray">
-        <div class="max-w-4xl mx-auto px-4 text-center fade-in">
-            <div class="gold-line mx-auto mb-6"></div>
-            <h2 class="font-display text-3xl md:text-4xl mb-6">The Tr&egrave;s Jolie <span class="text-accent">Experience</span></h2>
-            <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-                Tr&egrave;s Jolie means "very pretty" &mdash; and that's exactly what we deliver. Our salon lofts provide independent beauty professionals with private, upscale suites where they can focus entirely on you. Combined with our on-site boutique, we've created a destination for beauty and style in Foley.
+    <section id="boutique" class="py-20 md:py-28 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 rose-gold-gradient opacity-10"></div>
+        <div class="relative max-w-4xl mx-auto text-center fade-in">
+            <p class="font-body text-rose text-sm tracking-[0.2em] uppercase mb-3">Shop With Us</p>
+            <h2 class="font-heading text-emerald text-3xl md:text-4xl mb-4">The Boutique</h2>
+            <div class="decorative-line mx-auto mb-8"></div>
+            <p class="font-body text-charcoal/70 text-lg mb-4 max-w-2xl mx-auto">
+                In addition to our salon services, Tres Jolie offers a curated boutique featuring clothing, accessories, jewelry &amp; beauty products.
             </p>
-            <div class="grid grid-cols-3 gap-6 max-w-md mx-auto">
-                <div>
-                    <div class="text-3xl font-black text-accent">&#127775;</div>
-                    <p class="text-gray-400 text-sm mt-2">Premium Suites</p>
+            <p class="font-body text-charcoal/50 text-base mb-10 max-w-xl mx-auto">
+                Stop by the salon to browse our latest arrivals, or ask any of our providers about their favorite picks.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-white/80 rounded-xl p-5 border border-cream-dark">
+                    <p class="font-heading text-emerald text-sm">Clothing</p>
                 </div>
-                <div>
-                    <div class="text-3xl font-black text-accent">&#128100;</div>
-                    <p class="text-gray-400 text-sm mt-2">Private Service</p>
+                <div class="bg-white/80 rounded-xl p-5 border border-cream-dark">
+                    <p class="font-heading text-emerald text-sm">Jewelry</p>
                 </div>
+                <div class="bg-white/80 rounded-xl p-5 border border-cream-dark">
+                    <p class="font-heading text-emerald text-sm">Accessories</p>
+                </div>
+                <div class="bg-white/80 rounded-xl p-5 border border-cream-dark">
+                    <p class="font-heading text-emerald text-sm">Beauty Products</p>
+                </div>
+            </div>
+            <a href="#contact" class="inline-block rose-gold-gradient text-white font-body font-semibold px-8 py-3 rounded-full hover:opacity-90 transition-opacity">Visit the Boutique</a>
+        </div>
+    </section>
+
+    <!-- Visit Us -->
+    <section id="visit" class="py-20 md:py-28 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <p class="font-body text-rose text-sm tracking-[0.2em] uppercase mb-3">Come See Us</p>
+                <h2 class="font-heading text-emerald text-3xl md:text-4xl mb-4">Visit Us in Foley</h2>
+                <div class="decorative-line mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="text-3xl font-black text-accent">&#128717;</div>
-                    <p class="text-gray-400 text-sm mt-2">On-Site Boutique</p>
+                    <div class="bg-cream rounded-2xl p-8">
+                        <h3 class="font-heading text-emerald text-xl mb-4">Location</h3>
+                        <p class="font-body text-charcoal/70 mb-6">Foley, Alabama<br>
+                        <span class="text-sm text-charcoal/50">(Full address on Google Maps)</span></p>
+                        <h3 class="font-heading text-emerald text-xl mb-4">Hours</h3>
+                        <div class="font-body text-charcoal/70 text-sm space-y-1">
+                            <p>Hours vary by provider.</p>
+                            <p>Contact your provider directly for availability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-cream-dark rounded-2xl h-72 flex items-center justify-center">
+                    <p class="font-body text-charcoal/30 text-sm">Map / Photo Placeholder</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Hours & Location -->
-    <section id="visit" class="py-20 bg-dark">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-14 fade-in">
-                <div class="gold-line mx-auto mb-4"></div>
-                <h2 class="font-display text-3xl md:text-4xl mb-4">Visit <span class="text-accent">Us</span></h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8 fade-in">
-                <div class="bg-darkgray rounded-xl p-8 border border-accent/10">
-                    <h3 class="text-xl font-bold mb-6">Location</h3>
-                    <div class="space-y-4 mb-6">
-                        <div class="flex items-start gap-3">
-                            <span class="text-accent text-xl">&#128205;</span>
-                            <div>
-                                <p class="font-medium">Foley, AL 36535</p>
-                                <p class="text-gray-400">Baldwin County, Alabama</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-medgray border border-accent/10 rounded-lg p-5 mb-6">
-                        <p class="text-accent font-semibold text-sm mb-2">Appointment Info</p>
-                        <p class="text-gray-400 text-sm">Each stylist manages their own bookings. Contact your preferred professional directly or visit us to find the right match.</p>
-                    </div>
-                    <div class="rounded-lg overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3432!2d-87.6836!3d30.3946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDIzJzQwLjYiTiA4N8KwNDEnMDEuMCJX!5e0!3m2!1sen!2sus!4v1" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+    <!-- Contact -->
+    <section id="contact" class="py-20 md:py-28 px-4 emerald-gradient">
+        <div class="max-w-2xl mx-auto text-center fade-in">
+            <p class="font-body text-rose-light text-sm tracking-[0.2em] uppercase mb-3">Get in Touch</p>
+            <h2 class="font-heading text-cream text-3xl md:text-4xl mb-4">Contact Us</h2>
+            <div class="decorative-line mx-auto mb-8"></div>
+            <p class="font-body text-cream/70 mb-10">Ready to book an appointment or have a question? Reach out and we'll connect you with the right provider.</p>
+            <form class="space-y-4 text-left" onsubmit="event.preventDefault(); alert('Thank you! We will be in touch soon.');">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-full bg-white/10 border border-cream/20 text-cream placeholder:text-cream/40 font-body focus:outline-none focus:border-rose">
+                    <input type="tel" placeholder="Phone Number" class="w-full px-5 py-3 rounded-full bg-white/10 border border-cream/20 text-cream placeholder:text-cream/40 font-body focus:outline-none focus:border-rose">
                 </div>
-                <div class="bg-darkgray rounded-xl p-8 border border-accent/10">
-                    <h3 class="text-xl font-bold mb-6">What to Expect</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
-                                <span class="text-accent font-bold">1</span>
-                            </div>
-                            <div>
-                                <p class="font-semibold mb-1">Walk In or Book Ahead</p>
-                                <p class="text-gray-400 text-sm">Browse our professionals or book directly with your preferred stylist.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
-                                <span class="text-accent font-bold">2</span>
-                            </div>
-                            <div>
-                                <p class="font-semibold mb-1">Private Suite Experience</p>
-                                <p class="text-gray-400 text-sm">Enjoy one-on-one service in a private, upscale loft environment.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0">
-                                <span class="text-accent font-bold">3</span>
-                            </div>
-                            <div>
-                                <p class="font-semibold mb-1">Shop the Boutique</p>
-                                <p class="text-gray-400 text-sm">Complete your look with a visit to our curated fashion and accessory boutique.</p>
-                            </div>
-                        </div>
-                    </div>
+                <input type="email" placeholder="Email Address" class="w-full px-5 py-3 rounded-full bg-white/10 border border-cream/20 text-cream placeholder:text-cream/40 font-body focus:outline-none focus:border-rose">
+                <select class="w-full px-5 py-3 rounded-full bg-white/10 border border-cream/20 text-cream/60 font-body focus:outline-none focus:border-rose appearance-none">
+                    <option value="">Interested In...</option>
+                    <option>Hair Services</option>
+                    <option>Nail Services</option>
+                    <option>Permanent Makeup</option>
+                    <option>Boutique</option>
+                    <option>General Inquiry</option>
+                </select>
+                <textarea placeholder="Your Message" rows="4" class="w-full px-5 py-4 rounded-2xl bg-white/10 border border-cream/20 text-cream placeholder:text-cream/40 font-body focus:outline-none focus:border-rose resize-none"></textarea>
+                <div class="text-center pt-2">
+                    <button type="submit" class="rose-gold-gradient text-white font-body font-semibold px-10 py-3 rounded-full hover:opacity-90 transition-opacity">Send Message</button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-20 bg-darkgray relative overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.03]">
-            <div class="absolute top-0 left-1/2 w-96 h-96 bg-accent rounded-full blur-3xl -translate-x-1/2"></div>
-        </div>
-        <div class="max-w-3xl mx-auto px-4 text-center relative z-10 fade-in">
-            <div class="gold-line mx-auto mb-6"></div>
-            <h2 class="font-display text-3xl md:text-4xl mb-4">Discover <span class="text-accent">Tr&egrave;s Jolie</span></h2>
-            <p class="text-gray-400 text-lg mb-8">Premium salon lofts and a curated boutique, all in one beautiful space in Foley.</p>
-            <a href="https://www.google.com/maps/dir//Tres+Jolie+Salon+Lofts+Foley+AL" target="_blank" class="inline-block bg-accent hover:bg-accentLight text-dark px-8 py-4 rounded-xl font-bold text-lg transition accent-glow">
-                Get Directions
-            </a>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary border-t border-accent/10 py-8">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="font-display text-2xl text-accent mb-2">Tr&egrave;s Jolie Salon Lofts</p>
-            <p class="text-gray-500 text-sm">Foley, AL 36535</p>
-            <p class="text-gray-600 text-xs mt-4">&copy; 2026 Tr&egrave;s Jolie Salon Lofts. All rights reserved.</p>
+    <footer class="bg-charcoal py-10 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="font-heading text-cream text-xl mb-2">Tres Jolie Salon Lofts</h3>
+            <p class="font-body text-cream/40 text-sm mb-4">Foley, Alabama</p>
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="#" class="text-cream/40 hover:text-rose transition-colors font-body text-sm">Facebook</a>
+                <a href="#" class="text-cream/40 hover:text-rose transition-colors font-body text-sm">Instagram</a>
+            </div>
+            <p class="font-body text-cream/20 text-xs">&copy; 2026 Tres Jolie Salon Lofts. All rights reserved.</p>
+            <p class="font-body text-cream/15 text-xs mt-2">Demo site by Menendez Strategies</p>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
         document.getElementById('menuBtn').addEventListener('click', () => {
             document.getElementById('mobileMenu').classList.toggle('hidden');
         });
+        // Close mobile menu on link click
         document.querySelectorAll('#mobileMenu a').forEach(a => {
             a.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
         });
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-        }, { threshold: 0.1 });
+        // Fade-in on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.15 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>

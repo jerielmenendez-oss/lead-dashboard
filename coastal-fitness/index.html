@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coastal Fitness | Foley, AL - CrossFit & Training</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ocean: '#0369a1',
+        sand: '#f5e6d3',
+        slate: '#1e293b',
+      },
+      fontFamily: {
+        heading: ['Outfit', 'sans-serif'],
+        body: ['Plus Jakarta Sans', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  h1,h2,h3,h4 { font-family: 'Outfit', sans-serif; }
+</style>
+</head>
+<body class="bg-white text-slate">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="#" class="font-heading text-2xl font-bold text-ocean">COASTAL <span class="text-slate">FITNESS</span></a>
+    <div class="hidden md:flex gap-8 text-slate/70 text-sm font-medium">
+      <a href="#programs" class="hover:text-ocean transition">Programs</a>
+      <a href="#about" class="hover:text-ocean transition">About</a>
+      <a href="#why" class="hover:text-ocean transition">Why Us</a>
+      <a href="#contact" class="hover:text-ocean transition">Contact</a>
+    </div>
+    <a href="tel:+12517472687" class="bg-ocean hover:bg-ocean/90 text-white px-5 py-2 rounded-lg text-sm font-semibold transition">(251) 747-2687</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative min-h-screen flex items-center bg-gradient-to-br from-slate via-slate to-ocean overflow-hidden">
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-ocean/20 rounded-bl-[200px]"></div>
+  <div class="relative max-w-6xl mx-auto px-4 py-32 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-ocean font-semibold tracking-wider uppercase text-sm mb-4">Foley, Alabama</p>
+      <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6">Train Like the <span class="text-ocean">Coast</span> Depends on It</h1>
+      <p class="text-white/60 text-lg mb-8 max-w-md">CrossFit, strength training, and community-driven fitness on the Alabama Gulf Coast. Owned and operated by Amber and Carlos Lizarraga.</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="bg-ocean hover:bg-ocean/80 text-white px-8 py-4 rounded-xl font-semibold text-lg transition text-center">Start Your Free Trial</a>
+        <a href="#programs" class="border border-white/30 hover:border-ocean text-white px-8 py-4 rounded-xl font-semibold text-lg transition text-center">View Programs</a>
+      </div>
+    </div>
+    <div class="hidden md:flex justify-center">
+      <div class="w-80 h-96 bg-ocean/30 rounded-3xl flex items-center justify-center border border-ocean/50">
+        <p class="text-white/40 font-heading text-xl">Training Photo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programs -->
+<section id="programs" class="py-20 px-4 bg-sand">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-ocean uppercase tracking-wider text-sm font-semibold">What We Offer</p>
+      <h2 class="font-heading text-4xl md:text-5xl font-bold mt-2">Our Programs</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-2xl p-8 hover:shadow-lg transition group">
+        <div class="w-12 h-12 bg-ocean/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-ocean transition">
+          <svg class="w-6 h-6 text-ocean group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3 class="font-heading text-xl font-bold mb-2">CrossFit</h3>
+        <p class="text-slate/60 text-sm leading-relaxed">High-intensity functional fitness with expert coaching and scalable workouts for every level.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 hover:shadow-lg transition group">
+        <div class="w-12 h-12 bg-ocean/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-ocean transition">
+          <svg class="w-6 h-6 text-ocean group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </div>
+        <h3 class="font-heading text-xl font-bold mb-2">Strength</h3>
+        <p class="text-slate/60 text-sm leading-relaxed">Barbell and free weight programming to build raw strength with proper form and progressive overload.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 hover:shadow-lg transition group">
+        <div class="w-12 h-12 bg-ocean/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-ocean transition">
+          <svg class="w-6 h-6 text-ocean group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="font-heading text-xl font-bold mb-2">Group Classes</h3>
+        <p class="text-slate/60 text-sm leading-relaxed">Energy-packed group sessions combining cardio, strength, and conditioning in a motivating community.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 hover:shadow-lg transition group">
+        <div class="w-12 h-12 bg-ocean/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-ocean transition">
+          <svg class="w-6 h-6 text-ocean group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        </div>
+        <h3 class="font-heading text-xl font-bold mb-2">Personal Training</h3>
+        <p class="text-slate/60 text-sm leading-relaxed">One-on-one coaching tailored to your goals, schedule, and fitness level with dedicated attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 px-4 bg-white">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="bg-sand rounded-3xl aspect-square flex items-center justify-center">
+      <p class="text-slate/30 font-heading text-xl">Amber & Carlos</p>
+    </div>
+    <div>
+      <p class="text-ocean uppercase tracking-wider text-sm font-semibold">Meet Your Coaches</p>
+      <h2 class="font-heading text-4xl font-bold mt-2 mb-6">Amber & Carlos Lizarraga</h2>
+      <p class="text-slate/70 leading-relaxed mb-4">Coastal Fitness was built on a simple belief: everyone deserves access to quality coaching and a community that pushes them to be better. Amber and Carlos bring years of training experience and genuine care for every member who walks through the door.</p>
+      <p class="text-slate/70 leading-relaxed mb-6">Whether you're a seasoned athlete or stepping into a gym for the first time, Coastal Fitness meets you where you are and helps you get where you want to go.</p>
+      <div class="flex gap-6">
+        <div class="text-center"><p class="text-3xl font-heading font-bold text-ocean">CF</p><p class="text-slate/50 text-xs mt-1">Certified Coaches</p></div>
+        <div class="text-center"><p class="text-3xl font-heading font-bold text-ocean">All</p><p class="text-slate/50 text-xs mt-1">Fitness Levels</p></div>
+        <div class="text-center"><p class="text-3xl font-heading font-bold text-ocean">Foley</p><p class="text-slate/50 text-xs mt-1">Alabama</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section id="why" class="py-20 px-4 bg-slate text-white">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-ocean uppercase tracking-wider text-sm font-semibold">The Coastal Difference</p>
+    <h2 class="font-heading text-4xl md:text-5xl font-bold mt-2 mb-12">Why Coastal Fitness?</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6">
+        <div class="w-16 h-16 bg-ocean/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl">🏋️</span>
+        </div>
+        <h3 class="font-heading text-xl font-bold mb-2">Expert Coaching</h3>
+        <p class="text-white/60 text-sm">Certified coaches who know how to scale workouts and keep you safe while pushing your limits.</p>
+      </div>
+      <div class="p-6">
+        <div class="w-16 h-16 bg-ocean/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl">🤝</span>
+        </div>
+        <h3 class="font-heading text-xl font-bold mb-2">Real Community</h3>
+        <p class="text-white/60 text-sm">More than a gym -- a family that shows up for each other and celebrates every win together.</p>
+      </div>
+      <div class="p-6">
+        <div class="w-16 h-16 bg-ocean/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <span class="text-3xl">🌊</span>
+        </div>
+        <h3 class="font-heading text-xl font-bold mb-2">Coastal Lifestyle</h3>
+        <p class="text-white/60 text-sm">Train hard and live well on the Gulf Coast. Fitness that fits your beach-town lifestyle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 px-4 bg-ocean text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="uppercase tracking-wider text-sm font-semibold text-white/70">Ready to Start?</p>
+    <h2 class="font-heading text-4xl md:text-5xl font-bold mt-2 mb-4">Drop In Today</h2>
+    <p class="text-white/70 text-lg mb-10 max-w-xl mx-auto">Your first class is on us. Call or visit to start your free trial at Coastal Fitness in Foley.</p>
+    <a href="tel:+12517472687" class="inline-block bg-white text-ocean hover:bg-sand px-10 py-4 rounded-xl font-bold text-xl transition mb-10">(251) 747-2687</a>
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div class="bg-white/10 rounded-xl p-6">
+        <h4 class="font-heading text-lg font-bold mb-2">Location</h4>
+        <p class="text-white/70">Foley, AL</p>
+      </div>
+      <div class="bg-white/10 rounded-xl p-6">
+        <h4 class="font-heading text-lg font-bold mb-2">Email</h4>
+        <p class="text-white/70">thecoastalgym.com</p>
+      </div>
+      <div class="bg-white/10 rounded-xl p-6">
+        <h4 class="font-heading text-lg font-bold mb-2">Hours</h4>
+        <p class="text-white/70">Mon-Fri: 5am-7pm<br>Sat: 8am-12pm</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate text-white/40 py-8 text-center text-sm">
+  <p class="font-heading text-white text-lg mb-1">Coastal Fitness</p>
+  <p>Foley, Alabama | Owned by Amber & Carlos Lizarraga</p>
+  <p class="mt-4 text-white/20">Demo site by Menendez Strategies</p>
+</footer>
+
+</body>
+</html>

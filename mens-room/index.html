@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Men's Room Barbershop | Orange Beach, AL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;600;700;800&family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#36454f',
+            bourbon: '#a0522d',
+            parchment: '#f5ecd7',
+            brass: '#b5a642',
+          },
+          fontFamily: {
+            heading: ['Vollkorn', 'serif'],
+            body: ['Hind', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Hind', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Vollkorn', serif; }
+    .leather-bg {
+      background-color: #36454f;
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+    }
+    .grain {
+      background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body class="bg-parchment text-charcoal">
+
+  <!-- Nav -->
+  <nav class="leather-bg text-parchment py-3 px-4 sticky top-0 z-50 shadow-lg">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <a href="#" class="font-heading text-xl font-bold tracking-wide">
+        <span class="text-brass">THE</span> MEN'S ROOM
+      </a>
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#services" class="hover:text-brass transition">Services</a>
+        <a href="#about" class="hover:text-brass transition">About</a>
+        <a href="#location" class="hover:text-brass transition">Location</a>
+        <a href="#contact" class="hover:text-brass transition">Contact</a>
+      </div>
+      <a href="tel:2519791499" class="md:hidden bg-bourbon text-parchment px-4 py-2 rounded text-sm font-medium">Call Now</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="leather-bg text-parchment py-28 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(181,166,66,0.1) 35px, rgba(181,166,66,0.1) 36px);"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="inline-block border border-brass/40 px-6 py-2 rounded-sm mb-6">
+        <p class="text-brass font-medium tracking-[0.3em] uppercase text-xs">Est. in Orange Beach, Alabama</p>
+      </div>
+      <h1 class="font-heading text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Orange Beach's<br>Premier Barbershop</h1>
+      <p class="text-lg md:text-xl text-parchment/70 max-w-2xl mx-auto mb-10">Classic cuts. Clean fades. Refined grooming for the modern gentleman.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:2519791499" class="bg-bourbon hover:bg-bourbon/90 text-parchment font-semibold py-3 px-8 rounded text-lg transition shadow-lg">
+          &#9742; (251) 979-1499
+        </a>
+        <a href="#services" class="border-2 border-brass/60 text-brass hover:bg-brass hover:text-charcoal font-semibold py-3 px-8 rounded text-lg transition">
+          Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="h-1 bg-gradient-to-r from-bourbon via-brass to-bourbon"></div>
+
+  <!-- Services -->
+  <section id="services" class="py-20 px-4 grain">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-center mb-3">Services</h2>
+      <div class="w-16 h-0.5 bg-bourbon mx-auto mb-12"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition border-l-4 border-bourbon">
+          <h3 class="font-heading text-xl font-semibold mb-2">Classic Haircut</h3>
+          <p class="text-charcoal/70 text-sm">Precision scissor or clipper cut, styled to perfection. Includes hot towel finish.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition border-l-4 border-brass">
+          <h3 class="font-heading text-xl font-semibold mb-2">Beard Trim & Shape</h3>
+          <p class="text-charcoal/70 text-sm">Expert beard sculpting with straight razor edge-up for a clean, sharp look.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition border-l-4 border-bourbon">
+          <h3 class="font-heading text-xl font-semibold mb-2">Hot Towel Shave</h3>
+          <p class="text-charcoal/70 text-sm">The full traditional experience -- hot lather, straight razor, and a smooth finish.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition border-l-4 border-brass">
+          <h3 class="font-heading text-xl font-semibold mb-2">Fades & Tapers</h3>
+          <p class="text-charcoal/70 text-sm">Skin fades, mid fades, and tapers blended with precision. Sharp lines guaranteed.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition border-l-4 border-bourbon">
+          <h3 class="font-heading text-xl font-semibold mb-2">Kids' Cuts</h3>
+          <p class="text-charcoal/70 text-sm">Patient, fun haircuts for the young gentlemen. All ages welcome.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition border-l-4 border-brass">
+          <h3 class="font-heading text-xl font-semibold mb-2">Head Shave</h3>
+          <p class="text-charcoal/70 text-sm">Full head shave with hot towel treatment. Clean, smooth, and refreshing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="leather-bg text-parchment py-20 px-4">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="w-48 h-48 rounded-lg bg-gradient-to-br from-bourbon to-brass flex items-center justify-center text-charcoal text-6xl font-heading font-bold shadow-lg flex-shrink-0">
+        DM
+      </div>
+      <div>
+        <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">About Deanna Malbis</h2>
+        <div class="w-12 h-0.5 bg-brass mb-6"></div>
+        <p class="text-parchment/80 mb-4 leading-relaxed">Deanna Malbis brings passion, skill, and a genuine love for the craft to every client who sits in her chair. As the owner of The Men's Room, she's built a barbershop that blends old-school tradition with modern style.</p>
+        <p class="text-parchment/80 leading-relaxed">Located in the heart of Orange Beach, The Men's Room has become a go-to destination for locals and visitors alike. Whether you're a regular or just passing through on vacation, you'll get the same exceptional cut and welcoming atmosphere every time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="py-20 px-4 grain">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-3">Visit Us in Orange Beach</h2>
+      <div class="w-16 h-0.5 bg-bourbon mx-auto mb-8"></div>
+      <div class="bg-white rounded-lg shadow-sm p-8 max-w-xl mx-auto">
+        <div class="text-4xl mb-4">&#128205;</div>
+        <p class="text-charcoal/80 mb-4 leading-relaxed">Nestled in Alabama's Gulf Coast, The Men's Room is conveniently located for both Orange Beach locals and the thousands of visitors who come to enjoy our beautiful beaches each year.</p>
+        <p class="text-charcoal/70 text-sm mb-6">On vacation? Don't let your look slide. Stop in for a fresh cut before you hit the beach.</p>
+        <div class="inline-block bg-parchment rounded-lg px-6 py-3">
+          <p class="font-heading font-bold text-charcoal">Orange Beach, Alabama</p>
+          <p class="text-charcoal/60 text-sm">Gulf Coast &middot; Baldwin County</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="leather-bg text-parchment py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4">Book Your Cut</h2>
+      <div class="w-16 h-0.5 bg-brass mx-auto mb-6"></div>
+      <p class="text-parchment/70 mb-8 max-w-lg mx-auto">Call to schedule your appointment or stop by the shop. Walk-ins always welcome.</p>
+      <a href="tel:2519791499" class="inline-block bg-bourbon hover:bg-bourbon/90 text-parchment font-bold py-4 px-10 rounded text-xl transition shadow-lg mb-4">
+        &#9742; Call (251) 979-1499
+      </a>
+      <p class="text-parchment/40 text-sm mt-6">The Men's Room Barbershop &middot; Orange Beach, AL</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="h-1 bg-gradient-to-r from-bourbon via-brass to-bourbon"></div>
+  <footer class="bg-charcoal text-parchment/50 py-8 px-4 text-center text-sm">
+    <p>&copy; 2026 The Men's Room Barbershop. All rights reserved.</p>
+    <p class="mt-1">Orange Beach, AL &middot; <a href="tel:2519791499" class="text-brass hover:underline">(251) 979-1499</a></p>
+  </footer>
+
+</body>
+</html>
