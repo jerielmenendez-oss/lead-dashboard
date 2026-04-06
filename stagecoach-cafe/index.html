@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stagecoach Cafe | Southern Comfort in Stockton, Alabama</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Lora:wght@400;500&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--cream:#faf3e0;--cream-light:#fdfaf2;--dark-wood:#2c1810;--deep-red:#8b0000;
+--olive:#556b2f;--gold:#d4a017;--terracotta:#cc5500;--warm-brown:#5c3a21;
+--text-dark:#2c1810;--text-mid:#5c4a3a;--text-light:#8a7560;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--text-dark);background:var(--cream);overflow-x:hidden}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+background:linear-gradient(135deg,var(--dark-wood) 0%,#3d2215 40%,var(--warm-brown) 100%);
+overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+background:radial-gradient(ellipse at 30% 50%,rgba(212,160,23,.15) 0%,transparent 60%),
+radial-gradient(ellipse at 80% 20%,rgba(139,0,0,.1) 0%,transparent 50%);pointer-events:none}
+.hero-grain{position:absolute;inset:0;opacity:.04;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-content{position:relative;z-index:2;text-align:center;padding:2rem;max-width:800px}
+.hero-badge{display:inline-block;padding:.5rem 1.5rem;border:1px solid var(--gold);color:var(--gold);
+font-family:'Open Sans',sans-serif;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;
+border-radius:30px;margin-bottom:1.5rem;opacity:0;transform:translateY(20px);animation:fadeUp .8s .3s forwards}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:800;
+color:#fff;line-height:1.05;margin-bottom:1rem;opacity:0;transform:translateY(30px);animation:fadeUp .8s .5s forwards}
+.hero h1 span{color:var(--gold);display:block;font-style:italic;font-weight:600;font-size:.55em}
+.hero-sub{font-family:'Lora',serif;font-size:clamp(1rem,2.5vw,1.3rem);color:rgba(255,255,255,.75);
+margin-bottom:2rem;opacity:0;transform:translateY(20px);animation:fadeUp .8s .7s forwards}
+.hero-cta{display:inline-flex;gap:1rem;flex-wrap:wrap;justify-content:center;
+opacity:0;transform:translateY(20px);animation:fadeUp .8s .9s forwards}
+.btn{display:inline-block;padding:.9rem 2.2rem;font-family:'Open Sans',sans-serif;font-weight:600;
+font-size:.95rem;text-decoration:none;border-radius:50px;transition:all .3s ease}
+.btn-primary{background:var(--deep-red);color:#fff;box-shadow:0 4px 20px rgba(139,0,0,.3)}
+.btn-primary:hover{background:#a00000;transform:translateY(-2px);box-shadow:0 6px 25px rgba(139,0,0,.4)}
+.btn-secondary{background:transparent;color:var(--gold);border:1.5px solid var(--gold)}
+.btn-secondary:hover{background:var(--gold);color:var(--dark-wood)}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.4);
+font-size:.75rem;letter-spacing:2px;text-transform:uppercase;animation:bounce 2s infinite}
+
+/* Sections */
+section{padding:5rem 1.5rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--deep-red);
+font-weight:600;margin-bottom:.5rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;
+color:var(--dark-wood);margin-bottom:1rem}
+.section-divider{width:60px;height:3px;background:var(--gold);margin-bottom:2rem;border-radius:2px}
+
+/* About */
+.about{background:var(--cream-light)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-image{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;
+background:linear-gradient(135deg,var(--warm-brown),var(--dark-wood));
+box-shadow:0 20px 60px rgba(44,24,16,.15)}
+.about-image-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold);opacity:.3}
+.about-image::after{content:'';position:absolute;inset:0;border:1px solid rgba(212,160,23,.2);
+border-radius:16px;pointer-events:none}
+.about-text p{font-family:'Lora',serif;font-size:1.05rem;line-height:1.8;color:var(--text-mid);margin-bottom:1rem}
+.about-highlight{display:flex;align-items:center;gap:1rem;padding:1.2rem;
+background:linear-gradient(135deg,rgba(212,160,23,.08),rgba(212,160,23,.03));
+border-left:3px solid var(--gold);border-radius:0 10px 10px 0;margin-top:1.5rem}
+.about-highlight svg{flex-shrink:0;width:24px;height:24px;color:var(--gold)}
+.about-highlight p{font-family:'Lora',serif;font-size:.95rem;color:var(--warm-brown);font-style:italic;margin:0}
+
+/* Menu */
+.menu{background:var(--dark-wood);color:#fff;position:relative}
+.menu::before{content:'';position:absolute;inset:0;opacity:.03;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.menu .section-label{color:var(--gold)}
+.menu .section-title{color:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;position:relative;z-index:1}
+.menu-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+border-radius:16px;padding:2rem;transition:all .3s ease;backdrop-filter:blur(10px)}
+.menu-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px);
+box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.menu-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:.5rem;color:var(--gold)}
+.menu-card p{font-family:'Lora',serif;font-size:.9rem;line-height:1.6;color:rgba(255,255,255,.65)}
+.menu-card .icon{font-size:2rem;margin-bottom:1rem;display:block}
+.menu-note{text-align:center;margin-top:2rem;font-family:'Lora',serif;color:rgba(255,255,255,.5);font-style:italic;position:relative;z-index:1}
+
+/* Reviews */
+.reviews{background:var(--cream)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.review-card{background:#fff;border-radius:16px;padding:2rem;
+box-shadow:0 4px 20px rgba(44,24,16,.06);border:1px solid rgba(212,160,23,.1);transition:all .3s ease}
+.review-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(44,24,16,.1)}
+.review-stars{color:var(--gold);font-size:1.1rem;margin-bottom:.75rem;letter-spacing:2px}
+.review-card p{font-family:'Lora',serif;font-size:.95rem;line-height:1.7;color:var(--text-mid);font-style:italic}
+.review-author{margin-top:1rem;font-family:'Open Sans',sans-serif;font-weight:600;font-size:.85rem;color:var(--warm-brown)}
+.review-source{font-size:.75rem;color:var(--text-light);font-weight:400}
+
+/* Hours & Location */
+.location{background:var(--cream-light)}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.hours-table{width:100%}
+.hours-table tr{border-bottom:1px solid rgba(44,24,16,.08)}
+.hours-table td{padding:.75rem 0;font-family:'Lora',serif;font-size:.95rem;color:var(--text-mid)}
+.hours-table td:first-child{font-weight:500;color:var(--dark-wood)}
+.hours-table td:last-child{text-align:right}
+.map-wrap{border-radius:16px;overflow:hidden;box-shadow:0 8px 30px rgba(44,24,16,.1);height:100%;min-height:350px}
+.map-wrap iframe{width:100%;height:100%;border:0}
+.loc-details{margin-top:2rem}
+.loc-item{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
+.loc-item svg{width:20px;height:20px;color:var(--deep-red);flex-shrink:0}
+.loc-item span{font-family:'Lora',serif;color:var(--text-mid);font-size:.95rem}
+.loc-item a{color:var(--deep-red);text-decoration:none;font-weight:500}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--deep-red) 0%,#a00000 50%,var(--dark-wood) 100%);
+text-align:center;padding:5rem 1.5rem;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-50%;right:-20%;width:500px;height:500px;
+background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 70%);border-radius:50%}
+.cta-section h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:1rem;position:relative;z-index:1}
+.cta-section p{font-family:'Lora',serif;color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:2rem;position:relative;z-index:1}
+.cta-phone{display:inline-block;padding:1rem 2.5rem;background:#fff;color:var(--deep-red);
+font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;text-decoration:none;
+border-radius:50px;box-shadow:0 8px 30px rgba(0,0,0,.2);transition:all .3s ease;position:relative;z-index:1}
+.cta-phone:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+
+/* Footer */
+footer{background:var(--dark-wood);color:rgba(255,255,255,.5);text-align:center;padding:2.5rem 1.5rem}
+footer p{font-size:.85rem;margin-bottom:.5rem}
+footer a{color:var(--gold);text-decoration:none}
+
+/* Animations */
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes bounce{0%,20%,50%,80%,100%{transform:translateX(-50%) translateY(0)}40%{transform:translateX(-50%) translateY(-8px)}60%{transform:translateX(-50%) translateY(-4px)}}
+.reveal{opacity:0;transform:translateY(30px);transition:all .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* Responsive */
+@media(max-width:768px){
+.about-grid,.loc-grid{grid-template-columns:1fr}
+section{padding:3.5rem 1.2rem}
+.hero{min-height:90vh}
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+<div class="hero-grain"></div>
+<div class="hero-content">
+<div class="hero-badge">Est. Stockton, Alabama</div>
+<h1>Stagecoach Cafe<span>Southern Cookin' Worth the Drive</span></h1>
+<p class="hero-sub">Featured on Alabama's 100 Dishes to Eat Before You Die. Home-style comfort food, made fresh daily in the heart of Baldwin County.</p>
+<div class="hero-cta">
+<a href="tel:+12515800608" class="btn btn-primary">Call (251) 580-0608</a>
+<a href="#menu" class="btn btn-secondary">See What's Cookin'</a>
+</div>
+</div>
+<div class="hero-scroll">scroll down</div>
+</section>
+
+<!-- About -->
+<section class="about">
+<div class="container">
+<div class="about-grid">
+<div>
+<p class="section-label">Our Story</p>
+<h2 class="section-title">A Hidden Gem on Highway 59</h2>
+<div class="section-divider"></div>
+<div class="about-text">
+<p>Tucked away in Stockton, Alabama, Stagecoach Cafe has been serving up the kind of home-cooked Southern meals that folks drive miles for. Owner Joyce Overstreet and her team plate up a rotating daily buffet of fried chicken, meatloaf, salmon patties, fresh vegetables, and cornbread that tastes like your grandmother made it.</p>
+<p>Whether you're on your way to Fort Mims, passing through Baldwin County, or making a special trip just for the buttermilk pie, you'll leave full, happy, and already planning your next visit.</p>
+</div>
+<div class="about-highlight">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<p>Featured on Alabama's 100 Dishes to Eat Before You Die &mdash; try the buttermilk pie with ice cream</p>
+</div>
+</div>
+<div class="about-image">
+<div class="about-image-inner">&#127860;</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Menu -->
+<section class="menu" id="menu">
+<div class="container">
+<p class="section-label">What We Serve</p>
+<h2 class="section-title">Daily Home-Style Buffet</h2>
+<div class="section-divider" style="background:var(--gold)"></div>
+<div class="menu-grid">
+<div class="menu-card reveal">
+<span class="icon">&#127831;</span>
+<h3>Southern Fried Chicken</h3>
+<p>Golden, crispy, and seasoned just right. A Stagecoach staple served every single day alongside our rotating daily specials.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#129367;</span>
+<h3>Homestyle Meatloaf</h3>
+<p>Thick-cut, glazed, and made from scratch. Paired with mashed potatoes and gravy that'll make you close your eyes and smile.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#127843;</span>
+<h3>Salmon Patties</h3>
+<p>Pan-fried to a golden crust and served with tartar sauce. A Southern classic done the way it should be.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#129388;</span>
+<h3>Fresh Vegetables</h3>
+<p>Turnip greens, fried okra, butter beans, mac & cheese, candied yams &mdash; choose your sides from the daily spread.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#127856;</span>
+<h3>Buttermilk Pie</h3>
+<p>The legendary dessert. Creamy, custardy, perfectly sweet &mdash; top it with ice cream for a heavenly experience. You'll understand why it made the list.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#129386;</span>
+<h3>Sandwiches & More</h3>
+<p>Not a buffet person? We've got hearty sandwiches, daily soups, and plate lunches to keep everyone happy.</p>
+</div>
+</div>
+<p class="menu-note">Menu rotates daily &mdash; call ahead to see what's on today's buffet</p>
+</div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews">
+<div class="container">
+<p class="section-label">What Folks Say</p>
+<h2 class="section-title">4 Stars on Yelp &bull; 55+ Reviews</h2>
+<div class="section-divider"></div>
+<div class="reviews-grid">
+<div class="review-card reveal">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p>"You have to try the buttermilk pie with ice cream as it is truly a heavenly experience."</p>
+<div class="review-author">Kay P. <span class="review-source">&bull; Yelp</span></div>
+</div>
+<div class="review-card reveal">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p>"See review for description of the food! Crazy delicious! Great little cafe on the way to Fort Mims. The kind of place where everything tastes homemade."</p>
+<div class="review-author">Yelp Reviewer <span class="review-source">&bull; Yelp</span></div>
+</div>
+<div class="review-card reveal">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+<p>"Buffet every day starting at 10:30 AM. Menu varies from day to day but fried chicken every day. Old restaurant, but the food makes up for it."</p>
+<div class="review-author">TripAdvisor Visitor <span class="review-source">&bull; TripAdvisor</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Hours & Location -->
+<section class="location">
+<div class="container">
+<p class="section-label">Visit Us</p>
+<h2 class="section-title">Hours &amp; Location</h2>
+<div class="section-divider"></div>
+<div class="loc-grid">
+<div>
+<table class="hours-table">
+<tr><td>Sunday</td><td>11:00 AM &ndash; 3:00 PM</td></tr>
+<tr><td>Monday</td><td>10:30 AM &ndash; 3:00 PM</td></tr>
+<tr><td>Tuesday</td><td>10:30 AM &ndash; 3:00 PM</td></tr>
+<tr><td>Wednesday</td><td>10:30 AM &ndash; 3:00 PM</td></tr>
+<tr><td>Thursday</td><td>10:30 AM &ndash; 9:00 PM</td></tr>
+<tr><td>Friday</td><td>8:00 AM &ndash; 9:00 PM</td></tr>
+<tr><td>Saturday</td><td>7:00 AM &ndash; 9:00 PM</td></tr>
+</table>
+<div class="loc-details">
+<div class="loc-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<span>52860 State Hwy 59, Stockton, AL 36579</span>
+</div>
+<div class="loc-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+<a href="tel:+12515800608">(251) 580-0608</a>
+</div>
+<div class="loc-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+<a href="mailto:joyceoverstreet1@att.net">joyceoverstreet1@att.net</a>
+</div>
+<div class="loc-item">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+<a href="https://www.facebook.com/stagecoachcafe/" target="_blank" rel="noopener">Facebook</a>
+</div>
+</div>
+</div>
+<div class="map-wrap">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3422.5!2d-87.8573!3d30.9949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDU5JzQxLjciTiA4N8KwNTEnMjYuMyJX!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+<h2>Come Hungry, Leave Happy</h2>
+<p>Grab a plate, pull up a chair, and taste what everyone's been talking about.</p>
+<a href="tel:+12515800608" class="cta-phone">&#128222; (251) 580-0608</a>
+</section>
+
+<!-- Footer -->
+<footer>
+<p><strong>Stagecoach Cafe</strong> &mdash; 52860 State Hwy 59, Stockton, AL 36579</p>
+<p>&copy; 2026 Stagecoach Cafe. All rights reserved.</p>
+<p style="margin-top:.75rem;font-size:.75rem">Demo site by <a href="#">Marketing Built by Aleck</a></p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
