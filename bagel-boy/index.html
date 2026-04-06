@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bagel Boy | East Coast Bagels, Southern Charm | Foley & Orange Beach, AL</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--navy:#0b1628;--sky:#e8f0fe;--white:#ffffff;--off-white:#f5f7fa;
+--yellow:#fbbf24;--yellow-dark:#d69e10;--coral:#f97066;--teal:#14b8a6;
+--blue:#3b82f6;--text:#1e293b;--text-mid:#475569;--text-light:#94a3b8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;
+background:linear-gradient(160deg,var(--navy) 0%,#162040 50%,#1e3060 100%);overflow:hidden}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.25}
+.hero-orb-1{width:500px;height:500px;background:var(--yellow);top:-15%;right:-10%}
+.hero-orb-2{width:350px;height:350px;background:var(--coral);bottom:-10%;left:-5%}
+.hero-orb-3{width:250px;height:250px;background:var(--teal);top:40%;left:30%}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:2rem;
+display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:3rem}
+.hero-text{color:#fff}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem 1.2rem;
+background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.25);border-radius:50px;
+font-size:.75rem;font-weight:600;color:var(--yellow);letter-spacing:1px;text-transform:uppercase;
+margin-bottom:1.5rem;opacity:0;animation:fadeUp .6s .2s forwards}
+.hero h1{font-family:'Sora',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;
+line-height:1.05;margin-bottom:1rem;opacity:0;animation:fadeUp .6s .35s forwards}
+.hero h1 .accent{background:linear-gradient(135deg,var(--yellow),var(--coral));
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,.7);line-height:1.6;
+margin-bottom:2rem;opacity:0;animation:fadeUp .6s .5s forwards}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .65s forwards}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;font-family:'DM Sans',sans-serif;
+font-weight:600;font-size:.95rem;border-radius:14px;text-decoration:none;transition:all .3s ease;border:none;cursor:pointer}
+.btn-yellow{background:var(--yellow);color:var(--navy);box-shadow:0 4px 20px rgba(251,191,36,.3)}
+.btn-yellow:hover{background:#f0b000;transform:translateY(-2px);box-shadow:0 8px 30px rgba(251,191,36,.4)}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.25)}
+.btn-outline:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center;
+opacity:0;animation:fadeUp .6s .5s forwards}
+.bagel-circle{width:clamp(280px,30vw,400px);height:clamp(280px,30vw,400px);border-radius:50%;
+background:linear-gradient(135deg,var(--yellow),#f59e0b,var(--coral));display:flex;align-items:center;
+justify-content:center;font-size:clamp(6rem,12vw,10rem);box-shadow:0 30px 80px rgba(251,191,36,.2);
+position:relative}
+.bagel-circle::after{content:'';position:absolute;inset:8px;border-radius:50%;
+border:2px dashed rgba(255,255,255,.15)}
+.float-badge{position:absolute;padding:.6rem 1.2rem;border-radius:12px;font-weight:600;
+font-size:.8rem;backdrop-filter:blur(10px);box-shadow:0 8px 25px rgba(0,0,0,.15)}
+.badge-1{top:10%;right:-10%;background:rgba(255,255,255,.95);color:var(--navy)}
+.badge-2{bottom:5%;left:-15%;background:rgba(20,184,166,.9);color:#fff}
+.badge-3{top:45%;left:-20%;background:rgba(249,112,102,.9);color:#fff}
+
+/* Stats */
+.stats{background:var(--off-white);padding:2rem 1.5rem}
+.stats-row{max-width:900px;margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:1.5rem}
+.stat{text-align:center}
+.stat-num{font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;
+background:linear-gradient(135deg,var(--yellow-dark),var(--coral));-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:.8rem;color:var(--text-light);font-weight:500;margin-top:.25rem}
+
+/* Sections */
+section{padding:5rem 1.5rem}
+.container{max-width:1100px;margin:0 auto}
+.label{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--coral);font-weight:600;margin-bottom:.5rem}
+.stitle{font-family:'Sora',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;
+color:var(--navy);margin-bottom:.75rem;line-height:1.15}
+.sdivider{width:50px;height:4px;background:linear-gradient(90deg,var(--yellow),var(--coral));
+border-radius:4px;margin-bottom:2rem}
+
+/* Menu */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.menu-card{background:var(--white);border-radius:20px;padding:2rem;border:1px solid #e2e8f0;
+transition:all .3s ease;position:relative;overflow:hidden}
+.menu-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;
+background:linear-gradient(90deg,var(--yellow),var(--coral));opacity:0;transition:opacity .3s}
+.menu-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.menu-card:hover::before{opacity:1}
+.menu-card .icon{font-size:2.2rem;margin-bottom:1rem;display:block}
+.menu-card h3{font-family:'Sora',sans-serif;font-size:1.2rem;font-weight:700;color:var(--navy);margin-bottom:.5rem}
+.menu-card p{font-size:.9rem;color:var(--text-mid);line-height:1.6}
+.menu-card .popular{display:inline-block;padding:.2rem .7rem;background:rgba(251,191,36,.12);
+color:var(--yellow-dark);font-size:.7rem;font-weight:600;border-radius:20px;margin-bottom:.75rem}
+
+/* Locations */
+.locations{background:var(--navy);color:#fff}
+.locations .label{color:var(--yellow)}
+.locations .stitle{color:#fff}
+.loc-cards{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.loc-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+border-radius:20px;padding:2rem;transition:all .3s ease;backdrop-filter:blur(10px)}
+.loc-card:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.loc-card h3{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:.25rem}
+.loc-card .loc-sub{font-size:.85rem;color:var(--yellow);font-weight:500;margin-bottom:1.25rem}
+.loc-info{display:flex;flex-direction:column;gap:.75rem}
+.loc-row{display:flex;align-items:center;gap:.75rem;font-size:.9rem;color:rgba(255,255,255,.7)}
+.loc-row svg{width:18px;height:18px;color:var(--teal);flex-shrink:0}
+.loc-row a{color:var(--yellow);text-decoration:none}
+
+/* Reviews */
+.reviews{background:var(--off-white)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.review-card{background:var(--white);border-radius:20px;padding:2rem;border:1px solid #e2e8f0;transition:all .3s ease}
+.review-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.review-stars{color:var(--yellow);font-size:1.1rem;margin-bottom:.75rem}
+.review-card p{font-size:.92rem;color:var(--text-mid);line-height:1.7;font-style:italic}
+.review-author{margin-top:1rem;font-weight:600;font-size:.85rem;color:var(--navy)}
+.review-src{color:var(--text-light);font-weight:400}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--yellow),#f59e0b,var(--coral));text-align:center;padding:5rem 1.5rem;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);
+width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,.15),transparent 70%);border-radius:50%}
+.cta h2{font-family:'Sora',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--navy);margin-bottom:.75rem;position:relative}
+.cta p{font-size:1.1rem;color:rgba(11,22,40,.7);margin-bottom:2rem;position:relative}
+.cta-phone{display:inline-flex;align-items:center;gap:.75rem;padding:1rem 2.5rem;
+background:var(--navy);color:var(--yellow);font-family:'Sora',sans-serif;font-size:1.2rem;
+font-weight:700;text-decoration:none;border-radius:16px;box-shadow:0 8px 30px rgba(11,22,40,.3);
+transition:all .3s ease;position:relative}
+.cta-phone:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(11,22,40,.4)}
+
+/* Footer */
+footer{background:var(--navy);color:rgba(255,255,255,.45);text-align:center;padding:2.5rem 1.5rem}
+footer p{font-size:.85rem;margin-bottom:.4rem}
+footer a{color:var(--yellow);text-decoration:none}
+
+/* Animations */
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(25px);transition:all .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+.hero-content{grid-template-columns:1fr;text-align:center}
+.hero-btns{justify-content:center}
+.hero-visual{order:-1}
+.bagel-circle{width:220px;height:220px;font-size:5rem}
+.float-badge{display:none}
+.loc-cards{grid-template-columns:1fr}
+.stats-row{gap:1rem}
+section{padding:3.5rem 1.2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<section class="hero">
+<div class="hero-orb hero-orb-1"></div>
+<div class="hero-orb hero-orb-2"></div>
+<div class="hero-orb hero-orb-3"></div>
+<div class="hero-content">
+<div class="hero-text">
+<div class="hero-tag">&#127860; Two Locations &bull; Open 7 Days</div>
+<h1>East Coast Bagels.<br><span class="accent">Southern Charm.</span></h1>
+<p class="hero-sub">Fresh-baked bagels, craft coffee, and hearty breakfast sandwiches at our Foley and Orange Beach spots. Start your morning the Bagel Boy way.</p>
+<div class="hero-btns">
+<a href="tel:+12512525396" class="btn btn-yellow">&#128222; Call (251) 252-5396</a>
+<a href="#menu" class="btn btn-outline">View Menu</a>
+</div>
+</div>
+<div class="hero-visual">
+<div class="bagel-circle">&#129366;</div>
+<div class="float-badge badge-1">&#11088; 4.5 on Yelp</div>
+<div class="float-badge badge-2">&#9749; Craft Coffee</div>
+<div class="float-badge badge-3">&#128293; Spicy Boy</div>
+</div>
+</div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+<div class="stats-row">
+<div class="stat"><div class="stat-num">2</div><div class="stat-label">Locations</div></div>
+<div class="stat"><div class="stat-num">7</div><div class="stat-label">Days a Week</div></div>
+<div class="stat"><div class="stat-num">4.5&#9733;</div><div class="stat-label">Yelp Rating</div></div>
+<div class="stat"><div class="stat-num">46+</div><div class="stat-label">Reviews</div></div>
+</div>
+</div>
+
+<!-- Menu -->
+<section id="menu">
+<div class="container">
+<p class="label">The Menu</p>
+<h2 class="stitle">Fresh-Baked, Made to Order</h2>
+<div class="sdivider"></div>
+<div class="menu-grid">
+<div class="menu-card reveal">
+<span class="icon">&#128293;</span>
+<div class="popular">Fan Favorite</div>
+<h3>The Spicy Boy</h3>
+<p>A loaded bagel with Conecuh sausage, pepper jack, scrambled egg, and spicy sauce. The sandwich that put us on the map.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#129385;</span>
+<div class="popular">Fan Favorite</div>
+<h3>Lox &amp; Loaded</h3>
+<p>Smoked salmon, cream cheese, capers, red onion, and everything seasoning on a fresh-baked bagel. East Coast authenticity.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#127944;</span>
+<div class="popular">Fan Favorite</div>
+<h3>The SEC</h3>
+<p>A Southern-sized breakfast bagel stacked with all the fixings. Our regulars' go-to order &mdash; hearty enough to fuel your whole morning.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#129366;</span>
+<h3>Classic Bagels</h3>
+<p>Plain, everything, sesame, cinnamon raisin, jalape&ntilde;o cheddar, and more. Boiled and baked fresh every single morning.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#9749;</span>
+<h3>Craft Coffee</h3>
+<p>Brown sugar cold brew, espresso drinks, fresh-brewed drip, and seasonal specials. Locally sourced, carefully crafted.</p>
+</div>
+<div class="menu-card reveal">
+<span class="icon">&#129367;</span>
+<h3>Cream Cheese Spreads</h3>
+<p>House-made flavors &mdash; strawberry, jalape&ntilde;o, honey walnut, garden veggie. The perfect partner for any bagel.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Locations -->
+<section class="locations">
+<div class="container">
+<p class="label">Find Us</p>
+<h2 class="stitle">Two Spots, Same Great Bagels</h2>
+<div class="sdivider" style="background:linear-gradient(90deg,var(--yellow),var(--teal))"></div>
+<div class="loc-cards">
+<div class="loc-card reveal">
+<h3>&#127965; Foley</h3>
+<div class="loc-sub">Flagship Location</div>
+<div class="loc-info">
+<div class="loc-row">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<span>915 N. McKenzie Street, Foley, AL 36535</span>
+</div>
+<div class="loc-row">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+<span>Open 7 Days &mdash; 6:00 AM to 2:00 PM</span>
+</div>
+<div class="loc-row">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+<a href="tel:+12512525396">(251) 252-5396</a>
+</div>
+</div>
+</div>
+<div class="loc-card reveal">
+<h3>&#127754; Orange Beach</h3>
+<div class="loc-sub">Beach Location</div>
+<div class="loc-info">
+<div class="loc-row">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<span>3 Market Street, Orange Beach, AL</span>
+</div>
+<div class="loc-row">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+<span>Open 7 Days &mdash; 6:00 AM to 10:30 AM</span>
+</div>
+<div class="loc-row">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+<a href="tel:+12512525396">(251) 252-5396</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews">
+<div class="container">
+<p class="label">What People Say</p>
+<h2 class="stitle">4.5 Stars &bull; 46+ Reviews</h2>
+<div class="sdivider"></div>
+<div class="reviews-grid">
+<div class="review-card reveal">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p>"The 'Lox and Loaded' and 'Spicy Boy' are fantastic, but my go-to is the 'SEC!' Delicious! This has become a regular breakfast spot for me and my co-workers."</p>
+<div class="review-author">TripAdvisor Reviewer <span class="review-src">&bull; TripAdvisor</span></div>
+</div>
+<div class="review-card reveal">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p>"Best bagels on the Gulf Coast, hands down. The brown sugar cold brew is addictive and the Spicy Boy with Conecuh sausage is incredible."</p>
+<div class="review-author">Yelp Reviewer <span class="review-src">&bull; Yelp</span></div>
+</div>
+<div class="review-card reveal">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p>"East Coast-style bagels with southern charm — that's exactly what this place is. Fresh, fast, and the coffee is legit. We stop every time we visit the beach."</p>
+<div class="review-author">Google Reviewer <span class="review-src">&bull; Google</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Your Morning Deserves Better</h2>
+<p>Fresh bagels, real coffee, no drive-thru window. Come see why Foley and Orange Beach start their day with Bagel Boy.</p>
+<a href="tel:+12512525396" class="cta-phone">&#128222; (251) 252-5396</a>
+</section>
+
+<!-- Footer -->
+<footer>
+<p><strong>Bagel Boy</strong> &mdash; Foley &amp; Orange Beach, Alabama</p>
+<p>Follow us: <a href="https://www.facebook.com/bagelboyfoley/" target="_blank" rel="noopener">Facebook</a> &bull; <a href="https://www.instagram.com/bagelboyfoley/" target="_blank" rel="noopener">Instagram</a></p>
+<p>&copy; 2026 Bagel Boy. All rights reserved.</p>
+<p style="margin-top:.75rem;font-size:.75rem">Demo site by <a href="#">Marketing Built by Aleck</a></p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
