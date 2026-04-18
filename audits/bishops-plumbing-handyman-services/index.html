@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit — Bishop's Plumbing & Handyman Services</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+  .page { max-width: 850px; margin: 0 auto; padding: 40px; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); border-radius: 16px; padding: 48px 40px; margin-bottom: 32px; position: relative; overflow: hidden; }
+  .header::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%); }
+  .brand { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #3b82f6; margin-bottom: 4px; }
+  .brand-sub { font-size: 11px; color: #64748b; letter-spacing: 1px; margin-bottom: 24px; }
+  .biz-name { font-size: 28px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
+  .audit-date { font-size: 14px; color: #94a3b8; }
+  .score-box { display: inline-flex; align-items: center; gap: 16px; background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); border-radius: 12px; padding: 16px 24px; margin-top: 20px; }
+  .score-num { font-size: 48px; font-weight: 800; color: #ef4444; }
+  .score-label { font-size: 14px; color: #94a3b8; }
+  .score-grade { font-size: 24px; font-weight: 700; color: #ef4444; }
+  .section { background: #111111; border: 1px solid #1e1e1e; border-radius: 12px; padding: 32px; margin-bottom: 24px; }
+  .section-title { font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #1e1e1e; }
+  .score-bar-container { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .score-bar-label { font-size: 14px; min-width: 160px; color: #94a3b8; }
+  .score-bar-bg { flex: 1; height: 8px; background: #1e1e1e; border-radius: 4px; overflow: hidden; }
+  .score-bar-fill { height: 100%; border-radius: 4px; }
+  .score-bar-fill.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+  .score-bar-fill.orange { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .score-bar-value { font-size: 14px; font-weight: 600; min-width: 45px; text-align: right; }
+  .finding { padding: 12px 0; border-bottom: 1px solid #1a1a1a; }
+  .finding:last-child { border-bottom: none; }
+  .finding-status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; margin-right: 8px; }
+  .status-fail { background: rgba(239,68,68,0.15); color: #ef4444; }
+  .status-warn { background: rgba(245,158,11,0.15); color: #f59e0b; }
+  .status-pass { background: rgba(34,197,94,0.15); color: #22c55e; }
+  .finding-text { font-size: 14px; color: #cbd5e1; }
+  .finding-detail { font-size: 13px; color: #64748b; margin-top: 4px; }
+  .action-items { background: linear-gradient(135deg, #1a1a2e, #16213e); border: 1px solid #1e3a5f; border-radius: 12px; padding: 32px; margin-bottom: 24px; }
+  .action-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #3b82f6; color: #fff; border-radius: 50%; font-size: 14px; font-weight: 700; margin-right: 12px; flex-shrink: 0; }
+  .action-item { display: flex; align-items: flex-start; padding: 12px 0; }
+  .action-text { font-size: 15px; color: #e2e8f0; }
+  .action-why { font-size: 13px; color: #64748b; margin-top: 4px; }
+  .summary-text { font-size: 15px; color: #cbd5e1; line-height: 1.8; }
+  .competitor-box { background: #0d1117; border: 1px solid #1e3a5f; border-radius: 8px; padding: 16px; margin-top: 12px; }
+  .competitor-title { font-size: 14px; font-weight: 600; color: #f59e0b; margin-bottom: 8px; }
+  .competitor-item { font-size: 13px; color: #94a3b8; padding: 4px 0; }
+  a { color: #3b82f6; text-decoration: none; }
+  .footer { text-align: center; padding: 24px; color: #475569; font-size: 12px; }
+  .proof { font-size: 12px; color: #3b82f6; word-break: break-all; }
+  .big-stat { text-align: center; padding: 24px; }
+  .big-stat-num { font-size: 64px; font-weight: 800; color: #ef4444; }
+  .big-stat-label { font-size: 16px; color: #94a3b8; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="brand">Marketing Built by Aleck</div>
+    <div class="brand-sub">SEO & Digital Presence Audit</div>
+    <div class="biz-name">Bishop's Plumbing & Handyman Services</div>
+    <div class="audit-date">Audit Date: April 13, 2026 &nbsp;|&nbsp; Website: bishopsplumbingal.com (DOWN — domain not working)</div>
+    <div class="score-box">
+      <div>
+        <div class="score-num">13</div>
+        <div class="score-label">out of 100</div>
+      </div>
+      <div>
+        <div class="score-grade">Grade: F</div>
+        <div class="score-label">Critical — Essentially Invisible Online</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Summary -->
+  <div class="section">
+    <div class="section-title">What This Means for Your Business</div>
+    <p class="summary-text">
+      Blake, your website domain (bishopsplumbingal.com) is completely down — it doesn't load at all. That means every potential customer who tries to visit your site gets an error page. You're listed on HomeAdvisor, Nextdoor, Houzz, and the BBB, which is good — but without a working website, you're losing the customers who search "plumber near me" on Google. You do plumbing AND handyman work, which is a huge advantage, but nobody can see that right now.
+    </p>
+  </div>
+
+  <!-- Score Breakdown -->
+  <div class="section">
+    <div class="section-title">Score Breakdown</div>
+    <div class="score-bar-container">
+      <span class="score-bar-label">Technical SEO</span>
+      <div class="score-bar-bg"><div class="score-bar-fill red" style="width:0%"></div></div>
+      <span class="score-bar-value" style="color:#ef4444">0/100</span>
+    </div>
+    <div class="score-bar-container">
+      <span class="score-bar-label">On-Page SEO</span>
+      <div class="score-bar-bg"><div class="score-bar-fill red" style="width:0%"></div></div>
+      <span class="score-bar-value" style="color:#ef4444">0/100</span>
+    </div>
+    <div class="score-bar-container">
+      <span class="score-bar-label">Local SEO</span>
+      <div class="score-bar-bg"><div class="score-bar-fill red" style="width:30%"></div></div>
+      <span class="score-bar-value" style="color:#ef4444">30/100</span>
+    </div>
+    <div class="score-bar-container">
+      <span class="score-bar-label">Content & Reputation</span>
+      <div class="score-bar-bg"><div class="score-bar-fill red" style="width:20%"></div></div>
+      <span class="score-bar-value" style="color:#ef4444">20/100</span>
+    </div>
+  </div>
+
+  <!-- Dead Website Alert -->
+  <div class="section">
+    <div class="section-title">Your Website Is Down</div>
+    <div class="big-stat">
+      <div class="big-stat-num">0%</div>
+      <div class="big-stat-label">of visitors can access your website right now</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">bishopsplumbingal.com does not load — DNS resolution failure.</span>
+      <div class="finding-detail">This means the domain name isn't connected to any server. Either the domain expired, the hosting was cancelled, or the DNS settings are broken. Either way, your website is completely invisible.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">Google can't crawl or index a site that doesn't load.</span>
+      <div class="finding-detail">Any SEO work you had before is being lost. Google will eventually remove a dead site from search results entirely.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">Directory listings still point to your dead website — that sends customers to an error page.</span>
+      <div class="finding-detail proof">Proof: <a href="https://www.homeadvisor.com/rated.BishopsPlumbing.67065370.html">HomeAdvisor</a>, <a href="https://www.houzz.com/professionals/handyman/bishop-s-plumbing-and-handyman-services-pfvwus-pf~1764907223">Houzz</a>, <a href="https://nextdoor.com/pages/bishops-plumbing-handyman-services-magnolia-springs-al/">Nextdoor</a> — all link to a site that doesn't work.</div>
+    </div>
+  </div>
+
+  <!-- What You Do Have -->
+  <div class="section">
+    <div class="section-title">What's Working (Your Online Directory Presence)</div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Listed on HomeAdvisor with services and contact info.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Active Nextdoor business page in Magnolia Springs, AL.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Houzz profile with plumbing and handyman services listed.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">BBB profile on file (not rated, but listed).</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Phone number (251) 747-3237 is consistent across directories.</span>
+    </div>
+  </div>
+
+  <!-- What Competitors Have -->
+  <div class="section">
+    <div class="section-title">What Your Competitors Have (That You Don't)</div>
+    <div class="competitor-box">
+      <div class="competitor-title">Competitors in the Foley / Baldwin County Plumbing Market</div>
+      <div class="competitor-item">&#10003; Professional websites with service pages for every type of job</div>
+      <div class="competitor-item">&#10003; Google Business Profile showing up on Google Maps</div>
+      <div class="competitor-item">&#10003; Online reviews (20-100+) that build trust before the first phone call</div>
+      <div class="competitor-item">&#10003; Before-and-after project photos</div>
+      <div class="competitor-item">&#10003; Online scheduling and quote request forms</div>
+      <div class="competitor-item">&#10003; Professional email addresses (not Gmail)</div>
+      <div class="competitor-item">&#10003; Schema markup that tells Google their hours, services, and service area</div>
+    </div>
+    <p style="margin-top:16px; font-size:14px; color:#94a3b8;">
+      78% of plumbing leads in 2026 come from Google Search and Google Maps. Without a website, you're not competing for any of them.
+    </p>
+  </div>
+
+  <!-- Top 3 Action Items -->
+  <div class="action-items">
+    <div class="section-title" style="color:#fff; border-color:#1e3a5f;">Fix These 3 Things First</div>
+    <div class="action-item">
+      <span class="action-num">1</span>
+      <div>
+        <div class="action-text">Get a real, working website — even a simple one with 5 pages.</div>
+        <div class="action-why">A homepage, services page, about page, gallery, and contact page. That's all you need to start showing up on Google. Your domain bishopsplumbingal.com is a great name — get it fixed or get a new one.</div>
+      </div>
+    </div>
+    <div class="action-item">
+      <span class="action-num">2</span>
+      <div>
+        <div class="action-text">Claim and optimize your Google Business Profile.</div>
+        <div class="action-why">This is free and it's the single most important thing for "plumber near me" searches. Add your hours, services, photos, and service area. This alone could start bringing in calls.</div>
+      </div>
+    </div>
+    <div class="action-item">
+      <span class="action-num">3</span>
+      <div>
+        <div class="action-text">Start asking happy customers for Google reviews.</div>
+        <div class="action-why">You do plumbing AND handyman work — every satisfied customer is a potential 5-star review. After 7 years in business, you should have dozens of reviews. Text a Google review link to customers after each job.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Marketing Built by Aleck &nbsp;|&nbsp; <a href="https://builtbyaleck.com">builtbyaleck.com</a></p>
+    <p style="margin-top:4px;">This audit is based on publicly available data as of April 13, 2026.</p>
+  </div>
+</div>
+</body>
+</html>

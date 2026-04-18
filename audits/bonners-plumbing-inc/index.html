@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Audit — Bonner's Plumbing Inc.</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+  .page { max-width: 850px; margin: 0 auto; padding: 40px; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); border-radius: 16px; padding: 48px 40px; margin-bottom: 32px; position: relative; overflow: hidden; }
+  .header::before { content: ''; position: absolute; top: -50%; right: -20%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%); }
+  .brand { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #3b82f6; margin-bottom: 4px; }
+  .brand-sub { font-size: 11px; color: #64748b; letter-spacing: 1px; margin-bottom: 24px; }
+  .biz-name { font-size: 32px; font-weight: 800; color: #ffffff; margin-bottom: 8px; }
+  .audit-date { font-size: 14px; color: #94a3b8; }
+  .score-box { display: inline-flex; align-items: center; gap: 16px; background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); border-radius: 12px; padding: 16px 24px; margin-top: 20px; }
+  .score-num { font-size: 48px; font-weight: 800; color: #ef4444; }
+  .score-label { font-size: 14px; color: #94a3b8; }
+  .score-grade { font-size: 24px; font-weight: 700; color: #ef4444; }
+  .section { background: #111111; border: 1px solid #1e1e1e; border-radius: 12px; padding: 32px; margin-bottom: 24px; }
+  .section-title { font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #1e1e1e; }
+  .score-bar-container { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .score-bar-label { font-size: 14px; min-width: 160px; color: #94a3b8; }
+  .score-bar-bg { flex: 1; height: 8px; background: #1e1e1e; border-radius: 4px; overflow: hidden; }
+  .score-bar-fill { height: 100%; border-radius: 4px; }
+  .score-bar-fill.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+  .score-bar-fill.orange { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .score-bar-fill.green { background: linear-gradient(90deg, #22c55e, #4ade80); }
+  .score-bar-value { font-size: 14px; font-weight: 600; min-width: 45px; text-align: right; }
+  .finding { padding: 12px 0; border-bottom: 1px solid #1a1a1a; }
+  .finding:last-child { border-bottom: none; }
+  .finding-status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; text-transform: uppercase; margin-right: 8px; }
+  .status-fail { background: rgba(239,68,68,0.15); color: #ef4444; }
+  .status-warn { background: rgba(245,158,11,0.15); color: #f59e0b; }
+  .status-pass { background: rgba(34,197,94,0.15); color: #22c55e; }
+  .finding-text { font-size: 14px; color: #cbd5e1; }
+  .finding-detail { font-size: 13px; color: #64748b; margin-top: 4px; }
+  .action-items { background: linear-gradient(135deg, #1a1a2e, #16213e); border: 1px solid #1e3a5f; border-radius: 12px; padding: 32px; margin-bottom: 24px; }
+  .action-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #3b82f6; color: #fff; border-radius: 50%; font-size: 14px; font-weight: 700; margin-right: 12px; flex-shrink: 0; }
+  .action-item { display: flex; align-items: flex-start; padding: 12px 0; }
+  .action-text { font-size: 15px; color: #e2e8f0; }
+  .action-why { font-size: 13px; color: #64748b; margin-top: 4px; }
+  .summary-text { font-size: 15px; color: #cbd5e1; line-height: 1.8; }
+  a { color: #3b82f6; text-decoration: none; }
+  .footer { text-align: center; padding: 24px; color: #475569; font-size: 12px; }
+  .proof { font-size: 12px; color: #3b82f6; word-break: break-all; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="brand">Marketing Built by Aleck</div>
+    <div class="brand-sub">SEO & Digital Presence Audit</div>
+    <div class="biz-name">Bonner's Plumbing Inc.</div>
+    <div class="audit-date">Audit Date: April 13, 2026 &nbsp;|&nbsp; Website: <a href="https://www.bonnersplumbinginc.net/" style="color:#60a5fa">bonnersplumbinginc.net</a></div>
+    <div class="score-box">
+      <div>
+        <div class="score-num">35</div>
+        <div class="score-label">out of 100</div>
+      </div>
+      <div>
+        <div class="score-grade">Grade: F</div>
+        <div class="score-label">Needs Significant Work</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Summary -->
+  <div class="section">
+    <div class="section-title">What This Means for Your Business</div>
+    <p class="summary-text">
+      You've been in business since 1985 — 41 years serving Baldwin County. That's a track record most plumbers would kill for. Your website exists and has some good bones — the phone number is everywhere, you have service pages, and you're using HTTPS. But Google can't properly understand your site because it's missing the behind-the-scenes information that search engines need. There are no customer reviews on your site, no meta descriptions, and the platform you're on (Thryv) is limiting what you can do. For a 41-year-old business, your online presence should be much stronger.
+    </p>
+  </div>
+
+  <!-- Score Breakdown -->
+  <div class="section">
+    <div class="section-title">Score Breakdown</div>
+    <div class="score-bar-container">
+      <span class="score-bar-label">Technical SEO</span>
+      <div class="score-bar-bg"><div class="score-bar-fill red" style="width:36%"></div></div>
+      <span class="score-bar-value" style="color:#ef4444">36/100</span>
+    </div>
+    <div class="score-bar-container">
+      <span class="score-bar-label">On-Page SEO</span>
+      <div class="score-bar-bg"><div class="score-bar-fill red" style="width:30%"></div></div>
+      <span class="score-bar-value" style="color:#ef4444">30/100</span>
+    </div>
+    <div class="score-bar-container">
+      <span class="score-bar-label">Local SEO</span>
+      <div class="score-bar-bg"><div class="score-bar-fill orange" style="width:40%"></div></div>
+      <span class="score-bar-value" style="color:#f59e0b">40/100</span>
+    </div>
+    <div class="score-bar-container">
+      <span class="score-bar-label">Content & Reputation</span>
+      <div class="score-bar-bg"><div class="score-bar-fill red" style="width:34%"></div></div>
+      <span class="score-bar-value" style="color:#ef4444">34/100</span>
+    </div>
+  </div>
+
+  <!-- Technical SEO -->
+  <div class="section">
+    <div class="section-title">Technical SEO — 36/100</div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Your website uses HTTPS — visitors see a secure padlock.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Your site has a mobile viewport tag for phone viewing.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No structured data (schema markup) — Google can't automatically read your hours, services, or location.</span>
+      <div class="finding-detail">Schema markup is code that tells Google exactly what your business does, where you are, and when you're open. Without it, Google has to guess — and competitors who have it rank higher.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No sitemap detected — Google may be missing some of your pages.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-warn">WARN</span>
+      <span class="finding-text">Heavy page load — multiple font families, animation libraries, and large images slow things down.</span>
+      <div class="finding-detail">Your site loads 4+ font families (Sora, Open Sans, Barlow, Roboto), a Lottie animation library, and a large hero image. On a phone with slow mobile data, this could take 5+ seconds to load. Google penalizes slow sites.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-warn">WARN</span>
+      <span class="finding-text">Built on Thryv platform — limits your SEO customization options.</span>
+      <div class="finding-detail">Thryv is a small-business platform, not a professional web platform. It restricts how much you can optimize for search engines.</div>
+    </div>
+  </div>
+
+  <!-- On-Page SEO -->
+  <div class="section">
+    <div class="section-title">On-Page SEO — 30/100</div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Title tag includes your city and business name: "Plumbing Services | Foley, AL | Bonner's Plumbing Inc."</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No meta description — Google is writing your search result description for you.</span>
+      <div class="finding-detail">When people search for you, the text under your site name in Google is whatever Google picks from your page. A meta description lets you control that message — something like "Family-owned plumbing in Foley, AL since 1985. Licensed, bonded, insured. Call for a free estimate."</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No H1 heading tag — your main headline uses an H3 tag instead.</span>
+      <div class="finding-detail">"Efficient & Responsible Plumbing Company" should be an H1, not an H3. H1 tags tell Google what the page is about. Missing this is like having a book with no title on the cover.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">Images have no alt text descriptions.</span>
+      <div class="finding-detail">Your logo and service images have no descriptions for Google or visually impaired visitors. Every image should describe what it shows.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Good internal navigation with clear service categories.</span>
+      <div class="finding-detail">Plumbing Services, Water Heater Services, Gallery, Contact — clean and logical structure.</div>
+    </div>
+  </div>
+
+  <!-- Local SEO -->
+  <div class="section">
+    <div class="section-title">Local SEO — 40/100</div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Phone number (251-269-9119) is prominent and clickable throughout the site.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Foley, AL and Baldwin County are mentioned on the site.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No physical business address visible on the website.</span>
+      <div class="finding-detail">Google needs to see your address on your website to verify your location for local search. Customers also want to know where you're located.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No Google Maps or directions on the site.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No schema markup for LocalBusiness — Google can't automatically pull your info.</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-warn">WARN</span>
+      <span class="finding-text">No email address on the website — phone only.</span>
+      <div class="finding-detail">Adding a professional email and contact form gives customers another way to reach you.</div>
+    </div>
+  </div>
+
+  <!-- Content & Reputation -->
+  <div class="section">
+    <div class="section-title">Content & Reputation — 34/100</div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Multiple service pages exist (plumbing, drains, water heaters, tankless).</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-pass">PASS</span>
+      <span class="finding-text">Strong call-to-action buttons throughout the site with "Call for a free estimate."</span>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No customer reviews or testimonials anywhere on the site.</span>
+      <div class="finding-detail">After 41 years, you've served thousands of customers. None of their feedback appears on your website. Reviews are the #1 trust factor for new customers.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-warn">WARN</span>
+      <span class="finding-text">About section is minimal — "In business since 1985" and a few claims, but no real story.</span>
+      <div class="finding-detail">41 years, family-owned, licensed/bonded/insured — that's a story worth telling. Customers want to know who they're letting into their home.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">No blog or educational content.</span>
+      <div class="finding-detail">Articles about common plumbing problems bring in free traffic from Google. "When to Replace Your Water Heater" or "How to Prevent Frozen Pipes" — these are search queries your customers are typing right now.</div>
+    </div>
+    <div class="finding">
+      <span class="finding-status status-fail">FAIL</span>
+      <span class="finding-text">Gallery page exists but likely needs more project photos.</span>
+    </div>
+  </div>
+
+  <!-- Top 3 Action Items -->
+  <div class="action-items">
+    <div class="section-title" style="color:#fff; border-color:#1e3a5f;">Fix These 3 Things First</div>
+    <div class="action-item">
+      <span class="action-num">1</span>
+      <div>
+        <div class="action-text">Add LocalBusiness schema markup and meta descriptions to every page.</div>
+        <div class="action-why">This is the highest-impact technical fix. Schema markup tells Google your hours, services, location, and service area automatically. Meta descriptions control what people see in search results. Together, these can improve your rankings without changing anything visible on the site.</div>
+      </div>
+    </div>
+    <div class="action-item">
+      <span class="action-num">2</span>
+      <div>
+        <div class="action-text">Add a testimonials section with your best customer reviews.</div>
+        <div class="action-why">After 41 years, you should have dozens of great reviews. Put 5-10 of your best on the homepage and create a dedicated testimonials page. This builds trust and helps Google see your business as reputable.</div>
+      </div>
+    </div>
+    <div class="action-item">
+      <span class="action-num">3</span>
+      <div>
+        <div class="action-text">Add your physical address and a Google Maps embed to the contact page.</div>
+        <div class="action-why">Google uses your address to verify you're a real local business. Without it, you're harder to find in "plumber near me" searches. This is a 5-minute fix that makes a real difference.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Marketing Built by Aleck &nbsp;|&nbsp; <a href="https://builtbyaleck.com">builtbyaleck.com</a></p>
+    <p style="margin-top:4px;">This audit is based on publicly available data as of April 13, 2026.</p>
+  </div>
+</div>
+</body>
+</html>
